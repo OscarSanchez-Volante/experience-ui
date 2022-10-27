@@ -1,0 +1,68 @@
+<div class="container-fluid container-padding">
+  <div class="d-flex flex-wrap">
+    <div class="col-md-7 col-lg-9">
+      <div class="sandbox1">
+        Sandbox Transactions
+    </div>
+    <div  class=""> 
+      <div id="sandbox-description" class="">
+        <div class= "config-text"  >Following are your current sandbox transactions</div>
+      </div>
+     </div>
+    </div>  
+     <div class="col-md-4 col-lg-3">
+      <div class="float-end sandMargin1">
+        <div id="sandbox-dropdown" class="">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle btn-acc mt-2 mt-lg-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              NEW SIMULATED TRANSACTION
+            <span class="material-icons-outlined add-sandbox-size">
+              add
+              </span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a id="add-manual" class="dropdown-item" routerLink="/ftuInitPayments11.0">Add Manually</a></li>
+              <li><a id="upload" class="dropdown-item cursorupload" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload Transaction Payload</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     </div> 
+  </div>
+   <div class="row m-0 mt-3"> 
+    <div class="col-xl-3">
+      <div class="p-4 chart-out-style">
+        <div class="status">Transactions Status</div>
+       
+      <app-line-chart [options]="options"></app-line-chart>
+    </div>
+  </div>
+  <div class="col-xl-3 mt-3 mt-xl-0">
+      <div class="p-4 chart-out-style">
+        <div class="status">Transaction Currency</div>
+       
+      <app-line-chart [options]="options"></app-line-chart>
+    </div>
+  </div>
+  <div class="col-xl-3 mt-3 mt-xl-0"> 
+      <div class="p-4 chart-out-style">
+        <div class="status">Transactions Rails</div>
+      <app-line-chart [options]="options"></app-line-chart>
+    </div>
+  </div>
+  <div class="col-xl-3 mt-3 mt-xl-0">
+      <div class="p-4 chart-out-style">
+        <div class="status">Recipient Banks</div>
+       
+      <app-line-chart [options]="options"></app-line-chart>
+    </div>
+</div>
+<div class="p-2 mt-3">
+<app-tree-table [tableHead]="tableHead2"  [tableValues]="tableValues2"></app-tree-table>
+</div>
+</div>
+
+</div>
+<div>
+<app-create-transaction></app-create-transaction>
+</div>

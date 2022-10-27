@@ -1,0 +1,44 @@
+<div class="logocontainer d-md-none mt-3">
+    <div class="alt">
+        <div id="barHolder" class="w-50" data-bs-toggle="collapse" aria-label="Sidebar toggle button"
+            data-bs-target="#sidebar" tabindex="0" (click)="open()"><em class="fa fa-angle-right side" *ngIf="!show"></em> <em class="fa fa-angle-down side" *ngIf="show"></em>
+        </div>
+    </div> 
+  </div>
+       <div id="sidebar"  class="collapse d-md-block">
+         <div class="position-relative" >
+        <div id="sandbox-sidebar" class= "side-bar " >
+          <div class="menu ">
+            <div class="item btn-toggle "  routerLinkActive="active" [ngClass]="active==='/sandboxadminUser/adminForUsersSandbox1.0'?'active':''">
+              <a id="home" routerLink='/sandboxadminUser/adminForUsersSandbox1.0'> <div class='item'>Home<em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div></a>
+            </div>
+            <div id="footer-layout" class="menu d-none d-md-block fixed-bottom float">
+              <div class="item " [ngClass]="active==='/'?'active':''">    
+                <a id="help" routerLink='/'><div class="item">Help & Support <em class="fa fa-angle-right right" aria-hidden="true"></em>
+                </div></a> 
+              </div>
+              
+              <div class="item " [ngClass]="active==='/'?'active':''">    
+                <a id="setting" routerLink='/'><div class="item">Settings<em class="fa fa-angle-right float-end" aria-hidden="true"></em>
+                </div></a> 
+              </div>
+            </div>
+            <div id="footer-mobile" class="d-md-none d-block">
+             <div class="item" [ngClass]="active==='/'?'active':''">    
+               <a id="help-mobile" routerLink='/'><div class="item">Help & Support <em class="fa fa-angle-right" aria-hidden="true"></em>
+               </div></a> 
+             </div>
+             
+             <div class="item " [ngClass]="active==='/'?'active':''">    
+               <a id="setting-mobile" routerLink='/'><div class="item">Settings <em class="fa fa-angle-right" aria-hidden="true"></em>
+               </div></a> 
+             </div>
+           </div>
+           
+            
+  
+          </div>
+        </div>
+         </div>
+       </div>

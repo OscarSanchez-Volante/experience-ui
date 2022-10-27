@@ -1,0 +1,61 @@
+<div class="logocontainer d-md-none mt-3">
+  <div class="alt">
+      <div id="barHolder" data-bs-toggle="collapse" aria-label="Sidebar toggle button"
+          data-bs-target="#sidebarMenu" tabindex="0" (click)="open()"><em class="fa fa-angle-right side" *ngIf="!show"></em> <em class="fa fa-angle-down side" *ngIf="show"></em>
+      </div>
+  </div>
+</div>  
+
+     <div  id="sidebarMenu" class="collapse d-md-block">
+        <div class=" position-relative" > 
+       <div class= "side-bar" >
+         <div class="menu ">
+           <div class="item btn-toggle "  routerLinkActive="active" [ngClass]="active==='/ftuMesssageAPI/ftuDashboardMessage4.3'?'active':''">
+             <a routerLink='/ftuMesssageAPI/ftuDashboardMessage4.3'> <div class='item ftusidebar-bold'>Home<em class="fa fa-angle-right" aria-hidden="true"></em>
+           </div></a>
+           </div>
+           
+           <div class="item"  routerLinkActive="active" [ngClass]="active==='/ftuMesssageAPI/DesignerTransformerApi1.0'?'active':''">
+             <a routerLink='/ftuMesssageAPI/DesignerTransformerApi1.0'> 
+               <div class="item ftusidebar-bold" data-bs-toggle="collapse" data-bs-target="#msgsimulation-collapse" aria-expanded="false"> Messaging 
+                 <em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div></a>  
+            </div>
+ 
+            <div class="collapse" id="msgsimulation-collapse">
+             <ul class="btn-toggle-nav fw-normal pb-1 ">
+               <li>
+                <a id="creator" routerLink='/ftuMesssageAPI/MessagingDropdownCreators' class=" item1 " routerLinkActive="active" >Creators</a> </li>
+               <li>
+                   <a id="transformer" routerLink='/ftuMesssageAPI/MessagingDropdownTransformers' class="link-dark rounded  item1 "routerLinkActive="active" >Transformers </a></li>
+                   <li>
+                    <a id="validator" routerLink='/ftuMesssageAPI/MessagingDropdownValidators' class="link-dark rounded  item1 "routerLinkActive="active" >Validators </a></li>
+                   </ul>
+           </div>
+          <div id="footer-layout" class="menu d-none d-md-block fixed-bottom float">
+             <div id="help" class="item " [ngClass]="active==='/'?'active':''">    
+               <a routerLink='/'><div class="item ftusidebar-bold">Help & Support <em class="fa fa-angle-right right" aria-hidden="true"></em>
+               </div></a> 
+             </div>
+             
+             <div id="setting" class="item " [ngClass]="active==='/'?'active':''">    
+               <a routerLink='/'><div class="item ftusidebar-bold">Settings<em class="fa fa-angle-right float-end" aria-hidden="true"></em>
+               </div></a> 
+             </div>
+           </div>
+           <div id="footer-mobile" class="d-md-none d-block">
+            <div id="help-mobile" class="item" [ngClass]="active==='/'?'active':''">    
+              <a routerLink='/'><div class="item ftusidebar-bold">Help & Support <em class="fa fa-angle-right" aria-hidden="true"></em>
+              </div></a> 
+            </div>
+            
+            <div id="setting-mobile" class="item " [ngClass]="active==='/'?'active':''">    
+              <a routerLink='/'><div class="item ftusidebar-bold">Settings <em class="fa fa-angle-right" aria-hidden="true"></em>
+              </div></a> 
+            </div>
+          </div>        
+  
+         </div>
+       </div>
+        </div>
+      </div>

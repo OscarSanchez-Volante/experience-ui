@@ -1,0 +1,52 @@
+<div class="mt-2 bg_accor" >        
+  <div class="accordion" id="accordionExample1">
+    <div class="row m-0">
+      <span (click)="selectParent()"  class="material-icons-outlined pr-2 pl-4 pt-1 pointer" *ngIf="!paymentDetails.expand" data-toggle="collapse"  data-target="#collapseMain">
+        chevron_right
+        </span>
+      <span (click)="selectParent()"  class="material-icons-outlined pr-2 pl-4 pt-1 pointer" *ngIf="paymentDetails.expand" data-toggle="collapse"  data-target="#collapseMain">
+        expand_more
+        </span>
+        <ng-container *ngIf="type=='action'">
+      <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+      <label for="styled-checkbox-1 mb-0 mt-3"></label>
+    </ng-container>
+      <div (click)="selectParent()" class="payment-detail pt-1" [ngClass]="paymentDetails.expand ? 'text-accor':''"  data-toggle="collapse"  data-target="#collapseMain">
+        {{paymentDetails.parentKey}}</div>
+    </div>
+   
+    <div id="collapseMain" class="collapse show pl-3 collapse-style" *ngFor="let payment of paymentDetails.childKey;let i=index;" >
+      <div class="row m-0">
+        <span class="material-icons-outlined pr-2 pt-1 ico-st"  *ngIf="!payment.expand" (click)="select(i)"  data-toggle="collapse"  [attr.data-target]="'#collapseOne'+i+type">
+          chevron_right
+          </span>
+        <span class="material-icons-outlined pr-2 pt-1 ico-st"  *ngIf="payment.expand" (click)="select(i)"  data-toggle="collapse"  [attr.data-target]="'#collapseOne'+i+type">
+          expand_more
+          </span>
+          <ng-container *ngIf="type=='action'">
+          <input class="styled-checkbox mt-2 pl2" [id]="'styled-checkboxIn'+i" type="checkbox" value="value1"  >
+          <label [for]="'styled-checkboxIn'+i"></label>
+          </ng-container>
+      <div [ngClass]="payment.expand ? 'text-accor':''" (click)="select(i)"  data-toggle="collapse"  [attr.data-target]="'#collapseOne'+i+type" class="pointer p-1 text-accor"  > {{payment.parentKey}}</div>
+      </div>
+        
+        <div *ngFor="let child of payment.childKey;let j=index"  class="mt-2 collapse child pl_10" [ngClass]="i==0?'show':''"  [id]="'collapseOne'+i+type" data-parent="#accordionExample1">
+          <div class="row m-0 paddindleft-10" *ngIf="payment.parentObj === 'pymtDtls' && pymtDtls[child.value]">
+           <ng-container *ngIf="type=='action'">
+            <input class="styled-checkbox pl2" [id]="'styled-checkboxInc'+i+j" type="checkbox" value="value1" >
+            <label [for]="'styled-checkboxInc'+i+j" class="mb-0"></label>
+          </ng-container>
+            <div class="primaryColor pt-1"><span>{{child.key}}</span> - <strong>{{(pymtDtls[child.value]) ? pymtDtls[child.value] : '' }}</strong></div>
+          </div>
+          
+          <div class="row m-0 paddindleft-10" *ngIf="payment.parentObj === 'custDtls' && custDtls[child.value]">
+         
+            {{custDtls[child.key]}}
+            <div><span>{{child.key}}</span> - <strong>{{(custDtls[child.value]) ? custDtls[child.value] : '' }}</strong></div>
+          </div>
+            
+        </div>
+    </div>
+  </div>
+  
+  </div>

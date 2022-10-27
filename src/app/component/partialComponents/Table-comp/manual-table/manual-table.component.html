@@ -1,0 +1,21 @@
+<div class="table-height ">
+    <table class="table" aria-describedby="manual-table">
+      <thead class="col-font">
+        <tr class="bg-white">       
+          <th  *ngFor="let th of tableHead">{{th.label}}</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+    
+      
+        <tr *ngFor="let td of tableValues;let i=index">
+  
+          <td *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' ? 'table-primary-clr':''">{{td[th1.fieldName]}}</td>     
+        </tr>
+      </tbody>
+    
+    </table>
+    <div class="margin1" *ngIf="!tableValues" >
+      <div class="createmanualreport ">Create a Manual Reports</div>
+    </div>
+  </div>

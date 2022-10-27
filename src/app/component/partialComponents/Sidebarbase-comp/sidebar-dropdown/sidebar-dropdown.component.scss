@@ -1,0 +1,139 @@
+.accordion-item{
+    
+    height: auto;
+
+    border-radius: 5px;
+    border: solid 1px #d7d9de;
+    background-color: #ffffff;
+  }
+  .accordion-button{
+    background-color: #ffffff;
+    padding: 0 24px;
+    box-shadow: inset 0 0px 0 rgb(0 0 0 / 13%);
+  
+  }
+  .fed {
+
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 18px;
+    font-weight: bold;
+    
+    color: #101a2b;
+  }
+  .sepa{
+    
+        
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px 6px;
+ 
+        color: #101a2b;
+      
+  }
+  .trans{
+
+        padding: 3px 11px;
+        border-radius: 16px;
+        background-color: #facdcf;
+align-items: flex-end;      
+  }
+  .table-padding{
+    padding: 1rem 0rem 1rem 0rem 
+  }
+  .text-input {
+    background-color:  #d9eed1;
+        opacity: 0.7;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+      
+  }
+
+.btn{
+    
+        width: 169px;
+        height: 40px;
+        padding:  17px 2px;
+        border-radius: 20px;
+        border: solid 1px #cbced4;
+        background-color: #fff;
+      
+}
+.view{
+    
+      width: 167px;
+      height: 39px;
+      padding: 2px;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #18243e;
+      
+}
+.btn1{
+  width: 169px;
+  height: 40px;
+  margin: -143px 35px 32px 75px;
+ }
+
+
+.btn-acc{
+ 
+  font-size: 14px;
+ font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+}
+.transac{
+    
+    width: 122px;
+    height: 24px;
+    margin: 18px 764px 19px 20px;
+    padding: -1px 11px;
+    border-radius: 16px;
+    background-color: #d9eed1;
+      
+      
+}
+.accordion-button::after {
+ display: none;
+}
+.fa{
+
+  position: absolute;
+  right: 34px;
+  top: -3px;
+  font-weight: bolder;
+  font-size: 21px;
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+  color: #607d8b;
+
+ 
+}
+[aria-expanded=true] .fa-angle-down {
+  display: none;
+}
+[aria-expanded=false] .fa-angle-up {
+  display: none;
+}
+.accordion-body {
+  padding: 0rem 0rem; 
+}

@@ -1,0 +1,73 @@
+.swift{
+   font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+    font-size: 16px;
+   
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #003b7c;
+    border: none;
+  }
+  .point{
+ 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1rem ;
+    letter-spacing: 0.2px;
+    color: #101a2b;
+    margin-bottom: 5px;
+  }
+  .fa{
+    font-size: 17px;
+    color: #747c8b;
+  }
+
+  .tree, .tree ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+    list-style: none;
+    color: #343a40;
+    position: relative;
+}
+
+.tree:before, .tree ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    border-left: 1px dashed;
+}
+
+.tree li {
+    margin: 0;
+    padding: 0 1.5em;
+    line-height: 2em;
+    position: relative;
+}
+
+.tree li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    border-top: 1px dashed;
+    margin-top: -1px;
+    position: absolute;
+    top: 1em;
+    left: 4px;
+}
+
+.tree li:last-child:before {
+    background: white;
+    height: auto;
+    top: 1em;
+    bottom: 0;
+}

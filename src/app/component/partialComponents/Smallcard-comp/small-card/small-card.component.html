@@ -1,0 +1,46 @@
+
+     <div class="d-flex flex-row scroll-type">
+      <div class="col-md-5 col-xl-2 col-12 mt-4 pr-0"  *ngFor="let details of data;let i = index" > 
+      <div class="card p-3 smallcard-background" [ngStyle]="{'background-color': details.selected==true? 'rgba(0, 59, 124, 0.03)' : 'rgb(255,255,255)' , 'border' :  details.selected==true?  '1px solid #003b7c' : '1px solid #d7d9de'}">
+        <div class="round mt-3 mb-4" >
+          <input type="checkbox" [id]="'checkbox'+i" [(ngModel)]="details.selected" [name]="'element_name'+i" (change)="addonChange(checkBoxType,details)" [attr.disabled]="details.isDisabled ? true : null"/>
+          <label [for]="'checkbox'+i"></label>
+        </div>
+        <p class="title title-height">{{details.title}}</p>
+        <div  class=" pb-3  mt-4"  >
+        <div [ngClass]="{'limitTextHeight': isReadMore}">  {{details.desc}}</div>
+        <label type="button" (click)="showText()" (click)="d(); $event.stopPropagation();">
+          {{ isReadMore ? '...': 'Read Less' }}
+        </label>
+           </div>
+         
+
+        <p *ngIf="details.paidDetails"  class="pt-3 title topLine">{{details.freeDetails.title}}</p>
+        <p *ngIf="!details.paidDetails"  class="pt-3 title" >{{details.freeDetails.title}}</p>
+        
+        <div *ngIf="details.paidDetails"  class="pb-1">
+          <div class="body-text" *ngFor="let val of details.freeDetails.content"> {{val}}</div>
+         </div>
+
+
+         <div *ngIf="!details.paidDetails"  class=" pb-1">
+       
+
+<div >
+<app-treeview-parts [arr]="details.freeDetails.items"></app-treeview-parts>
+</div>
+         
+         </div>
+
+         
+         <span *ngIf="details.paidDetails">
+         <p  class="pt-3 title">{{details.paidDetails.title}}</p>
+         <div class="body-text" *ngFor="let valP of details.paidDetails.content"> {{valP}}</div>
+
+          
+        </span  >
+      </div>
+       
+    </div>
+    </div>
+   

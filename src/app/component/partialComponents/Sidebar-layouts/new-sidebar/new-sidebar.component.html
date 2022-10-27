@@ -1,0 +1,9 @@
+
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-volante-light sidebar-newstyle">
+    <div id="sidebar" meta name="viewport" content="width=device-width, initial-scale=1.0" class="vert ">
+      <app-timeline-tab [data]="timeLineData" [active]="active" (newItemEvent)="activeTab($event)"></app-timeline-tab>
+     </div>
+     <div class="fixed-bottom pt-2 pb-2 text-center footer-newsidebar">
+      <button class="bt-lg-login" (click)="exit()">Back</button> 
+      <button class="ml-4 bt-lg-next" (click)="next()">Next</button></div>
+ </div>

@@ -1,0 +1,48 @@
+<div class="col-md-12">
+  <div class="mb-5">
+    <nav class="navbar fixed-top navbar-expand navbar-light bg-volante">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="assets/darlogo-new.png" class="img-fluid" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+          </ul>
+         
+          
+        
+          <span class="material-icons-outlined account-circleicon img ms-3">
+            account_circle
+            </span>
+          <select class="select d-flex" aria-label="Default select example" *ngIf="currentUrl=='/adminUser/adminForUsers1.0'">
+            
+              <option selected  >User Admin</option>
+              <option *ngFor="let drop of data; let i = index" > 
+                <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+              </option>
+            
+            </select>
+            <select class="select d-flex" aria-label="Default select example" *ngIf="currentUrl=='/ftuMesssageAPI/ftuDashboardMessage4.4'">
+            
+              <option selected  >Sandbox User</option>
+              <option *ngFor="let drop of data; let i = index" > 
+                <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+              </option>
+            
+            </select>
+            <select class="select d-flex" aria-label="Default select example" *ngIf="currentUrl=='/ftuPaaS/notificationScreenflow1.0'">
+            
+              <option selected  >{{userInfo.firstName}} {{userInfo.lastName}}</option>
+              <option *ngFor="let drop of data; let i = index" > 
+                <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+              </option>
+            
+            </select>
+        </div>
+      </div>
+    </nav>
+  
+  </div>
+</div>

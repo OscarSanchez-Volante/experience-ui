@@ -1,0 +1,27 @@
+
+<div class="container-fluid  pt-1  mb-1 ms-7 mt-2" *ngIf="data.display">
+  <div   data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+data['id']" aria-expanded="false" [attr.aria-controls]="'collapse'+data['id']">
+    <ul class="tree">
+      
+          <li class=" swift ">
+            <span class="material-icons-outlined">
+              description
+              </span>
+            {{data.header}}</li>
+
+ <ul [attr.id]="'collapse'+data['id']" class=" collapse " [attr.aria-labelledby]="'heading'+data['id']">
+  <div class=" collapse-body head mt-3 " *ngFor="let notes of data.notes" >
+    <div class="dot mt-3 " *ngFor="let points of notes.points">
+      <li class="point">
+        {{points}}
+      </li>
+    </div>
+  </div>
+</ul>
+ </ul>
+      </div>
+
+ </div>
+
+
+

@@ -1,0 +1,42 @@
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <div class="col h-100">
+            <div class="container trans">
+                <div class="row">
+                     <div class="col-xl-8 col-lg-10 col-12 mx-auto">
+                         <div class="row">
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 first-sec-pad">
+                 <img src="assets/vol-login-new-logo2.png"class="img-fluid" alt="Volante Logo"/>
+                 <p class="text-style mt-3 mt-md-5">We are a global financial technology company, with two decades of experience serving as trusted strategic partners for financial institutions of all sizes.</p>
+                 <div class="col-lg-5 p-0">
+                 <div class="learn">
+                        <button class="bt-lg">Learn More</button>
+                        </div>
+            </div>
+        </div>
+             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 login-section">
+                    <img src="assets/{{data.image}}" class="img-fluid" alt="Image">
+                <p class="bold-lg credit-txt">{{data.title}}</p>
+                
+                <div *ngIf="data.type=='validate';else default1">
+                    <p class="text-style desc-txt" >{{data.text}}</p>
+                    <div class="loginSec">
+                    <button class="return-btn" routerLink="/{{data.link}}">{{data.buttonName}}</button>
+                </div>    
+                </div>
+                <ng-template #default1>
+                    <p class="text-style desc-txt">{{data.text.split('.')[0]}}.</p>
+                    <p class="text-style desc-txt">{{data.text.split('.')[1]}}.</p>
+                    <div class="loginSe">
+                    <button class="login-padding" routerLink="/{{data.link}}">{{data.buttonName}}</button>
+                </div>    
+                </ng-template>
+        </div>
+ </div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+</div>   
+

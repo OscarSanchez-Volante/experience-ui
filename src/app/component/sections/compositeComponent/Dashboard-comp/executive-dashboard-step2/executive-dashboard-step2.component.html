@@ -1,0 +1,200 @@
+<div class="header"> 
+    <app-ops-header></app-ops-header>
+
+</div>
+    <div class="row m-0">
+        <div class="col-2 exeSidebar p-0 position-fixed d-none d-md-block"> 
+            <app-sidebardash></app-sidebardash>
+        </div>
+        <div class="exeMobView  d-block d-md-none">
+          <app-sidebardash></app-sidebardash>
+      </div>
+        
+        <div id="main" class="col">
+            <div class="mt-4 container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-md-2 pr-0 home-width">
+              <a routerLink="/" class="No-textdecoration" > <span class="material-icons-outlined backspace-color">
+                keyboard_backspace
+              </span> </a>
+             </div>
+             <div class="col-xl-10 col-md-10 ms-3 pl-0">
+                 <a routerLink="/ftuPaaS/notificationScreenflow1.0" class="No-textdecoration"><p class="hom">Home </p></a>
+            </div>
+            <a routerLink="/opsDashboard1.0" class="No-textdecoration"><p class="hom">OperationsDashboard</p></a>
+                 <a routerLink="/AdminDashboard1.0" class="No-textdecoration"><p class="hom">ExecutiveDashboard</p></a>
+          </div>
+          <div class="d-flex flex-column flex-lg-row bd-highlight">
+          <div class="col-md-12 col-lg-3 p-0">
+            <div class="bd-highlight dashboard">Fedwire</div>
+          </div>
+          <div class="col-md-12 col-lg-9 p-0">
+            <div class="float-end bd-highlight">
+                <div class="d-flex flex-wrap">
+                    <div class="mr-4">
+                        <select class="exe2  form-select"  aria-label="Default select example">
+                            <option selected >Executive</option>
+                            <option *ngFor="let drop of data; let i = index" > 
+                              <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+                            </option>
+                          </select>
+                    </div>
+                    <div class="mr-4">
+                        <select class="exe2 marginTop form-select"  aria-label="Default select example">
+                            <option selected >Month to date</option>
+                            <option *ngFor="let drop of data; let i = index" > 
+                              <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+                            </option>
+                          </select>
+                    </div>
+                    <div>
+                        <button class="filter-style" type="button" >Filters</button> 
+                    </div>
+                </div>
+              </div>
+          </div>
+          </div>
+            <div class="row p-2">
+                <div class="col">
+                    <div class="row">
+                        <div class="col settype">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <p class="text-step2 mt-1">STP</p>
+                                </div>
+                                <div class="col-xl-10 ">
+                                    <app-box-plot-chart [optionsBoxplotchart]="optionscandlestick1"></app-box-plot-chart>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col settype">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <p class="text-step2 mt-1">Repairs</p>
+                                </div>
+                                <div class="col-xl-10 ">
+                                    <app-box-plot-chart [optionsBoxplotchart]="optionscandlestick2"></app-box-plot-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col settype">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <p class="text-step2 mt-1">Sanction Filter</p>
+                                </div>
+                                <div class="col-xl-10 ">
+                                    <app-box-plot-chart [optionsBoxplotchart]="optionscandlestick3"></app-box-plot-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col settype">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <p class="text-step2 mt-1">Fraud Filter</p>
+                                </div>
+                                <div class="col-xl-10 ">
+                                    <app-box-plot-chart [optionsBoxplotchart]="optionscandlestick4"></app-box-plot-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col settype">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <p class="text-step2 mt-1">Credit Dec. by Ops</p>
+                                </div>
+                                <div class="col-xl-10 ">
+                                    <app-box-plot-chart [optionsBoxplotchart]="optionscandlestick5"></app-box-plot-chart>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 settype">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="text-step2barchart mt-1">Largest Transactions</div>
+                                    <div class="no1  mb-0 " >104</div>
+                                    <div class= "text-step2  ">Transactions</div>
+                                    <div  class="no1 mb-0 ">750k</div>
+                                    <div class= " mb-0 text-step2">USD </div>
+                                </div>
+                                <div class="col-10">
+                                    <app-heatmap-chart></app-heatmap-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 settype">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="text-step2barchart mt-1">Off Hour Transactions</div>
+                                    <div class="no1  mb-0 " >123</div>
+                                    <div class= "text-step2  ">Total  </div>
+                                    <div  class="no1 mb-0 ">350k</div>
+                                    <div class= " mb-0 text-step2">USD </div>
+                                </div>
+                                <div class="col-10">
+                                    <app-scatter-chart></app-scatter-chart>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 settype">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="text-step2barchart mt-1">Largest Counterparties</div>
+                                    <div class="no1  mb-0 " >250 </div>
+                                    <div class= "text-step2  ">Payments  </div>
+                                    <div  class="no1 mb-0 ">1.1M</div>
+                                    <div class= " mb-0 text-step2">USD </div>
+                                </div>
+                                <div class="col-10">
+                                    <app-horizontal-barchart [optionsHorizontalstackbar]="Horizontalstackbar1"></app-horizontal-barchart>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 settype">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="text-step2barchart mt-1">Highest Traffic Customers</div>
+                                    <div class="no1  mb-0 " >950 </div>
+                                    <div class= "text-step2  ">Customers  </div>
+                                    <div  class="no1 mb-0 ">1M</div>
+                                    <div class= " mb-0 text-step2">USD </div>
+                                </div>
+                                <div class="col-10">
+                                    <app-horizontal-barchart [optionsHorizontalstackbar]="Horizontalstackbar2"></app-horizontal-barchart>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="row settype mb-3 p-2">
+                        <div class="col-xl-9">
+                            <div class="text-step2barchart mt-1">Transaction Volume</div>
+                            <app-world-mapchart></app-world-mapchart>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class= "text-step2  ">View</div>
+                            <div  class="dropdown mt-2">
+                                <button class="global-style form-select  form-control "     type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Global               
+                                </button>
+                                <div class="dropdown-menu executiveDropdownwidth p-2" aria-labelledby="dropdownMenuButton1" >
+                                  <div><a  class="dropdown-item global-style"   >Originating Countries</a></div>
+                                  <div><a  class=" dropdown-item global-style"  >Intermediary Countries</a></div>
+                                  <div><a  class="dropdown-item global-style"  >Destination Countries</a></div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+
+

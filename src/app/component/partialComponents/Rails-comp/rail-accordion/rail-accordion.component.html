@@ -1,0 +1,76 @@
+<div class="accordion-item  pt-3  mb-3 ms-7 mt-2" *ngIf="data.display">
+  <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+data['id']" aria-expanded="false" [attr.aria-controls]="'collapse'+data['id']">
+    <div class="d-flex flex-wrap justify-content-start">
+      <div class="fed mr-3">{{data.header}}</div>
+      
+      <div class="trans text px-3 mb-2" *ngIf="data.selected">Selected, Input Needed</div> </div>
+
+    <div class="d-flex justify-content-end">
+    <em class="fa fa-angle-down"></em>
+    <em class="fa fa-angle-up"></em>
+  </div>
+  </button> 
+  <div class="cont p-4">
+    {{data.content}}
+ 
+</div>
+
+<div [attr.id]="'collapse'+data['id']" class="accordion-collapse collapse hide" [attr.aria-labelledby]="'heading'+data['id']" data-bs-parent="#accordionExample">
+  <div class="accordion-body">
+   
+ 
+  <div class="head mt-3 " *ngFor="let notes of data.notes" >{{notes.head}} 
+    <ul class="dot mt-3 " *ngFor="let points of notes.points">
+      <li class="point">
+        {{points}}
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="d-flex flex-wrap card-footer">
+    <div class="mr-1">
+      <span class="form-check form-switch card-font" (click)="$event.stopPropagation();">
+        <input class="form-check-input" type="checkbox" [attr.id]="'flexSwitchCheckDefault'+data['id']" [(ngModel)]="data.selected" [disabled]="btnDisabled" (change)="d(data.id)">
+        <label class="form-check-label" [for]="'flexSwitchCheckDefault'+data['id']"></label>
+      </span>
+    </div>
+            <div class="cont mt-2 mr-4">Select this {{title}}  </div>
+            <div>             
+             <button class="Input-style" data-bs-toggle="modal" data-bs-target="#Modal" > <span class="material-icons-outlined editpencil">
+              edit
+              </span> Input Sizing Info</button>
+            </div>
+          </div>         
+</div>
+
+<div class="mt-4 ms-4 mb-3" *ngIf="currentUrl.includes('/ftuInitPayments13.1')" >
+  <a routerLink="/ftuPaymentRail-14.0"><button type="button" class="btn btn-default view mr-4" > VIEW ACCOUNTS & TRANSACTIONS </button></a>
+  
+  <button class="btn btn-acc btn mt-3 mt-lg-0"  type="button" id="dropdownMenuButtonrail" data-bs-toggle="dropdown" aria-expanded="false"> NEW PAYMENT SIMULATED    
+    <span class="material-icons-outlined add-font">
+    add
+    </span> 
+  </button>
+    <ul class="dropdown-menu list-unstyled fw-normal" aria-labelledby="dropdownMenuButtonrail">
+      <li><a class="dropdown-item " routerLink="/ftuInitPayments11.0">Add Manually</a></li>
+      <li><a class="dropdown-item cursor-style" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload Transaction Payload</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+
+</div>
+<div class="col-md-6 d-flex align-items-end ">
+  <div *ngIf="title == 'Payment Rails' ; else Transformers">
+  <app-report-sidebar ></app-report-sidebar>
+</div>
+<ng-template #Transformers>
+  <app-messagereport-sidebar></app-messagereport-sidebar>
+</ng-template>
+</div> </div>
+
+<div>
+  <app-create-transaction></app-create-transaction>
+</div>

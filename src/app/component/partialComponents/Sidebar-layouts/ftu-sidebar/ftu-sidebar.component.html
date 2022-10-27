@@ -1,0 +1,17 @@
+<div  class="dark-blue-bg">
+  <div class="header">
+      <app-ops-header></app-ops-header>
+  </div>
+  <div class="row m-0" >
+    <div class="col-2 px-1 position-fixed sidebarWidth d-none d-md-block">
+      <app-side-navbar></app-side-navbar> 
+    </div>
+    <div  class="mobview d-md-none d-block">
+      <app-side-navbar></app-side-navbar> 
+    </div>
+    <div id="mainContent" class="col"> 
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+ 

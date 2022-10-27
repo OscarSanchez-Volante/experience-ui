@@ -1,0 +1,173 @@
+
+<div class="container-fluid mt-5"> 
+
+  <div class="row mb-2">
+    <div class="col-md-6 col-6 p-0">
+        <div class="dashtxt">Dashboard</div>
+    </div>
+    <div class="col-md-6 col-6 p-0" >
+        <button class="add-button float-end" type="button"  id="step2-li" >Add Chart</button> 
+    </div>
+  </div>
+    <div class="row">
+         <div class="col-md-12 col-xl-8">
+            <div class="row">
+              <div class="col-lg-6 ftudashborder">
+                <div class="d-flex flex-wrap mt-3">
+                  <div class="col-md-3 col-6 p-0">
+                      <p class="railText ">Rails</p>
+                    </div>
+                    <div class="col-md-9 col-6 p-0">
+                      <p ><a href="#" class="float-end vlink-text">Initiate Payment</a></p>
+                    </div> 
+                </div>                        
+                   <div class="value2 " >2 </div>                  
+                    <app-bar-chart [options]="optionslineBar"></app-bar-chart>
+              </div>
+             <div class="col-lg-6 ftudashborder">
+                <div class="col-md-12 p-0 mt-3">
+                  <p class="railText">Currencies</p>
+                </div>
+                  <div class="value2">4 </div>
+                   <app-bar-chart [options]="optionslineBar1"></app-bar-chart> 
+              </div>
+            </div> 
+            <div class="row">
+  
+              <div  class="col-lg-6 ftudashborder" *ngFor="let chartArray of chartItem"  id="step1-li" >
+                <div class="d-flex flex-wrap mt-3">
+                <div class="col-md-6 col-6 p-0">
+                  <p class="railText ">Payment Rails</p>
+                </div>
+                <div class="col-md-6 col-6 p-0"> 
+                  <p ><a href="#" class="float-end vlink-text">View All </a></p>
+                </div> 
+            </div>
+            <app-doughnut-charts [options]="optionsdoughnutftu"></app-doughnut-charts>
+            </div>
+            
+            </div>
+         </div>
+    <div class="col-md-12 col-xl-4 ftudashborder ">
+          <div class="d-flex flex-wrap mt-3">
+            <div class="col-md-5 p-0">
+              <p class="railText  ">Notification (5)</p>
+            </div>
+            <div class="col-md-7 p-0">
+            <div class="viewAll mb-3 mb-md-0">
+                <a routerLink='/ftuPaaS/notificationScreenflow2.0' class="vlink-text margin">View All </a>
+                <a  href="" class="vlink-text margin" data-bs-toggle="modal" data-bs-target="#NotificationModal">Create</a>
+                <a href="#" class=""><em class="fa fa-refresh " aria-hidden="true"></em></a>
+              </div>
+               </div>  
+        </div>
+        <div class="d-grid gap-3">
+          <div class="height-overflowsetting">
+            <div class="item"  routerLinkActive="active" >
+              <a> <div class="item Insight-style mb-1" data-bs-toggle="collapse" data-bs-target="#repairs-collapse" aria-expanded="false"><i class="fa fa-angle-down me-2" aria-hidden="true"></i>Repairs (1)
+              </div></a>
+              </div>
+              <div class="expand" id="repairs-collapse">
+              <div class="d-flex flex-row bd-highlight alert alert-dark collapse mt-1"  role="alert">
+              <div class="bd-highlight"><span class="material-icons-outlined">info </span></div>
+              <div class="bd-highlight ms-1">Notification Message Here</div>
+              </div>
+              </div>
+              <div class="item mt-2"  routerLinkActive="active" >
+              <a> <div class="item Insight-style mb-1" data-bs-toggle="collapse" data-bs-target="#oversight-collapse" aria-expanded="false"><i class="fa fa-angle-down me-2" aria-hidden="true"></i>Oversight (2)
+              </div></a>
+              </div>
+              <div class="expand" id="oversight-collapse">
+              <div class="d-flex flex-row bd-highlight alert alert-warning mt-1" role="alert">
+              <div class="bd-highlight"><span class="material-icons-outlined">info </span></div>
+              <div class="bd-highlight ms-1">Notification Message Here</div>
+              </div>
+              <div class="d-flex flex-row bd-highlight alert alert-danger mt-1" role="alert">
+              <div class="bd-highlight"><span class="material-icons-outlined">info </span></div>
+              <div class="bd-highlight ms-1">Notification Message Here</div>
+              </div>
+              </div>
+    
+              <div class="item mt-2"  routerLinkActive="active" >
+              <a> <div class="item Insight-style mb-1" data-bs-toggle="collapse" data-bs-target="#product-collapse" aria-expanded="false"><i class="fa fa-angle-down me-2" aria-hidden="true"></i>Product (2)
+              </div></a>
+              </div>
+              <div class="expand" id="product-collapse">
+              <div class="d-flex flex-row bd-highlight alert alert-danger mt-1" role="alert">
+              <div class="bd-highlight"><span class="material-icons-outlined">info </span></div>
+              <div class="bd-highlight ms-1">Notification Message Here</div>
+              </div>
+              <div class="d-flex flex-row bd-highlight alert alert-danger mt-1" role="alert">
+              <div class="bd-highlight"><span class="material-icons-outlined">info </span></div>
+              <div class="bd-highlight ms-1">Notification Message Here</div>
+              </div>
+              </div>
+          </div>
+      </div>     
+    </div>
+    </div>
+  <div class="row" >
+      <div class="col-md-12 col-xl-8 ftudashborder Request-response">
+          <div class="row mt-4">
+              <div class="col">
+                <p class="railText ">Scheduled Reports</p>
+              </div>
+              <div class="col">
+                <p ><a  class="float-end vlink-text">View All </a></p>
+              </div> 
+          </div>
+        <app-table [tableHead]="tableHead2" [tableValues]="tableValues2"  [iconShow]= "{'edit':true,'view':false}" ></app-table> 
+      </div>
+      <div class="col-md-12 col-xl-4 ftudashborder" id="step3-li">
+        <div class="row mt-4">
+          <div class="col">
+            <p class="railText  ">Requests </p>
+          </div>
+          <div class="col">
+            <p ><a href="#" class="float-end vlink-text">New Request </a></p>
+          </div> 
+      </div>
+      <div class="d-grid gap-2">
+  
+          <button id="users-button" class="btn btn-primary ftu-btnclr" type="button">
+            <div>
+              Request: Add Users 
+            </div>
+            <div class="time mt-1">
+              {{date   | date: "MM-dd-yyyy"}}
+              {{date   | date: "HH:mm:ss"}}
+            </div>
+         </button>
+          <button id="sanctions-button" class="btn btn-primary ftu-btnclr" type="button">Product Request: Sanctions
+            <div class="time mt-1">
+              {{date   | date: "MM-dd-yyyy"}}
+              {{date   | date: "HH:mm:ss"}}
+            </div>
+          </button>
+          <button id="request-button" class="btn btn-primary ftu-btnclr" type="button">request here
+            <div class="time mt-1">
+              {{date   | date: "MM-dd-yyyy"}}
+              {{date   | date: "HH:mm:ss"}}
+            </div>
+          </button>
+          <button id="request-button1" class="btn btn-primary ftu-btnclr" type="button">request here
+            <div class="time mt-1">
+              {{date   | date: "MM-dd-yyyy"}}
+              {{date   | date: "HH:mm:ss"}}
+            </div>
+          </button>
+          <button id="request-button2" class="btn btn-primary ftu-btnclr mb-3" type="button">request here
+              <div class="time mt-1">
+              {{date   | date: "MM-dd-yyyy"}}
+              {{date   | date: "HH:mm:ss"}}
+            </div>
+          </button>
+  
+        </div>
+      </div>
+  </div>
+  </div>
+  
+  <div>
+    <app-create-notification-popup></app-create-notification-popup>
+  </div>

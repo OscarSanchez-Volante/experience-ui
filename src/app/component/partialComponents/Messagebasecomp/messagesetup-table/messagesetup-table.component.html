@@ -1,0 +1,39 @@
+<div class="table-height ">
+    <table class="table" aria-describedby="mydesc"> 
+    
+      <thead class="col-font">
+        <tr class="bg-white"> 
+          <th>          
+        
+ </th>
+
+          <th  *ngFor="let th of tableHead">  {{th.label}} <em *ngIf="(selectedColumn==th.fieldName && sortDir==1)"  ></em><em *ngIf="(selectedColumn==th.fieldName && sortDir==-1)"  ></em></th> 
+        </tr>
+      </thead>
+      <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+        
+       
+        <tr *ngFor="let td of tableValues ;let i=index">
+       
+          <td> 
+           
+ </td>
+        <td  *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''"><span *ngIf= "th1.fieldName!=='Download' && th1.type!== 'input'">{{td[th1.fieldName]}}</span> <span *ngIf= "th1.fieldName=='Download' && th1.type!== 'input'"><span class="csv-style">CSV</span> <span>PDF</span></span>
+        
+        <div >
+          <span *ngIf="th1.type== 'input'"> <label>0</label><input class="value-width" type="range"  id="vol" name="vol" min="0" max="200"  value="10" (change)="getSliderValue($event)" (oninput)="getSliderValue($event)"> <label>200+</label>
+          <div>{{Value}} messages/mo</div>   </span>
+        
+          </div> 
+      </td>    
+          <td *ngIf="iconShow?.edit" >
+          <span class="material-icons mode-edit">
+            mode_edit
+            </span>
+          </td> 
+        </tr>
+    
+      </tbody>
+      
+    </table>
+  </div>

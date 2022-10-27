@@ -1,0 +1,172 @@
+
+<div >
+    <div class="modal fade padr"   id="OpsPopupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+      <div class="modal-dialog moveright modal-lg" role="document">
+        <div class="modal-content backg-color1" >
+          <div class="modal-header mlr-8 ">
+            <h4 class="modal-title p-0" id="exampleModalLabel">FEDNOW / Manual Actions / Duplicate Check</h4>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+  
+          <div class="modal-body backg-color" >
+           
+              <div class=" m-0">
+                    <div class="box-border p-3">
+                        <div class="row ">
+                        <div class="col-sm col-lg-3">
+                        <div class="  number" >10k</div>
+                        <div class="  box-name" >Transactions</div>
+                    </div>
+                    <div class="col-sm col-lg-9">
+                        <div class="  number" >50k</div>
+                        <div class="  box-name" >USD</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="box-border p-2 mt-4">
+                    <div class="row ">
+                    <div class="col-sm col-lg-5">
+                    <div class="  box-name" >Transactions</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dropdown float-end">
+                <select class="form-select source" aria-label="Default select example">
+                    <option class="Ops-text">Accept</option>
+                    <option class="Ops-text">Ignore</option>
+                    <option class="Ops-text" selected >All</option>
+
+                        </select>
+                    </div>
+                        </div>
+                </div>
+                <div class="col ">
+                    <div echarts [options]="optionsOps"  class="demo-chart bar1heigh"></div> 
+                  </div>
+            </div>
+            
+              <div class="accordion-item p-2 mt-3">
+             
+                  <button class="accordion-button" type="button" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  
+                      
+                      <div class="d-flex justify-content-start">
+                        <div class="fed mr-2">27 June 2021</div>
+                        <div class="usd-number ml-2 ">25,000 USD</div>
+                      </div>
+                      <div class="d-flex  justify-content-end">
+                        <em class="fa fa-angle-down"></em>
+                        <em class="fa fa-angle-up"></em>
+                      </div>
+                   
+                
+                </button>
+              <div id="collapseOne" class="accordion-collapse collapse show mt-1" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <app-table [tableHead]="tableOpsHead" [tableValues]="tableOpsValues" ></app-table> 
+               
+                </div>
+        </div>
+              <div class="accordion-item p-2">
+              <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                
+               
+                  <div class="d-flex justify-content-start">
+                    <div class="fed ">28 June 2021</div>
+                    <div class="usd-number ml-2">5,000 USD</div>
+                   </div>
+                   <div class="d-flex  justify-content-end">
+                    <em class="fa fa-angle-down"></em>
+                    <em class="fa fa-angle-up"></em>
+                  </div>
+               </button>
+               <div id="collapseTwo" class="accordion-collapse collapse  mt-1" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <app-table [tableHead]="tableOpsHead" [tableValues]="tableOpsValues" ></app-table> 
+               
+                </div>
+              </div>
+
+              <div class="accordion-item p-2">
+                <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  
+                 
+                    <div class="d-flex justify-content-start">
+                      <div class="fed ">29 June 2021</div>
+                      <div class="usd-number ml-2">2,000 USD</div>
+                     </div>
+                     <div class="d-flex  justify-content-end">
+                      <em class="fa fa-angle-down"></em>
+                      <em class="fa fa-angle-up"></em>
+                    </div>
+                 </button>
+                </div>
+
+                <div class="accordion-item p-2">
+                  <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    
+                   
+                      <div class="d-flex justify-content-start">
+                        <div class="fed ">30 June 2021</div>
+                        <div class="usd-number ml-2">1,000 USD</div>
+                       </div>
+                       <div class="d-flex  justify-content-end">
+                        <em class="fa fa-angle-down"></em>
+                        <em class="fa fa-angle-up"></em>
+                      </div>
+                   </button>
+                  </div>
+
+                  <div class="accordion-item p-2">
+                    <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      
+                     
+                        <div class="d-flex justify-content-start">
+                          <div class="fed ">1 july 2021</div>
+                          <div class="usd-number ml-2">5,000 USD</div>
+                         </div>
+                         <div class="d-flex  justify-content-end">
+                          <em class="fa fa-angle-down"></em>
+                          <em class="fa fa-angle-up"></em>
+                        </div>
+                     </button>
+                    </div>
+
+                    <div class="accordion-item p-2">
+                      <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        
+                       
+                          <div class="d-flex justify-content-start">
+                            <div class="fed ">2 july 2021</div>
+                            <div class="usd-number ml-4">2,000 USD</div>
+                           </div>
+                           <div class="d-flex  justify-content-end">
+                            <em class="fa fa-angle-down"></em>
+                            <em class="fa fa-angle-up"></em>
+                          </div>
+                       </button>
+                      </div>
+
+                      <div class="accordion-item p-2">
+                        <button class="accordion-button" type="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          
+                         
+                            <div class="d-flex justify-content-start">
+                              <div class="fed ">3 july 2021</div>
+                              <div class="usd-number ml-2">1,000 USD</div>
+                             </div>
+                             <div class="d-flex  justify-content-end">
+                              <em class="fa fa-angle-down"></em>
+                              <em class="fa fa-angle-up"></em>
+                            </div>
+                         </button>
+                        </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="but-lg-can" data-bs-dismiss="modal"  #closeAddExpenseModal>CLOSE</button>
+            <button type="button" class="but-lg"  data-bs-dismiss="modal"  #closeAddExpenseModal> All Transactions</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

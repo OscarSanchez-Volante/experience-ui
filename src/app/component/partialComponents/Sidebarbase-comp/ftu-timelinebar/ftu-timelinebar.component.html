@@ -1,0 +1,10 @@
+<div class="pr-2 pt-5 pb-2 side-paneftu">
+    <div *ngFor="let trans of data;let i = index">         
+        <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + trans.id"  [ngClass]="active == trans.name ? 'active' : ''" class="mt-2 text-semi submenu">
+
+            <div class=" mt-0"  [attr.id]="i"></div><div class="transaction" >{{trans.name}}</div><span class="material-icons float-end">
+                navigate_next
+                </span></div>
+        
+    </div>        
+  </div>    

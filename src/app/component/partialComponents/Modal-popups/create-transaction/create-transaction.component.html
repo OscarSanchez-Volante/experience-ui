@@ -1,0 +1,53 @@
+
+  <div class="p-0">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content backg-color1" >
+        <div class="modal-header mlr-8 ">
+          <h4 class="modal-title p-0" id="exampleModalLabel">Create Transaction</h4>
+          <br />
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div> <h2 class="Upload-Sample-Transa"> Upload Sample Transactions</h2></div>
+
+        <div class="modal-body p-3 backg-color" >
+          <div  class="ml-4 mr-4 pad m-body">
+            <div class="row m-0">
+              <div class="col-md-12 layout-margin p-4" >
+                <h4 class="sub-heading pl-5 pb-3">Lorem ipsum dolor sit lorem a amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h4>
+
+                      <div class="ml-3 mr-3 mb-3  fileover_style" >
+                        <div ng2FileDrop (fileOver)="fileOverBase($event)"  class="file-cust">
+                          <span class="material-icons-outlined cloudicon_style">
+                            cloud_upload
+                            </span>
+                          <div class="col-sm-9">
+                            <span class="hidden-file">
+                              <input type="file" #fileInput ng2FileSelect  (onFileSelected)="onFileSelected($event)" />
+                            </span>
+
+                          </div>
+                          <div class="heading-text drag">Drag & Drop here</div>
+                          <div class="file-upload-text">or </div>
+                          <strong (click)="fileInput.click()" class="browse">Browse Files</strong>
+                          <div class="mt-5 heading-text-regular" >Max file size is 500kb. Supported file types are .csv and .xls</div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex  justify-content-center ml-3 mr-3 mb mt-5 mlr-8 col-12 text-style" >
+                           <div > <button type="button" class="but-lg  mt-1 mr-0 ml-0">Download Sample CSV</button></div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer mlr-8">
+          <button type="button" class="but-lg-can ml-0"  data-bs-dismiss="modal"  #closeAddExpenseModal>CANCEL</button>
+          <button type="button" class="but-lg mt-1 mr-0 ml-0"  data-bs-dismiss="modal" #closeAddExpenseModal>SAVE & ADD TRANSACTIONS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

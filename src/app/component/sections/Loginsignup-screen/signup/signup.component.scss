@@ -1,0 +1,174 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-control.is-invalid{
+    background-image: none !important;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.container-fluid{
+    background-color: #18243e !important;
+    height: 100vh;
+}
+
+.bold{
+    font-weight: 600;
+}
+.text-style{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: #101a2b; 
+}
+.login{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+.bt-lg{
+    padding: 7px 16px;
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+    font-family:'Source Sans Pro', sans-serif !important;
+    font-weight: 600;
+    background-color: #003b7c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: .22px;
+    line-height: 0%;
+    }
+.bt-lg-login{
+    padding: 11px 16px;
+    font-size: 14px;
+    font-family:'Source Sans Pro', sans-serif !important;
+    font-weight: 600;
+    background-color: #003b7c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: .22px;
+    line-height: 0%;
+    width: 141px;
+    height: 40px;
+}
+label{
+   font-family:'Source Sans Pro', sans-serif !important;
+   font-weight: 600;
+   font-size: 16px;
+   color: #18243e;
+}
+.form-control{
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #cbced4;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+.form-control:focus{
+    outline: none !important;
+    border: solid 1px #cbced4;
+}
+.btn-eye{
+    background-color:white;
+    cursor: pointer;
+    height: 40px;
+    padding: 0px 5px;
+    border-top: solid 1px #cbced4;
+    border-bottom: solid 1px #cbced4;
+    border-right: solid 1px #cbced4;
+    color: #607d8b;
+    border-radius: 4px;   
+}  
+.material-icons-outlined{
+    font-size: 24px;
+}
+.signup-section{
+    background-color: white;
+    padding: 31px 48px 32px 48px;
+}
+.eye{
+   color: #607d8b;
+}
+.hidden{
+   border-right: solid 1px #cbced4;
+
+}
+.form-group .input-group{
+    border-bottom: none !important;
+}
+.first-sec-pad{
+    padding: 70px 46px 36px 46px;
+    background-color: #d7e0e5;
+}
+.trans{
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.account{
+    padding-top: 265px;
+}
+.fa-eye,.fa-eye-slash{
+   padding-top: 10px !important;
+}
+@media screen and (max-width: 767px) {
+    .trans{
+        transform: unset;
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+    .container-fluid{
+        background-color: #18243e !important;
+        height: 145vh;
+    }
+    .account{
+        padding-top: 0px;
+    }
+    .first-sec-pad{
+        padding: 30px 26px 26px 26px;
+    }
+    .signup-section{
+        padding: 30px 26px 26px 26px;
+    }
+    .float-end{
+        float: left !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:850px) {
+    .trans{
+        transform: unset;
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+    .container-fluid{
+        background-color: #18243e !important;
+        height: 140vh;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .account{
+        padding-top: 0px;
+    }
+    .first-sec-pad{
+        padding-top: 50px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .first-sec-pad{
+        background-color: #d7e0e5;
+    }
+    .login{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

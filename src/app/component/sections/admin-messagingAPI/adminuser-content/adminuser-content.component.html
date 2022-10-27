@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div id="title" class="admin-header col-md-6"> Admin/Users/Messaging APIs</div>
+    <div class=" col-md-6">
+        <button class="btn-acc btn mb-3 mt-3 mt-md-0 float-end cursorsetting" type="button" data-bs-toggle="modal" data-bs-target="#admininviteModal">Invite Users</button>
+    </div>
+</div>
+<div class=" row">
+    <div id="total-request" class="col-md-4 col-lg-2">
+     <div class="request-style ">
+        <div class="no1 ms-3" >4      
+        <span class="material-icons-outlined standard-green">  </span>
+       <div class="Select   ">Total Requests</div> </div> 
+     </div>
+        
+  </div>
+  <div id="active-sandbox" class="col-md-4 col-lg-2 mt-3 mt-md-0" >
+  <div class="request-style">
+    <div class="no1 ms-3" >1  
+    <span class="material-icons-outlined standard-green">  </span>
+   <div class="Select   ">Active Sandboxes</div> </div> 
+  </div>
+</div>
+<div id="companies" class="col-md-4 col-lg-2 mt-3 mt-md-0" >
+    <div class="request-style">
+        <div class="no1 ms-3" >3 
+        <span class="material-icons-outlined standard-green">  </span>
+       <div class="Select   ">Companies</div> </div> 
+    </div>
+</div>
+
+</div>
+<div class="mt-3">
+  <app-table-adminuser [tableHead]="tableadminHead2" [tableValues]="tableadminValues2" ></app-table-adminuser> 
+  </div>
+</div>
+<div>
+  <app-adminpopup-inviteuser></app-adminpopup-inviteuser>
+</div>

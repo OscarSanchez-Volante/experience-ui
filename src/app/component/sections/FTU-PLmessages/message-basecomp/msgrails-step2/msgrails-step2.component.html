@@ -1,0 +1,39 @@
+
+        <div class="container-fluid">
+        <div class="row mt-5">
+        <div class="col ">
+            <p class="mb-0 Paymentrail"> 
+               <!-- {{selected.title}} -->
+               Message Creators
+              </p>
+            
+             <div class="row  ">
+                <div class="col ">
+                    <p class="Select">
+                        Select and configure the message creators that your institution would like to review and evaluaite ont he Volante VolPay service. You only need to configure one rail to get started, and can configure additional rails later as needed.                    </p>
+                </div>
+                       
+             </div>
+                        
+                      <div class="row ">  
+                            <label class=" Payment">Select up to 2 message creators</label>
+                      
+                        <div class="col-md-4 mb-2  ">
+                         <button class=" bt-lg-next" >Launch Sandbox</button>
+                        </div>
+                        </div>
+                    </div>
+     
+ 
+  </div>
+
+      <div class="row">
+        <div class="col">
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <app-rail-accordion *ngFor="let data of accordianData" [data]="data"  class="accordion accordion-default"></app-rail-accordion>
+    
+  </div>
+        </div>
+    </div>
+    </div>
+

@@ -1,0 +1,21 @@
+<div *ngIf="currentUrl !=='/ftuInitPayments11.0'" class="pt-2 pb-2 side-pane">
+    <div class="line mt-4 d-md-block d-none" [ngClass]="data.length == 3 ? 'linestraight':'line1'" > </div>
+    <div class="mobLine mt-4 d-block d-md-none" [ngClass]="data.length == 3 ? 'linestraight':'line1'" > </div>
+    <div *ngFor="let trans of data;let i = index">         
+        <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + trans.id"  [ngClass]="active == trans.name ? 'active' : ''" class="mt-2 text-semi submenu">
+
+          	<div class="dot mt-0" [ngClass]="{'dot' : trans.status === 'initial','dot1' : trans.status === 'pending'}" [attr.id]="i"></div><div class="transaction" >{{trans.name}}</div></div>
+      </div>        
+    </div>       
+
+    <div *ngIf="currentUrl=='/ftuInitPayments11.0'" class="pt-2 pb-2 side-pane">
+      <div class="vertadd mt-4 vertical1add"> </div>
+      <div *ngFor="let trans of data;let i = index">         
+          <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + trans.id"  [ngClass]="active == trans.name ? 'active' : ''" class="mt-2 text-semi submenu">
+
+          	<div class="dot mt-0" [ngClass]="{'dot' : trans.status === 'initial','dot1' : trans.status === 'pending'}" [attr.id]="i"></div><div class="transaction" >{{trans.name}}</div></div>
+      </div>        
+    </div>  
+
+    
+ 

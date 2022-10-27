@@ -1,0 +1,88 @@
+
+
+ul.tree:before {
+  border-left: none;
+}
+.tree li:last-child:before {
+  height: auto;
+  top: 1em;
+  bottom: 0;
+}
+.tree li {
+  margin: 0;
+  padding: 0 1.5em;
+  line-height: 2em;
+  position: relative;
+}
+
+
+.treeselect li:last-child:before {
+  background: #f8f9fb;
+}
+.treerevieworder li:last-child:before {
+  background: #f3f3f5;
+}
+.treevolmain li:last-child:before {
+  background: white;
+}
+
+ul.tree>li:before {
+  border-top: none;
+}
+
+.tree li:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 0;
+  border-top: 1px dashed;
+  margin-top: -1px;
+  position: absolute;
+  top: 1em;
+  left: 4px;
+}
+.tree:before, .tree ul:before {
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  border-left: 1px dashed;
+}
+.tree, .tree ul {
+  padding: 0;
+  list-style: none;
+  color: #343a40;
+  position: relative;
+}
+.contentMain {
+  display: none;
+}
+.treetextstyle{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+
+}
+.treetextstylechild{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

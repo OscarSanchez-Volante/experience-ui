@@ -1,0 +1,32 @@
+<div class="table-height "> 
+  <table class="table" aria-describedby="table-eg">
+  
+    <thead class="col-font">
+      <tr class="bg-white">     
+       
+        <th  *ngFor="let th of tableHead"  (click)="sortData ( th.fieldName)" >{{th.label}} <em *ngIf="(selectedColumn==th.fieldName && sortDir==1)" class="pi pi-arrow-up pi-size" ></em><em *ngIf="(selectedColumn==th.fieldName && sortDir==-1)" class="pi pi-arrow-down pi-size" ></em></th> 
+      </tr>
+    </thead>
+    <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+      
+     
+      <tr *ngFor="let td of tableValues | searchFilter: searchText | paginate: { itemsPerPage: pageSize, currentPage: p } ;let i=index">
+    
+        <td  *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' ||th1.fieldName=='ID' || th1.fieldName=='Amount' || th1.fieldName=='Download' ? 'table-primary-clr':''"><span *ngIf= "th1.fieldName!=='Download'" [ngClass]="{'high':td[th1.fieldName]=='High','medium':td[th1.fieldName]=='Medium','info':td[th1.fieldName]=='Info'}">{{td[th1.fieldName]}}</span><span *ngIf= "th1.fieldName=='Download'"><span class="xls-style">XLS</span> <span class="pdf-style">PDF</span></span> 
+        
+        </td> 
+      
+        <td *ngIf="iconShow?.edit" >
+          <span class="material-icons"  >delete</span>
+        </td> 
+      </tr>
+  
+    </tbody>
+       
+  </table>
+
+  
+  <div class="margin" *ngIf="!tableValues || tableValues.length==0" >
+      <app-no-dataoutput [contain]="contain"></app-no-dataoutput>
+  </div>
+</div>

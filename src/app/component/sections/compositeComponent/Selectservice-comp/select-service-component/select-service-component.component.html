@@ -1,0 +1,100 @@
+<div class="header">
+  <app-header *ngIf="currentUrl=='/selectService1-4.1'"></app-header>
+</div>
+<div class="row m-0" *ngIf="currentUrl=='/selectService1-4.1'">
+    <div class="px-1 position-fixed backforsidebar d-none d-md-block" id="sticky-sidebar">
+      <app-sidebar ></app-sidebar>
+     </div>
+     <div class="mobView d-md-none d-block" id="sticky-sidebar">
+      <app-sidebar ></app-sidebar>
+     </div>
+     <div id="content" class="col">
+       <div class="container-fluid selectPadding py-0 mt-md-5 mt-2">
+       <div class="col-md-12">
+        <p class="service">Select your Preferred Service</p>
+       </div>
+        <app-select-service [selectValue]="SelectValue" (newItemEvent)="data($event)"></app-select-service>
+         <div  >
+         <div *ngIf="selectedtext=='ADD PAYMENT SERVICES'">
+           <div class="col-md-12 p-0">
+            <div class="d-flex  mt-4">
+              <div class="col-md-6 col-xl-4 col-12">
+                <div class="text">
+                  <div class="box btn-lg w-100 text-center default-style">Default</div> </div>
+                 </div>
+              <div class="col-md-6 col-xl-8 col-12">
+                <div class="text">
+                <div class="box1 btn-lg w-100 text-center default-style">Add-Ons</div>
+              </div>
+              </div>
+        </div>
+           </div>
+       </div>
+       <div *ngIf="selectedtext!='ADD PAYMENT SERVICES'">
+                         </div>
+     </div>  
+       <div class="mb-5">
+        <app-small-card [data]="cardData" [checkBoxType]="type" ></app-small-card>
+       </div>
+      </div>   
+    </div>  
+</div>  
+
+<div class="mt-1" *ngIf="currentUrl=='/selectService0.1' || currentUrl=='/'">
+
+          <div class="">
+            <div class="">
+              <app-select-service [selectValue]="SelectValue" (newItemEvent)="data($event)"></app-select-service>
+            </div>
+          </div>
+           
+ 
+                
+            <div >
+
+                <div *ngIf="selectedtext=='ADD PAYMENT SERVICES'">
+                  <div class="row">
+                    <div class="col">
+                      <div class="my-2">
+                        <p class="service text-center mb-0 pt-4">SERVICES</p>
+                        <p class="Up text-center my-0">Select up to 1 or more add-ons.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                           <div class="d-flex mt-4">
+                    <div class="col-md-6 col-xl-4 col-12">
+                      <div class="text">
+                        <div class="box btn-lg w-100 text-center default-style">Default</div> </div>
+                    </div>
+                    <div class="col-md-6 col-xl-8 col-12">
+                      <div class="text">
+                      <div class="box1 btn-lg w-100 text-center default-style">Add-Ons</div>
+                    </div>
+                    </div>
+              </div>
+                    </div>
+                  </div>
+              </div>
+              <div *ngIf="selectedtext!='ADD PAYMENT SERVICES'">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="d-flex">
+                           <div class="col-md-6">
+                <div class="box btn-lg w-100 text-center mt-3 default-style">Included</div>
+              </div>
+                      </div>
+            </div>
+          </div>
+                </div>
+
+                      <div class="">
+            <div class="mb-5">
+              <app-small-card [data]="cardData" [checkBoxType]="type" ></app-small-card>
+            </div>
+          </div>
+
+       </div>
+</div> 
+        

@@ -1,0 +1,247 @@
+<div class="container-fluid p-4 px-0 px-md-4">
+  <div id="title" class="Payment">
+    Message Transformers
+</div>
+ 
+  <div id="description" class="Select">
+    Select and configure the transformers that your institution would like to review and evaluaite ont he Volante VolPay service. You only need to configure one rail to get started, and can configure additional rails later as needed.
+  </div>
+  <div id="dropdown-button" class="dropdown">
+    <button class="action-style form-select  form-control  Actiontxt-style dropdown" (change)="nextroute($event.target)"    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Launch Sandbox               
+    </button>
+    <div id="options" class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton1" >
+      <div id="creator"><a routerLink='/ftuMesssageAPI/MessagingDropdownCreators' class="dropdown-item Actiontxt-style"   >Creators</a></div>
+      <div id="transformer"><a routerLink='/ftuMesssageAPI/MessagingDropdownTransformers' class=" dropdown-item Actiontxt-style"  >Transformers</a></div>
+      <div id="validator"><a routerLink='/ftuMesssageAPI/MessagingDropdownValidators' class="dropdown-item Actiontxt-style"  >Validators</a></div>
+</div>
+  </div>
+<div class="drop">
+<label id="source" for="exampleInputEmail1" class="form-label mt-2">Source</label>
+<div class="tab-pane " id="collapseOne" >
+
+<div class="row">
+  <div class="row">
+  <div id="format" class="col-xl-3 col-lg-4">
+    <label  for="exampleInputEmail1" class="form-label ">Format <span class="mandatory">*</span></label>
+    <select class="form-select source" aria-label="Default select example">
+        <option selected>CBPR+</option>
+        <option >SWIFT</option>
+
+        <option >Swiss payments</option>
+
+        <option >TARGET2 RTGs</option>
+
+        <option>Volante Standard</option>
+
+      
+      </select>
+</div>
+<div id="version" class="col-xl-3 col-lg-4">
+    <label for="exampleInputEmail1" class="form-label ">Version <span class="mandatory">*</span></label>
+    <select class="form-select source" aria-label="Default select example">
+        <option selected>1.0</option>        
+      </select>
+</div>
+</div>
+<div class="row">
+<div id="Mandatoryname" class="col-xl-3 col-lg-4">
+  <label for="exampleInputEmail1" class="form-label ">Name <span class="mandatory">*</span></label>
+  <select class="form-select source" aria-label="Default select example">
+      <option selected>CBPR+</option>    
+    </select>
+</div>
+<div id="validate" class="col-xl-3 col-lg-4">
+  <label for="exampleInputEmail1" class="form-label ">Validation <span class="mandatory">*</span></label>
+  <select class="form-select source" aria-label="Default select example">
+      <option selected>— Select One —</option>
+      
+      
+      
+    </select>
+  </div>
+</div>
+<!-- <target> -->
+<label id="target" for="exampleInputEmail1" class="form-label">Target</label>
+<div class="row">
+<div id="format1" class="col-xl-3 col-lg-4">
+<label for="exampleInputEmail1" class="form-label ">Format <span class="mandatory">*</span></label>
+    <select class="form-select source" aria-label="Default select example">
+        <option id="target-cbpr" selected>CBPR+</option>
+        <option id="swift" >SWIFT</option>
+
+        <option id="swiss">Swiss payments</option>
+
+        <option id="rtg">TARGET2 RTGs</option>
+
+        <option id="standard">Volante Standard</option>
+
+      
+      </select>
+</div>
+<div  class="col-xl-3 col-lg-4">
+    <label id="version1" for="exampleInputEmail1" class="form-label ">Version <span class="mandatory">*</span></label>
+    <select class="form-select source" aria-label="Default select example">
+        <option id="version-1" selected>1.0</option>
+        
+        
+        
+      </select>
+</div>
+</div>
+<div class="row">
+<div id="name1" class="col-xl-3 col-lg-4">
+  <label for="exampleInputEmail1" class="form-label ">Name <span class="mandatory">*</span></label>
+  <select class="form-select source" aria-label="Default select example">
+      <option id="name-cbpr" selected>CBPR+</option>
+      
+      
+      
+    </select>
+</div>
+<div id="validation1" class="col-xl-3 col-lg-4">
+  <label for="exampleInputEmail1" class="form-label ">Validation <span class="mandatory">*</span></label>
+  <select class="form-select source" aria-label="Default select example">
+      <option id="select-one" selected>— Select One —</option>
+      
+      
+      
+    </select>
+  </div>
+</div>
+<!-- <advance> -->
+<div class="col-md-12">
+  <div class=" modal-content backg-color1 mt-4">
+    <div class="p-3">
+     <div class="d-flex">
+       <div class="col-md-10 ps-0"  data-bs-toggle="collapse" aria-label="Dropdown"
+       data-bs-target="#dropDown" >
+  <label id="advanced-option" class=" form-label mt-1">Advanced Options</label>
+ </div>
+ <div class="col-md-2"  data-bs-toggle="collapse" aria-label="Dropdown"
+ data-bs-target="#dropDown" >
+  <div class="d-flex justify-content-end mb-2">
+   <em class="fa fa-angle-down"></em>
+  </div>
+ </div>
+     </div>
+<div class="drop" id="dropDown">
+ <div class="row">
+   <div id="Include" class="col-xl-3 col-lg-4 mt-1">
+   <label for="exampleInputEmail1" class="form-label">Include Parsed Payload<span class="mandatory">*</span></label>
+   <select class="form-select" aria-label="Default select example">
+     <option selected>Never</option>
+     <option >OnError</option>
+     <option >Always</option>
+     
+   </select>
+   </div>
+   
+   <div id="Encode" class="col-xl-3 col-lg-4 mt-1">
+     <label for="exampleInputEmail1" class="form-label">Encode Payload as<span class="mandatory">*</span></label>
+     <select class="form-select" aria-label="Default select example">
+       <option selected>— None —</option>
+       
+     </select>
+     </div>
+   
+     <div id="Sendrequest" class="col-xl-3 col-lg-4 mt-1">
+       <label for="exampleInputEmail1" class="form-label">Send Request as<span class="mandatory">*</span></label>
+       <select class="form-select" aria-label="Default select example">
+         <option selected>Raw Message</option>
+         
+       </select>
+       </div>
+     </div>
+     
+     <div class="row ">
+     <div id="Cascadeerrors" class="col-xl-3 col-lg-4 mt-3">
+       <label for="exampleInputEmail1" class="form-label">Cascade Errors<span class="mandatory">*</span></label>
+       <select class="form-select" aria-label="Default select example">
+         <option selected>Disable</option>
+         <option >Enable</option>
+       </select>
+       </div>
+       <div id="Mapping" class="col-xl-3 col-lg-4 mt-3">
+         <label for="exampleInputEmail1" class="form-label">Mapping Options<span class="mandatory">*</span></label>
+         <select class="form-select" aria-label="Default select example">
+           <option selected>Disable</option>
+         </select>
+         </div>
+     </div>
+</div>
+    </div>
+</div>
+
+
+</div>
+<!-- <unknown> -->
+<h5 class="mt-3">Enter Payload below or Select File<span class="mandatory">*</span></h5>
+<div id="payload-content" class="col-lg-6">
+
+<div class="d-flex">
+<div class="col ps-0">
+<div class="text">
+<input type="text" class="form-control" placeholder="Browser">
+</div>
+</div>
+<div class="d-flex">
+  <div class="col float-end pe-0">
+    <button id="clear" class="btn-clear" type="button">clear</button>
+  <button id="transform" class="btn-acc ms-2" type="button" >Transform</button> 
+  </div>
+</div>
+</div>
+
+<textarea class="form-control mt-2 area-height" placeholder="Enter your payload here"  ></textarea>
+</div>
+<div class="col-lg-6 mt-3 mt-lg-0">
+<div class="d-flex">
+<div id="response" class="col ps-0">
+<h5>Response</h5>
+</div>
+<div class="col pe-0">
+<button id="clear" class="btn-acc float-end " type="button" >Clear</button> 
+</div>
+</div>
+<select id="status" class="form-select mt-2" aria-label="Default select example">
+<option selected>Status</option>
+</select>
+<select id="error" class="form-select error mt-2 " aria-label="Default select example">
+<option selected>Error
+</option>
+</select>
+<div class=" modal-content" >
+<div class="d-flex">
+<div class="col-10 col-md-10 col-lg-10 col-xl-11">
+  
+  <textarea class="form-control error-border area-height1"></textarea>
+</div>
+<div class="col-2 col-md-2 col-lg-2 col-xl-1 error-box p-2">
+
+<div class="row">
+<em class="fa fa-download mt-3" aria-hidden="true"></em>
+</div>
+<div class="row ">
+<em class="fa fa-clone mt-4" aria-hidden="true"></em>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<select id="output" class="form-select mt-2" aria-label="Default select example">
+<option selected>Output</option>
+</select>
+<select id="parsed-payload" class="form-select mt-2" aria-label="Default select example">
+<option selected>Parsed Payload</option>
+</select>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>

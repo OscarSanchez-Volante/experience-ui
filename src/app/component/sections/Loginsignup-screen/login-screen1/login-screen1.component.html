@@ -1,0 +1,70 @@
+<div class="container-fluid vh-100 bg-core">
+    <div class="row h-100">
+        <div class="col h-100">
+            <div class="container">
+                <div class="row">
+                     <div class="col-xl-8 col-lg-10 col-12 mx-auto">
+                         <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 first-sec-pad position-relative">
+                                    <img src="assets/vol-login-new-logo2.png" class="img-fluid" alt="Vol-Login">
+                                    <p class="text-style my-3 my-md-5">We are a global financial technology company, with two decades of experience serving as trusted strategic partners for financial institutions of all sizes.</p>
+                                    <div class="d-flex flex-wrap account">
+                                            <div class="col-md-7 p-0 mt-2">
+                                                <span class="text">Don't have an account?</span>
+                                            </div>
+                                            <div class="col-md-5 p-0">
+                                                <button class="bt-lg float-end mt-3 mt-md-0" routerLink="/signUp2.0">Request Account</button>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 login-section position-relative">
+                                    <div class="d-flex login">
+                                        <div class="text-decoration"> <a routerLink="/login0.1">
+                                            <span class="material-icons-outlined mt-1 backspace-color">keyboard_backspace</span> </a>
+                                        </div>
+                                        <div  class="content px-2 mt-1">{{userInfo.email}}</div>
+                                    </div>
+                                    <h5 class="bold login">Enter password</h5>
+                                    <form class="form-class" [formGroup]="registerForm" (ngSubmit)="formSubmit()">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                                            <div class="input-group">
+                                                <input [type]="password" formControlName="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="login.password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                                                </div>
+                                                <div class="input-group-addon btn-eye" *ngIf="!(submitted && f.password.errors)" [ngClass]="{ 'hidden': !(submitted && f.password.errors) }" > 
+                                                    <span (click)="onSubmit()" class="eye">
+                                                        <span class="material-icons mt-2"  *ngIf="show">visibility</span>
+                                                        <span class="material-icons mt-2" *ngIf="!show">visibility_off</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="bold forgot forgot-btn">Forgot Password?</span>
+                                                <div class="col-lg-12 p-0 mt-3 mt-lg-0">
+                                                    <div class="padding">
+                                                        <button class="bt-lg-login bold">LOGIN</button>
+                                                    </div>       
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+
+
+
+
+
+
+
+
+
+

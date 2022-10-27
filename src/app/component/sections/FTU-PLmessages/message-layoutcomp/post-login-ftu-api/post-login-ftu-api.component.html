@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-12">
+          <div class="row letsback p-5">
+             <div class="col">
+              <p class="lets">Welcome {{userInfo.firstName}} {{userInfo.lastName}}, Let’s setup your Volante API Catalog </p>
+             </div>
+          </div>
+          <div class=" row ftuapi-background pt-3">
+              <div class=" col d-flex flex-wrap justify-content-center bd-highlight ">
+                  <div class="p-2 bd-highlight ">
+                    <div class="col">
+                        <p class="accyour d-flex">Your Account</p>
+                      </div>
+                         <div class="d-flex flex-wrap justify-content-center  bd-highlight ">
+                          <div id="institution-name" class="p-2 bd-highlight col">
+                              <strong class="title">Institution Name</strong>
+                              <div class="mt-2 content">{{userInfo.institutionName}}</div>
+                          </div>
+                          <div id="user-name" class="p-2 bd-highlight col">
+                              <strong class="title">Name</strong>
+                              <div class="mt-2 content">{{userInfo.firstName}} {{userInfo.lastName}}</div>
+                          </div>
+                          <div id="phone-number" class="p-2 bd-highlight col">
+                              <strong class="title">Phone</strong>
+                              <div class="mt-2 content">{{userInfo.contactNumber}}</div>
+                          </div>
+                          <div id="mail-id" class="p-2 bd-highlight col">
+                              <strong class="title">Email</strong>
+                              <div class="mt-2 content">{{userInfo.email}}</div>
+                          </div>
+    
+                        </div>
+                  </div>
+                  <div class="p-2 bd-highlight">
+                      <div class="p-2 bd-highlight">
+                          <img src="assets/icons-interactions.png" alt="" >
+      
+                      </div>
+                  </div>
+                </div>
+              </div>           
+          </div>
+      </div>
+  
+          <div class="container-fluid ">
+              <div class="d-flex flex-wrap justify-content-center mt-5 mb-5">
+                  <div class="bd-highlight">
+                      <button class=" button-boxsize button-stable button-clear cursorstyle" data-bs-toggle="modal" data-bs-target="#ModalMessagingApi">
+                          <img src="assets/icons-payment.png" alt=""><h5 class="servicecss" >Your Messaging APIs</h5>
+                          </button>
+      
+                  </div>
+                  <div class="bd-highlight">
+                      <button id="messagingHome" class=" button-boxsize  button-stable button-clear" data-bs-toggle="modal" data-bs-target="#ModalMessaginghome">
+                          <img src="assets/icons-dashboard.png" alt=""><h5 class="servicecss" >Messaging Home</h5>
+                          </button>
+                  </div>
+                </div>
+          </div>
+         
+         
+          <div class="fixed-bottom row m-0 p-0 footer-api">
+             
+            
+            <div class="col-md-12 pt-3 pb-3">
+              <div class="float-end">
+              <button class="bt-lg-login">Cancel</button> 
+           
+              <button class="bt-lg-next" >Next</button>
+           
+            </div>
+            </div>
+          </div></div>
+          <div>
+  <app-modal-messagingapi (someEvent)="onShow()"></app-modal-messagingapi>
+  </div>
+  <div>
+      <app-modal-messaginghome></app-modal-messaginghome>
+  </div>
+  
+  
+  
+      
+  
+  
+  
+  
+  
+  

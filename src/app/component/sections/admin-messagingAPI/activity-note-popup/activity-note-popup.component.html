@@ -1,0 +1,53 @@
+
+  <div class="p-0">
+    <div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
+      <div id="dialog-activity" class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content backg-color1" >
+          <div id="head-activity" class="modal-header mlr-8 ">
+            <h4 class="modal-title admintitle p-0" id="activityModalLabel">Activity Note</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+  
+          <div id="body-activity" class="modal-body  backg-color" >
+            <div  class="ml-4 mr-2  m-body">
+              <div class="row m-0">
+                <div class="col-md-12 layout-margin p-4" >
+                  <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                      <select  class="form-select  but-pro " aria-label="Default select example">
+                        <option id="status">Status Updated to  </option>
+                        <option id="acc-provision">Account Provisioned</option>
+                       </select>
+                    </div>
+                  </div>
+                    <input type="text" class="form-control mt-3" placeholder="Note">
+                  
+                        <div class=" mt-3  " >
+                          <div ng2FileDrop (fileOver)="fileOverBase($event)"  class="file-cust">
+                            <span id="upload" class="material-icons-outlined cloudicon_style">
+                              cloud_upload
+                              </span>
+                            <div class="col-sm-9">
+                              <span id="file" class="hidden-file">
+                                <input type="file" #fileInput ng2FileSelect  (onFileSelected)="onFileSelected($event)" />
+                              </span>
+                             
+                            </div>
+                            <div id="drag-drop" class="heading-text drag">Drag & Drop here</div>
+                            <div class="file-upload-text">or </div>
+                            <strong (click)="fileInput.click()" class="browse" >Browse Files</strong>
+                            <div class="mt-5 heading-text-regular" >Accepted File Types: .pdf, .xls(x), .csv  |  Maximum size: 3 GB</div>
+                          </div>
+                        </div>             
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-footer mlr-8">
+            <button id="cancel" type="button" class="activityCancel"  data-bs-dismiss="modal"  #closeAddExpenseModal>CANCEL</button>
+            <button id="save" type="button" class="activitySave"  data-bs-dismiss="modal" #closeAddExpenseModal>SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 

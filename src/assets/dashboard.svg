@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>16597086-AB6E-4ADB-9796-357EB7581D4B</title>
+    <defs>
+        <linearGradient x1="49.9939372%" y1="96.78525%" x2="49.9939372%" y2="7.63021384%" id="linearGradient-1">
+            <stop stop-color="#F5F8FF" offset="0%"></stop>
+            <stop stop-color="#D8E0EB" offset="99.13%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.524193548%" y1="49.7896045%" x2="99.9193548%" y2="49.7896045%" id="linearGradient-2">
+            <stop stop-color="#FF66A9" offset="0%"></stop>
+            <stop stop-color="#F53689" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="23.4033029%" y1="9.12431108%" x2="78.7050374%" y2="92.4678506%" id="linearGradient-3">
+            <stop stop-color="#0055B3" offset="0%"></stop>
+            <stop stop-color="#003B7C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M86.88,3.77 C87.875,3.77 88.759,3 88.759,1.89 C88.759,0.89 87.985,0 86.88,0 C85.774,0.11 85,0.89 85,2 C85,3 85.774,3.77 86.88,3.77 Z" id="path-4"></path>
+        <filter x="-385.7%" y="-252.0%" width="871.5%" height="869.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.11372549   0 0 0 0 0.294117647   0 0 0 0 1  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0.116890707%" y1="50.0437956%" x2="97.3115137%" y2="50.0437956%" id="linearGradient-6">
+            <stop stop-color="#FF66A9" offset="0%"></stop>
+            <stop stop-color="#F53689" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.6694633%" y1="20.7180761%" x2="69.7347365%" y2="73.9528057%" id="linearGradient-7">
+            <stop stop-color="#E81778" offset="0%"></stop>
+            <stop stop-color="#E01F79" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.02008318%" y1="50.3798543%" x2="99.8383834%" y2="50.3798543%" id="linearGradient-8">
+            <stop stop-color="#288EFF" offset="0%"></stop>
+            <stop stop-color="#023F83" offset="99.9855715%"></stop>
+            <stop stop-color="#003B7C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="23.5560848%" y1="9.12431108%" x2="78.5401443%" y2="92.4678506%" id="linearGradient-9">
+            <stop stop-color="#0055B3" offset="0%"></stop>
+            <stop stop-color="#003B7C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M27.838,70.571 C27.838,72 27.648,73.333 27.268,74.571 C25.843,79.429 21.853,83.143 16.817,84.286 C15.867,84.476 14.917,84.571 13.872,84.571 C6.271,84.571 0,78.286 0,70.571 C0,62.857 6.271,56.571 13.967,56.571 C21.663,56.571 27.838,62.857 27.838,70.571 Z" id="path-10"></path>
+        <filter x="-52.1%" y="-33.9%" width="204.2%" height="203.6%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.11372549   0 0 0 0 0.294117647   0 0 0 0 1  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="15.1002506%" y1="22.5915031%" x2="74.3107769%" y2="72.4203301%" id="linearGradient-12">
+            <stop stop-color="#002956" offset="0%"></stop>
+            <stop stop-color="#0050A8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.0697307%" y1="77.7913896%" x2="23.1063879%" y2="-17.0633532%" id="linearGradient-13">
+            <stop stop-color="#C2D1FF" offset="1.13208%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="111.264452%" y1="139.783978%" x2="-0.243008099%" y2="-22.8322832%" id="linearGradient-14">
+            <stop stop-color="#C2D1FF" offset="1.13208%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="245.678424%" y1="172.481612%" x2="9.41846078%" y2="25.990091%" id="linearGradient-15">
+            <stop stop-color="#C2D1FF" offset="1.13208%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="101.573815%" y1="90.793482%" x2="49.1165395%" y2="50.8511692%" id="linearGradient-16">
+            <stop stop-color="#C2D1FF" offset="1.13208%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="80.1028701%" y1="93.0229573%" x2="12.4156953%" y2="25.3232273%" id="linearGradient-17">
+            <stop stop-color="#FFC9E3" offset="1.13208%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="UX-VLT-23.22.21.20.18.5-MUX-VolPay-Sanbox-Proto-v1.0-2021-05-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5.0-VLT-21-Exec-Dashboard-2021-10-20" transform="translate(-516.000000, -142.000000)">
+            <g id="Payment-Rails" transform="translate(294.000000, 86.000000)">
+                <g id="Group-4" transform="translate(0.000000, 32.000000)">
+                    <g id="Icons-/-Dashboard" transform="translate(222.000000, 24.000000)">
+                        <g id="05-copy" transform="translate(0.000000, 9.000000)">
+                            <path d="M62.423,100.667 C88.5,100.667 109.64,79.475 109.64,53.333 C109.64,27.192 88.5,6 62.423,6 C36.343,6 15.202,27.192 15.202,53.333 C15.202,79.475 36.343,100.667 62.423,100.667 Z" id="Path" fill="#EAEEF9" fill-rule="nonzero"></path>
+                            <path d="M82.565,100.857 C75.819,101.048 67.648,100.857 61.948,100.762 C56.247,100.857 48.076,101.048 41.33,100.857 C47.981,97.048 50.356,89.905 50.736,85.238 L73.159,85.238 C73.634,89.905 75.914,97.048 82.565,100.857 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                            <path d="M41.995,102 L81.995,102 C82.565,102 83.04,101.524 83.04,100.952 C83.04,100.381 82.565,99.905 81.995,99.905 L41.995,99.905 C41.425,99.905 40.95,100.381 40.95,100.952 C40.95,101.524 41.425,102 41.995,102 Z" id="Path" fill="#EBF0F6" fill-rule="nonzero"></path>
+                            <path d="M104.42,25.81 L104.42,84.476 C104.42,85.905 103.28,86.952 101.95,86.952 L22.328,86.952 C20.903,86.952 19.857,85.81 19.857,84.476 L19.857,25.81 C19.857,24.381 20.998,23.333 22.328,23.333 L101.95,23.333 C103.28,23.238 104.42,24.381 104.42,25.81 Z" id="Path" fill="#F5F8FF" fill-rule="nonzero"></path>
+                            <path d="M104.42,25.81 L104.42,76.286 L19.857,76.286 L19.857,25.81 C19.857,24.381 20.998,23.333 22.328,23.333 L101.95,23.333 C103.28,23.238 104.42,24.381 104.42,25.81 Z" id="Path" fill="#172D45" fill-rule="nonzero"></path>
+                            <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="101.19 26.476 22.708 26.476 22.708 73.524 101.19 73.524"></polygon>
+                            <path d="M27.363,31.81 C28.045,31.81 28.598,31.255 28.598,30.571 C28.598,29.888 28.045,29.333 27.363,29.333 C26.681,29.333 26.128,29.888 26.128,30.571 C26.128,31.255 26.681,31.81 27.363,31.81 Z" id="Path" fill="#FD724F" fill-rule="nonzero"></path>
+                            <path d="M31.354,31.81 C32.036,31.81 32.589,31.255 32.589,30.571 C32.589,29.888 32.036,29.333 31.354,29.333 C30.672,29.333 30.119,29.888 30.119,30.571 C30.119,31.255 30.672,31.81 31.354,31.81 Z" id="Path" fill="#FFCB00" fill-rule="nonzero"></path>
+                            <path d="M35.344,31.81 C36.027,31.81 36.58,31.255 36.58,30.571 C36.58,29.888 36.027,29.333 35.344,29.333 C34.662,29.333 34.109,29.888 34.109,30.571 C34.109,31.255 34.662,31.81 35.344,31.81 Z" id="Path" fill="#7ED171" fill-rule="nonzero"></path>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="101.19 34.667 39.62 34.667 27.078 34.667 22.708 34.667 22.708 73.524 39.62 73.524 39.62 35.238 101.19 35.238"></polygon>
+                            <path d="M31.354,43.048 C32.508,43.048 33.444,42.11 33.444,40.952 C33.444,39.795 32.508,38.857 31.354,38.857 C30.2,38.857 29.264,39.795 29.264,40.952 C29.264,42.11 30.2,43.048 31.354,43.048 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M37.055,46.19 L25.558,46.19 C25.273,46.19 25.083,46 25.083,45.714 C25.083,45.429 25.273,45.238 25.558,45.238 L37.055,45.238 C37.34,45.238 37.53,45.429 37.53,45.714 C37.625,45.905 37.34,46.19 37.055,46.19 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M37.055,49.143 L25.558,49.143 C25.273,49.143 25.083,48.952 25.083,48.667 C25.083,48.381 25.273,48.19 25.558,48.19 L37.055,48.19 C37.34,48.19 37.53,48.381 37.53,48.667 C37.625,48.857 37.34,49.143 37.055,49.143 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M37.055,52.095 L25.558,52.095 C25.273,52.095 25.083,51.905 25.083,51.619 C25.083,51.333 25.273,51.143 25.558,51.143 L37.055,51.143 C37.34,51.143 37.53,51.333 37.53,51.619 C37.625,51.81 37.34,52.095 37.055,52.095 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M37.055,55.048 L25.558,55.048 C25.273,55.048 25.083,54.857 25.083,54.571 C25.083,54.286 25.273,54.095 25.558,54.095 L37.055,54.095 C37.34,54.095 37.53,54.286 37.53,54.571 C37.625,54.762 37.34,55.048 37.055,55.048 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M37.055,58 L25.558,58 C25.273,58 25.083,57.81 25.083,57.524 C25.083,57.238 25.273,57.048 25.558,57.048 L37.055,57.048 C37.34,57.048 37.53,57.238 37.53,57.524 C37.625,57.714 37.34,58 37.055,58 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M31.544,60.952 L25.463,60.952 C25.273,60.952 25.083,60.762 25.083,60.571 L25.083,60.286 C25.083,60.095 25.273,59.905 25.463,59.905 L31.544,59.905 C31.734,59.905 31.924,60.095 31.924,60.286 L31.924,60.571 C31.829,60.762 31.734,60.952 31.544,60.952 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M61.948,84 C63.102,84 64.038,83.062 64.038,81.905 C64.038,80.748 63.102,79.81 61.948,79.81 C60.793,79.81 59.857,80.748 59.857,81.905 C59.857,83.062 60.793,84 61.948,84 Z" id="Path" fill="#CED7E2" fill-rule="nonzero"></path>
+                            <path d="M120,22.571 C120,23.524 119.9,24.381 119.71,25.333 C119.71,25.429 119.71,25.429 119.71,25.524 C118.76,29.524 115.82,32.857 112.11,34.286 C111.92,34.381 111.83,34.381 111.64,34.476 C110.4,34.952 109.07,35.143 107.65,35.143 C100.81,35.143 95.2,29.524 95.2,22.667 C95.2,15.81 100.81,10.19 107.65,10.19 C114.49,10.19 120,15.714 120,22.571 Z" id="Path" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                            <g id="Path" fill-rule="nonzero">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                <use fill="url(#linearGradient-3)" xlink:href="#path-4"></use>
+                            </g>
+                            <path d="M115.88,62.77 C116.875,62.77 117.759,62 117.759,60.89 C117.759,59.89 116.985,59 115.88,59 C114.774,59.11 114,59.89 114,61 C114,62 114.774,62.77 115.88,62.77 Z" id="Path-Copy" fill="url(#linearGradient-6)" fill-rule="nonzero"></path>
+                            <path d="M9.88,50.77 C10.875,50.77 11.759,50 11.759,48.89 C11.759,47.89 10.985,47 9.88,47 C8.774,47.11 8,47.89 8,49 C8,50 8.774,50.77 9.88,50.77 Z" id="Path-Copy-2" fill="url(#linearGradient-6)" fill-rule="nonzero"></path>
+                            <path d="M119.71,25.333 C119.71,25.429 119.71,25.429 119.71,25.524 C118.76,29.524 115.82,32.857 112.11,34.286 C111.92,34.381 111.83,34.381 111.64,34.476 L103.75,26.571 L104.89,22.571 L104.8,21.048 L106.89,17.714 L108.88,16.762 L112.97,18.476 L119.71,25.333 Z" id="Path" fill="url(#linearGradient-7)" fill-rule="nonzero"></path>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="49.216 56.476 44.845 56.476 44.845 67.048 49.216 67.048"></polygon>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="59.952 51.619 55.582 51.619 55.582 67.048 59.952 67.048"></polygon>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="70.689 56.476 66.318 56.476 66.318 67.048 70.689 67.048"></polygon>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="81.425 44.19 77.055 44.19 77.055 67.048 81.425 67.048"></polygon>
+                            <polygon id="Path" fill="#E6EDF5" fill-rule="nonzero" points="92.16 51.333 87.79 51.333 87.79 67.048 92.16 67.048"></polygon>
+                            <polygon id="Path" fill="#CED7E2" fill-rule="nonzero" points="49.216 64.667 44.845 64.667 44.845 67.048 49.216 67.048"></polygon>
+                            <polygon id="Path" fill="#CED7E2" fill-rule="nonzero" points="59.952 63.619 55.582 63.619 55.582 67.048 59.952 67.048"></polygon>
+                            <polygon id="Path" fill="#CED7E2" fill-rule="nonzero" points="70.689 64.667 66.318 64.667 66.318 67.048 70.689 67.048"></polygon>
+                            <polygon id="Path" fill="#CED7E2" fill-rule="nonzero" points="81.425 61.905 77.055 61.905 77.055 67.048 81.425 67.048"></polygon>
+                            <polygon id="Path" fill="#CED7E2" fill-rule="nonzero" points="92.16 63.524 87.79 63.524 87.79 67.048 92.16 67.048"></polygon>
+                            <path d="M47.411,65.429 C45.511,65.429 43.895,64.857 42.945,64.571 C42.185,64.286 41.805,63.524 41.995,62.762 C42.28,62 43.04,61.619 43.8,61.81 C46.366,62.667 49.406,63.333 52.066,60.381 L52.827,59.524 C56.247,55.81 58.242,53.619 64.513,57.048 C69.549,59.905 71.354,58.857 73.349,55.619 C74.109,54.286 74.679,52.857 75.249,51.524 C76.294,48.857 77.34,46.095 80.19,46.476 L80.38,46.476 C83.135,46.762 86.46,47.143 90.64,41.333 C91.21,40.476 91.78,39.905 92.26,39.429 C92.83,38.857 93.78,38.952 94.25,39.524 C94.82,40.095 94.73,41.048 94.16,41.524 C93.78,41.81 93.4,42.381 92.92,43.048 C87.89,50.095 83.04,49.619 80.095,49.333 L79.905,49.333 C79.24,49.238 78.67,50.476 77.91,52.571 C77.34,54 76.77,55.619 75.819,57.143 C72.779,62.191 69.074,62.857 63.183,59.619 C58.907,57.238 58.337,57.905 55.012,61.524 L54.157,62.476 C51.971,64.857 49.501,65.429 47.411,65.429 Z" id="Path" fill="url(#linearGradient-8)" fill-rule="nonzero"></path>
+                            <path d="M50.736,42.095 L44.941,42.095 C44.465,42.095 44.18,41.714 44.18,41.333 C44.18,40.857 44.56,40.571 44.941,40.571 L50.736,40.571 C51.211,40.571 51.496,40.952 51.496,41.333 C51.496,41.81 51.116,42.095 50.736,42.095 Z" id="Path" fill="#E6EDF5" fill-rule="nonzero"></path>
+                            <path d="M55.962,45.81 L44.941,45.81 C44.465,45.81 44.18,45.429 44.18,45.048 C44.18,44.571 44.56,44.286 44.941,44.286 L55.867,44.286 C56.342,44.286 56.627,44.667 56.627,45.048 C56.722,45.429 56.342,45.81 55.962,45.81 Z" id="Path" fill="#E6EDF5" fill-rule="nonzero"></path>
+                            <g id="Path" fill-rule="nonzero">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                                <use fill="url(#linearGradient-9)" xlink:href="#path-10"></use>
+                            </g>
+                            <path d="M27.268,74.571 C25.843,79.429 21.853,83.143 16.817,84.286 L8.266,75.714 L9.406,74.667 L8.171,73.429 L10.071,72 L17.482,66.857 L18.337,65.81 L27.268,74.571 Z" id="Path" fill="url(#linearGradient-12)" fill-rule="nonzero"></path>
+                            <path d="M16.773,70.186 L18.103,70.186 C18.388,70.186 18.578,70.376 18.578,70.662 L18.578,75.424 C18.578,75.71 18.388,75.9 18.103,75.9 L16.773,75.9 C16.488,75.9 16.297,75.71 16.297,75.424 L16.297,70.662 C16.297,70.376 16.488,70.186 16.773,70.186 Z" id="Path" fill="url(#linearGradient-13)" fill-rule="nonzero"></path>
+                            <path d="M12.782,72.567 L14.112,72.567 C14.397,72.567 14.587,72.757 14.587,73.043 L14.587,75.424 C14.587,75.71 14.397,75.9 14.112,75.9 L12.782,75.9 C12.497,75.9 12.307,75.71 12.307,75.424 L12.307,73.043 C12.307,72.757 12.497,72.567 12.782,72.567 Z" id="Path" fill="url(#linearGradient-14)" fill-rule="nonzero"></path>
+                            <path d="M8.792,74.471 L10.122,74.471 C10.407,74.471 10.597,74.662 10.597,74.948 L10.597,75.424 C10.597,75.71 10.407,75.9 10.122,75.9 L8.792,75.9 C8.507,75.9 8.316,75.71 8.316,75.424 L8.316,74.948 C8.221,74.662 8.507,74.471 8.792,74.471 Z" id="Path" fill="url(#linearGradient-15)" fill-rule="nonzero"></path>
+                            <path d="M18.198,65.519 C18.388,65.519 18.578,65.71 18.578,65.9 L18.578,68.376 C18.578,68.471 18.483,68.567 18.388,68.567 L17.628,68.567 C17.533,68.567 17.438,68.471 17.438,68.376 L17.438,67.424 C14.872,69.9 11.832,71.9 8.506,73.329 C8.411,73.329 8.411,73.329 8.316,73.329 L8.221,73.233 L8.221,72.376 C8.221,72.281 8.316,72.186 8.411,72.186 C11.452,70.852 14.302,68.948 16.677,66.567 L15.632,66.567 C15.537,66.567 15.442,66.471 15.442,66.376 L15.442,65.614 C15.442,65.519 15.537,65.424 15.632,65.424 L18.198,65.519 Z" id="Path" fill="url(#linearGradient-16)" fill-rule="nonzero"></path>
+                            <path d="M112.35,23.002 L107.98,23.002 C107.79,23.002 107.6,22.811 107.6,22.621 L107.6,18.24 C107.6,17.859 107.32,17.669 107.03,17.573 L106.94,17.573 C103.99,17.954 102,20.716 102.38,23.669 C102.76,26.621 105.51,28.621 108.46,28.24 C110.83,27.954 112.73,26.049 113.02,23.669 C113.02,23.383 112.73,23.002 112.35,23.002 C112.45,23.002 112.35,23.002 112.35,23.002 Z" id="Path" fill="url(#linearGradient-17)" fill-rule="nonzero"></path>
+                            <path d="M108.74,17.097 L108.74,21.383 C108.74,21.669 108.93,21.859 109.22,21.859 L113.49,21.859 C113.78,21.859 113.97,21.669 113.97,21.383 C113.78,19.002 111.69,16.716 109.22,16.621 C108.93,16.526 108.74,16.716 108.74,17.097 C108.74,17.002 108.74,17.097 108.74,17.097 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <line x1="14.727" y1="100.762" x2="111.83" y2="100.762" id="Path" stroke="#EBF0F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

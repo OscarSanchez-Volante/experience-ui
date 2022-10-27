@@ -1,0 +1,85 @@
+.admin-header{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101a2b;
+  }
+  .btn-acc{
+  
+      font-size: 15px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      background-color: #003b7c;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: .22px;
+      line-height: 0%;
+      }
+      .btn{
+    
+          height: 38px;
+          border-radius: 20px;
+          border: solid 1px #cbced4;
+          }
+  
+          .no1{
+  
+              font-family: 'Source Sans Pro', sans-serif !important;
+              font-size: 54px;
+              font-weight: 700;
+              color: #00875a;
+              }
+  
+  .Select {
+    
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+  }
+  .request-style{
+      border: 1px solid lightgray; 
+       background-color: #e6ebf2;
+        border-radius: 5px; 
+        height: 7rem;
+  }
+  .form-select{
+      font-family:  'Source Sans Pro', sans-serif !important;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #18243e;
+  }
+  .cursorsetting{
+    cursor: pointer;
+  }
+  .standard-green{
+    color: #00875a;
+  }
+  .curve{
+      border-radius: 18.5px;
+      height: 32px;
+  }
+  .material-icons{
+      color: #e30613;
+    }
+  .color-fontawesome{
+      color: #747c8b;
+  }
+  @media (max-width:767px){
+      .float-end{
+          float: left !important;
+      }
+  }

@@ -1,0 +1,22 @@
+
+    <div class="bg-volante-light" >
+      <div id="sidebar" class="setting mobView">
+        <app-timeline-tab [data]="timeLineData" [active]="active" (newItemEvent)="activeTab($event)"></app-timeline-tab>
+       </div>
+       <div class="fixed-bottom pt-2 pb-2 text-center border-top setting d-none d-md-block" >
+        <button class="bt-lg-login" (click)="exit()">Back</button> 
+        <button class="ml-4 bt-lg-next" (click)="next()" *ngIf="showBtn[0]">Next</button> 
+        <button class="ml-4 bt-lg-next" (click)="next()" *ngIf="showBtn[1]">Next</button>
+        <button class="ml-4 bt-lg-submit" (click)="next()" *ngIf="showBtn[2]">Submit</button>
+  
+    </div>
+    <div class="fixed-bottom pt-2 pb-2 text-center d-block d-md-none mob">
+      <button class="bt-lg-login" (click)="exit()">Back</button> 
+      <button class="ml-4 bt-lg-next" (click)="next()" *ngIf="showBtn[0]">Next</button>
+      <button class="ml-4 bt-lg-next" (click)="next()" *ngIf="showBtn[1]">Next</button>
+      <button class="ml-4 bt-lg-submit" (click)="next()" *ngIf="showBtn[2]">Submit</button>
+
+  </div>
+   </div>
+ 
+    

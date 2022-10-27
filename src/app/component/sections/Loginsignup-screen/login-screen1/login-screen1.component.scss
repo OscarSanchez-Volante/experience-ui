@@ -1,0 +1,216 @@
+.content{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #003b7c;
+  }
+  .form-control.is-invalid{
+      background-image: none !important;
+  }
+  .container{
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
+  }
+  .bg-core{
+      background-color: #18243e;
+  }
+
+  h5{
+      font-size: 20px;
+  }
+  .bold{
+      font-weight: 700;
+  }
+  .text-style{
+      font-size: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.4;
+      letter-spacing: 0.2px;
+      color: #101a2b;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+  }
+  .login{
+      font-size: 20px;
+      font-weight: 600 !important;
+  }
+  .bt-lg{
+      height: 36px;
+      padding: 7px 16px;
+      width: 135px;
+      font-size: 14px;
+      font-family:'Source Sans Pro', sans-serif !important;
+      font-weight: 600;
+      background-color: #003b7c;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: .22px;
+      line-height: 0%;
+  }
+  .bt-lg-login{  
+      padding: 11px 16px;
+      width: 100px;
+      height: 40px;
+      font-size: 14px;
+      font-family:'Source Sans Pro', sans-serif !important;
+      font-weight: 600;
+      background-color: #003b7c;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: .22px;
+      line-height: 0%;
+  }
+  label{
+     font-family:'Source Sans Pro', sans-serif !important;
+     font-weight: 600;
+     font-size: 16px;
+     color: #18243e;
+     font-stretch: normal;
+     font-style: normal;
+     line-height: normal;
+     letter-spacing: normal;
+  }
+  .form-control{
+      height: 40px;
+      margin: 4px 0 0 0px;
+      padding: 9px 12px 11px 12px;
+      border-radius: 4px;
+      border: solid 1px #cbced4;
+      background-color: #ffffff;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  .form-control:focus{
+      outline: none !important;
+      border: solid 1px #cbced4;
+  }
+  .first-sec-pad{
+    padding: 80px 46px 48px 56px;
+    background-color: #d7e0e5;
+  }
+  .btn-eye{
+      background-color:white;
+      cursor: pointer;
+      height: 40px;
+      margin: 4px 0 0 0px;
+      padding: 0px 5px;
+      border-top: solid 1px #cbced4;
+      border-bottom: solid 1px #cbced4;
+      border-right: solid 1px #cbced4;
+      border-radius:0px 4px 4px 0px;
+      color: #607d8b;
+  }  
+  .material-icons-outlined{
+      font-size: 24px;
+  }
+  .form-group .input-group{
+      border-bottom: none !important;
+  }
+  .login-section{
+      background-color: white;
+      padding: 84px 46px 48px 56px;
+    }
+  .forgot-btn{
+      color: #003b7c;
+      font-family: 'Source Sans Pro', sans-serif !important;    
+  }
+  .form-group{
+      margin-bottom: 12px;
+  }
+  .hidden{
+     border-right: solid 1px #cbced4;
+  }
+  .account{
+    padding-top: 47px;
+  }
+  .padding{
+    padding-top: 184px;
+  }
+  .backspace-color{
+    color: #003b7c;
+  }
+  .text-decoration{
+    text-decoration: none;
+  }
+  .text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #101a2b;
+    font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  @media (max-width:424px){
+    .content{
+        display: inline-block;
+        margin-top: -2px;
+        vertical-align: top;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        width: 220px; 
+    }
+  }
+  @media (max-width:769px){
+    .content{
+        display: inline-block;
+        margin-top: -2px;
+        vertical-align: top;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        width: 280px; 
+    }
+  }
+  @media screen and (max-width:991px) {
+      .account{
+          padding-top: 0px;
+      }
+      .padding{
+          padding-top: 0px;
+      }
+      .first-sec-pad{
+          padding-top: 40px;
+      } 
+  }
+  @media screen and (max-width:767px) {
+      .float-end{
+          float: left !important;
+      }
+  }
+  @media screen and (max-width:1398px) {
+      .login-section{
+          padding-right:30px;
+          padding-left: 40px;
+          padding-top: 40px;
+      }
+      .first-sec-pad{
+          padding-right:30px;
+          padding-left: 40px;
+          padding-top: 40px;
+      }
+  }
+  @media only screen and (max-width: 1920px) {
+      .bg-core{
+          background-color: #18243e;
+          // height: 100%;
+      }
+  }
+  @media only screen and (max-width: 1440px) {
+      .login{
+          font-size: 20px;
+          font-weight: 700;
+      }
+  }
+  @media only screen and (max-width: 1300px) {
+      .login{
+          font-size: 20px;
+          font-weight: 700;
+      }
+  }
+  

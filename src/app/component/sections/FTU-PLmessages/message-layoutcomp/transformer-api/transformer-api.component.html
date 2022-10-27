@@ -1,0 +1,66 @@
+
+    <div class="container-fluid p-4 fluidPadding"  > 
+
+      <div class="row">
+        <div class="col-md-12 col-lg-9 col-xl-10">
+          <div class="Payment">
+            Messaging APIs
+        </div>
+         
+          <div class="Select">
+            Select and configure the transformers that your institution would like to review and evaluaite ont he Volante VolPay service. You only need to configure one rail to get started, and can configure additional rails later as needed.
+          </div>
+      
+  <div>
+
+     
+
+    <div  class="dropdown mt-3">
+      <button class="action-style form-select  form-control  Actiontxt-style dropdown" (change)="nextroute($event.target)"    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Launch Sandbox               
+      </button>
+      <div class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton1" >
+        <div><a routerLink='/ftuMesssageAPI/MessagingDropdownCreators' class="dropdown-item Actiontxt-style"   >Creators</a></div>
+        <div><a routerLink='/ftuMesssageAPI/MessagingDropdownTransformers' class=" dropdown-item Actiontxt-style"  >Transformers</a></div>
+        <div><a routerLink='/ftuMesssageAPI/MessagingDropdownValidators' class="dropdown-item Actiontxt-style"  >Validators</a></div>
+
+      </div>
+    </div>
+   
+
+  </div>    
+    <ul class=" nav-tabs m-2" >
+       
+            <li class="item" data-bs-toggle="collapse" data-bs-target="#collapseCreator" aria-expanded="false" (click)="collapse(1)"> Creators </li> 
+            <li class="item" data-bs-toggle="collapse" data-bs-target="#collapseTransformer" aria-expanded="false" (click)="collapse(2)"> Transformers </li> 
+            <li class="item" data-bs-toggle="collapse" data-bs-target="#collapseValidators" aria-expanded="false" (click)="collapse(3)"> Validators </li> 
+        </ul> 
+        <div class="collapse collapseMOde" id="1">
+       
+            <app-treeview-parts [arr]="treeView"></app-treeview-parts>
+       
+        </div>
+        <div class="collapse collapseMOde" id="2" >
+       
+            <app-treeview-parts [arr]="treeView1"></app-treeview-parts>
+  
+        </div>
+        <div class="collapse collapseMOde" id="3" >
+         
+            <app-treeview-parts [arr]="treeView2"></app-treeview-parts>
+  
+        </div> 
+    
+      </div>
+        <div class="col-md-6 col-lg-3 col-xl-2 Message-value">
+          <div class="no1" >100<span class="material-icons-outlined standard-green">  </span>
+                        <div class="Select seltitle ">Messages/Day/API</div>  
+        </div>
+    </div>
+    
+   
+   
+   </div>
+  </div>
+  
+  

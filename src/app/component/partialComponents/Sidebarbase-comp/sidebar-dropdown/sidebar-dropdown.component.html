@@ -1,0 +1,44 @@
+
+   
+
+   <div class="accordion-item  pl-1 pr-1 pb-3 pt-3 mb-3 ms-7 mt-2">
+ 
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+data['id']" aria-expanded="false" [attr.aria-controls]="'collapse'+data['id']">
+        <div class="d-flex justify-content-start">
+        <div class="fed ">{{data.header}}</div>
+       </div>
+      <div class="d-flex justify-content-end">
+        <p class="text-input ms-5 px-3 mb-2"  *ngIf="data.selected">Input Provided</p>
+      <div>
+        <em class="fa mt-2 fa-angle-down"></em>
+        <em class="fa mt-2 fa-angle-up"></em></div>
+      </div>
+      </button>
+
+    <div [attr.id]="'collapse'+data['id']" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+data['id']" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="table-padding">
+      
+          <app-sidebar-table [tableHead]="tableHead2" [tableValues]="tableValues2" ></app-sidebar-table> 
+      
+        </div>
+    
+      </div>
+     
+    </div>
+  
+    
+    </div>
+
+   
+   
+
+
+
+
+            
+    
+
+
+    
+

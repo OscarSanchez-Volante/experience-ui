@@ -1,0 +1,31 @@
+<div >
+    <div class="modal fade "   id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+      <div class="modal-dialog moveright modal-lg" role="document">
+        <div class="modal-content backg-color1" >
+          <div class="modal-header mlr-8 ">
+            <h4 class="modal-title p-0" id="exampleModalLabel">Sizing Info for FED-WIRE</h4>
+            <br /> 
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div> <h2 class="Upload-Sample-Transa"> Instructions on how to configure the volume for the selected payment rail Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.    </h2></div> 
+  
+          <div class="modal-body backg-color" >
+            <div  class="p-4 m-body">
+              <div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <app-sidebar-dropdown *ngFor="let data of accordianData" [data]="data" class="accordion accordion-default"></app-sidebar-dropdown>
+                
+              </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-footer p-3 ms-4">
+            <button type="button" class="but-lg-can" data-bs-dismiss="modal"  #closeAddExpenseModal>CLOSE</button>
+            <button type="button" class="but-lg" (click)="save()" data-bs-dismiss="modal"  #closeAddExpenseModal> SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

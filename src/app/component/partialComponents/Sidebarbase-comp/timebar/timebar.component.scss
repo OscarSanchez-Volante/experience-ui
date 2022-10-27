@@ -1,0 +1,37 @@
+.vertical1{
+    height: 10%;
+      left: 54.6%;
+    
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: lightgrey;
+    z-index: 0 !important;
+  }
+  @media only screen and (max-width: 992px) {
+    .vert {height: 16%;
+      left: 4.25%;}
+  } 
+  @media only screen and (max-width: 1440px) {
+    .vert {height:20%;
+      left:14.9%; }
+  }
+  @media only screen and (max-width: 1200px) {
+    .vert {height: 25%;
+      left: 13.5%; }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .vert {height: 16%;
+      left: 19.3%; }
+  }
+  @media only screen and (max-width: 3840px) {
+    .vert {height: 6%;
+      left: 5.3%;}
+  }
+  
+@media only screen and (max-width: 1920px) {
+  .vert {height: 13%;
+    left:10.5%;}
+}
+ 

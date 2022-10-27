@@ -1,0 +1,522 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+<div class="">
+  <div class="padding  bord">
+    <div class="d-flex bd-highlight">
+      <div class="d-flex flex-row mt-3">
+       <a routerLink="/ftuPaaS/ftuInitPayments9.0">
+        <span class="material-icons-outlined backspace-blue">
+        keyboard_backspace </span></a>
+      <a routerLink="/ftuPaaS/ftuInitPayments9.0" class="no-decoration"><p class="back-link ms-2">Back</p></a>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap mb-3">
+        <div class="col-md-6 p-0"> 
+        <p class="Add-Transactions mt-2">Add Transactions</p></div>
+        <div class="col-md-6 p-0">
+          <div class="float-end addtrans">
+            <label for="exampleInputEmail1" class="form-label mb-0 me-5">Templates</label>
+          <select class="form-select temp" aria-label="Default select example">
+              <option selected>Test-001</option>
+              <option value="1">Test-002</option>
+              <option value="2">Test-003</option>
+              <option value="3">Test-004</option> 
+            </select>
+          </div>
+          </div>
+      </div>
+  </div>
+    <div class="row m-0">
+    <div class="col-2 p-0 sideWidth d-md-block d-none">
+      <div  id="wizard">
+        <app-timeline-tab [data]="timeLineData" [active]="active" (newItemEvent)="activeTab($event)"></app-timeline-tab>
+      
+      </div>
+    </div>
+    <div class="logocontainer d-md-none mt-3">
+      <div class="">
+          <div id="barHolder" class="" data-bs-toggle="collapse" aria-label="Sidebar toggle button"
+              data-bs-target="#sideBarmenu" tabindex="0" (click)="open()"><em class="fa fa-angle-right iconsize" *ngIf="!show"></em> <em class="fa fa-angle-down iconsize" *ngIf="show"></em>
+          </div>
+      </div>
+    </div> 
+    <div id="sideBarmenu" class="col-2 p-0  collapse sideWidth d-md-none">
+      <div  id="wizard">
+        <app-timeline-tab [data]="timeLineData" [active]="active" (newItemEvent)="activeTab($event)"></app-timeline-tab>
+      
+      </div>
+    </div>
+    <div class="col">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show" id="collapseOne" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row p-3">
+            <div class="col-md-12 col-xl-8 row">
+              <div class="col-lg-6 mt-3">
+                <label for="exampleInputEmail1" class="form-label">Party <span class="mandatory">*</span></label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>SWIFT MT103 Party</option>
+                  
+                  </select>
+            </div>
+            <div class="col-lg-6 mt-3">
+                <label for="exampleInputEmail1" class="form-label">Services <span class="mandatory">*</span></label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Payment service-Payment</option>
+                  </select>
+            </div>
+            <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Message Type <span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Customer Credit Transfer</option>
+                  </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Party Service Association Code <span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>7765569999 Payment MT103</option>
+           </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Branch<span class="mandatory">*</span></label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>US Head Office Branch</option>
+                </select>
+        </div>
+        <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Products Supported<span class="mandatory">*</span></label>
+          <select class="form-select" aria-label="Default select example">
+              <option selected>ACH</option>
+              </select>
+      </div>
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Value Date<span class="mandatory">*</span></label>
+        <input type="date" class="form-control" placeholder="Value Date">
+    </div>
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Debtor Customer Proprietary Code<span class="mandatory">*</span></label>
+      <select class="form-select" aria-label="Default select example">
+          <option selected>Select</option>
+          </select>
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Payment Currency<span class="mandatory">*</span></label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>USD</option>
+
+      </select>
+</div>
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Amount<span class="mandatory">*</span></label>
+  <input type="text" class="form-control" placeholder="Please enter Amount">
+</div>
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">End to End ID<span class="mandatory">*</span></label>
+  <input type="text" class="form-control" placeholder="Please enter End to End ID">
+</div>
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Charge Code<span class="mandatory">*</span></label>
+  <select class="form-select" aria-label="Default select example">
+      <option selected>Select</option>
+      </select>
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Transaction ID<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please enter Transaction ID">
+</div>
+</div>
+        </div>
+        </div>
+        <div class="tab-pane fade show" id="collapseTwo" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="row">
+          <div class="col-lg-8 row">
+            <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Client ID<span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>7765569999</option>
+                </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Name <span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>SWIFT_MT_103_Party</option>
+                  
+                </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Address Line 1<span class="mandatory">*</span></label>
+            <input type="text" class="form-control" placeholder="Please Enter Address Line 1">
+        </div>
+        
+        <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Address Line 2<span class="mandatory">*</span></label>
+          <input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+      </div>
+        
+      
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+        <input type="text" class="form-control" placeholder="Please Enter State">
+    </div>
+    
+      
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Post Code">
+  </div>
+  
+    <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Account Number<span class="mandatory">*</span></label>
+          <select class="form-select" aria-label="Default select example">
+              <option selected>SWIFT_MT_103_Party</option>
+            </select>
+      </div>
+      <div class="col-lg-6 mt-3">        <label for="exampleInputEmail1" class="form-label">Account Currency<span class="mandatory">*</span></label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>USD</option>
+          </select>
+    </div>
+  
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Account Name<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Account Name">
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Account Domiciled Country<span class="mandatory">*</span></label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select the Account Domiciled Country</option>
+
+      </select>
+</div>
+
+
+          </div>
+      </div>
+      </div>
+       <div class="tab-pane fade show" id="collapseTwo" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="row">
+          <div class="col-lg-8 row">
+            <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Client ID<span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>7765569999</option>
+                </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+              <label for="exampleInputEmail1" class="form-label">Name <span class="mandatory">*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>SWIFT_MT_103_Party</option>
+                  
+                </select>
+          </div>
+          <div class="col-lg-6 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Address Line 1<span class="mandatory">*</span></label>
+            <input type="text" class="form-control" placeholder="Please Enter Address Line 1">
+        </div>
+        
+        <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Address Line 2<span class="mandatory">*</span></label>
+          <input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+      </div>
+        
+      
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+        <input type="text" class="form-control" placeholder="Please Enter State">
+    </div>
+    
+      
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Post Code">
+  </div>
+  
+    <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Account Number<span class="mandatory">*</span></label>
+          <select class="form-select" aria-label="Default select example">
+              <option selected>SWIFT_MT_103_Party</option>
+            </select>
+      </div>
+      <div class="col-lg-6 mt-3">        <label for="exampleInputEmail1" class="form-label">Account Currency<span class="mandatory">*</span></label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>USD</option>
+          </select>
+    </div>
+  
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Account Name<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Account Name">
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Account Domiciled Country<span class="mandatory">*</span></label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select the Account Domiciled Country</option>
+
+      </select>
+</div>
+
+
+          </div>
+      </div>
+      </div>
+      <!-- ordering Customer -->
+      <div class="tab-pane fade show" id="collapseThree" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row">
+        <div class="col-lg-8 row">
+          <div class="col-lg-6 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Client ID<span class="mandatory">*</span></label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select</option>
+              </select>
+        </div>
+        <div class="col-lg-6 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Name <span class="mandatory">*</span></label>
+            <input type="text" class="form-control" placeholder="Please Enter Name">
+        </div>
+        <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Address Line 1<span class="mandatory">*</span></label>
+          <input type="text" class="form-control" placeholder="Please Enter Address Line 1">
+      </div>
+      
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Address Line 2<span class="mandatory">*</span></label>
+        <input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+    </div>
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">City<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter City">
+  </div>  
+    
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter State">
+  </div>
+  
+    
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter Post Code">
+</div>
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Country<span class="mandatory">*</span></label>
+  <input type="text" class="form-control" placeholder="Please Enter Country">
+</div>
+
+  <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Account Number<span class="mandatory">*</span></label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>SWIFT_MT_103_Party</option>
+          </select>
+    </div>
+    <div class="col-lg-6 mt-3">        <label for="exampleInputEmail1" class="form-label">Account Currency<span class="mandatory">*</span></label>
+      <select class="form-select" aria-label="Default select example">
+          <option selected>USD</option>
+        </select>
+  </div>
+
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Account Name<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter Account Name">
+</div>
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Account Domiciled Country<span class="mandatory">*</span></label>
+  <select class="form-select" aria-label="Default select example">
+      <option selected>Select the Account Domiciled Country</option>
+
+    </select>
+</div>
+
+
+        </div>
+    </div>
+    </div>
+    <!-- beneficiary bank details -->
+    <div class="tab-pane fade show" id="collapseFour" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="row">
+      <div class="col-lg-8 row">
+        <div class="col-lg-6 mt-3">
+          <label for="exampleInputEmail1" class="form-label">Bank Identifier Type<span class="mandatory">*</span></label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select the Bank Identifier Type</option>
+            </select>
+      </div>
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Bank Identifier Code<span class="mandatory">*</span></label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select the Bank Identifier Code</option>
+          </select>
+      </div>
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Address Line 1<span class="mandatory">*</span></label>
+        <input type="text" class="form-control" placeholder="Please Enter Address Line 1">
+    </div>
+    
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Address Line 2<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">City<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter City">
+</div>  
+  
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter State">
+</div>
+
+  
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+  <input type="text" class="form-control" placeholder="Please Enter Post Code">
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Country<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Country">
+</div>
+
+
+
+
+      </div>
+  </div>
+  </div>
+  <!-- beneficiary details -->
+  <div class="tab-pane fade show" id="collapseFive" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+    <div class="col-lg-8 row">
+      <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Account Number<span class="mandatory">*</span></label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select</option>
+          </select>
+    </div>
+  
+    <div class="col-lg-6 mt-3">
+        <label for="exampleInputEmail1" class="form-label">Name <span class="mandatory">*</span></label>
+        <input type="text" class="form-control" placeholder="Please Enter Name">
+    </div>
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Beneficiary Address Line 1<span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Beneficiary Address Line 1">
+  </div>
+ 
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Beneficiary Address Line 2<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">City<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter City">
+</div>  
+
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter State">
+</div>
+
+
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Post Code">
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Country<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Country">
+</div>
+  
+  
+ </div>
+</div>
+</div>
+ <!-- Remittance information -->
+ <div class="tab-pane fade show" id="collapseSix" role="tabpanel" aria-labelledby="nav-home-tab">
+  <div class="row">
+  <div class="col-lg-8 row">
+ 
+  <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Remittance ID <span class="mandatory">*</span></label>
+      <input type="text" class="form-control" placeholder="Please Enter Remittance ID ">
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Remittance Information<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter Remittance Information">
+</div>
+
+
+</div>
+</div>
+</div>
+<!-- intermediary bank details -->
+<div class="tab-pane fade show" id="collapseSeven" role="tabpanel" aria-labelledby="nav-home-tab">
+  <div class="row">
+  <div class="col-lg-8 row">
+    <div class="col-lg-6 mt-3">
+      <label for="exampleInputEmail1" class="form-label">Bank Identifier Type<span class="mandatory">*</span></label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Select the Bank Identifier Type</option>
+        </select>
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Bank Identifier Code<span class="mandatory">*</span></label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Select the Bank Identifier Code</option>
+      </select>
+  </div>
+  <div class="col-lg-6 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Address Line 1<span class="mandatory">*</span></label>
+    <input type="text" class="form-control" placeholder="Please Enter Address Line 1">
+</div>
+
+<div class="col-lg-6 mt-3">
+  <label for="exampleInputEmail1" class="form-label">Address Line 2<span class="mandatory">*</span></label>
+  <input type="text" class="form-control" placeholder="Please Enter Address Line 2">
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">City<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter City">
+</div>  
+
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">State<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter State">
+</div>
+
+
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Post Code<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Post Code">
+</div>
+<div class="col-lg-6 mt-3">
+<label for="exampleInputEmail1" class="form-label">Country<span class="mandatory">*</span></label>
+<input type="text" class="form-control" placeholder="Please Enter Country">
+</div>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+    <div class="fixed-bottom row m-0 p-0 d-none d-md-block  pt-3 pb-3 footer-color">
+    <div class="col-md-12">
+      <div class="float-end">
+      <button class="bt-lg-login">Reset</button> 
+      <button class="ml-4 bt-lg-next" (click)="savechange()">Save & Add Transaction</button>
+    </div>
+    </div>
+    </div>
+    <div class="row m-0 p-0 d-md-none d-block mb-5  pt-3 pb-3 footer-color footer-border">
+      <div class="col-md-12">
+        <div class="float-end">
+        <button class="bt-lg-login">Reset</button> 
+        <button class="bt-lg-next margin" (click)="savechange()">Save & Add Transaction</button>
+      </div>
+      </div>
+      </div>
+  </div>
+  <div class="fixed-bottom row m-0 p-0 footer-border">
+    <div class="pt-3 pb-3 text-center sideWidth exit">
+    <a routerLink="/SIMsetup-1"><button class="bt-lg-login">Exit</button></a> 
+    <button class="ml-4 bt-lg-next" (click)="next(activeIndex+1)">Next</button>
+  </div>
+</div>
+    </div>

@@ -1,0 +1,133 @@
+.Rectangle {
+  width: 1444px;
+  height: 70px;
+  padding: 15px 20px 12px;
+  background-color: #18243e; 
+}
+
+.side-navbar {
+  background-color: #fff;
+}
+.Volante-Experience {
+
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: inherit; 
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fffffe;
+}
+a{
+ text-decoration: none;
+ color: #18243e   ;
+}
+.side-bar{
+
+
+ top: 0;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+.side-bar.active{
+  left: 0;
+}
+
+.side-bar .menu{
+  margin-top: 28px;
+  padding: 5px 16px 5px 16px;
+  line-height: 45px;
+}
+
+.side-bar .menu .item{
+  position: relative;
+  cursor: pointer;
+  padding: 7px 12px 7px 11px;
+  line-height: 32px;
+}
+.side-bar .menu .item.active{
+
+  position: relative;
+  cursor: pointer;
+  border: solid 1px #003b7c;
+  border-radius: 4px;
+  margin: 0 0 8px;
+  padding: 2px 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #003b7c;
+  box-shadow: 1px 0 0 0 #cbced4;
+}
+.side-bar .menu .item1.active{
+
+  position: relative;
+  cursor: pointer;
+  
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #003b7c;
+ 
+}
+.side-bar .menu .item1{
+ 
+  margin: 0 0 8px;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #18243e;
+  padding: 9px 12px 5px 11px;
+  line-height: 32px;
+}
+
+.side-bar .menu .item .fa{
+  width: 17px;
+  height: 7px;
+  position: absolute; 
+  right: 0;
+  margin: 4px;
+  font-weight: bolder;
+  font-size: 21px;
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+  color: #607d8b
+  
+}
+.side-bar .menu .item.item.active .fa{
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  margin: 4px;
+  font-weight: inherit;
+  font-size: 21px;
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+  color: #003b7c;
+}
+.float{
+  width: 260px;
+  }
+  .iconSize{
+    font-size: 30px;
+  }
+@media screen and (max-width:767px) {
+  .side-bar .menu{
+    margin-top: 0px !important;
+  }
+  
+}

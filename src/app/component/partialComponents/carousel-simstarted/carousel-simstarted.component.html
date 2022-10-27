@@ -1,0 +1,73 @@
+<ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="newArray">
+	<div *nguCarouselDef="let carddet;" class="pl-2 pr-2 item position-relative">
+    <div class="row m-0 " >
+   
+      <div  class="col-xl col-lg col-md-12 mt-4 slickpad">
+    <div class="card p-3 border card-body-background">
+    
+
+
+      <div >
+    <div>
+          <div>
+            <p class="title mb-4">{{carddet.title}}</p>
+          </div>
+          <div class="row mb-3">
+            
+            <div class="col">
+            <div [ngClass]="{'limitTextHeight': isReadMore}">  {{carddet.desc}}</div>
+                <label type="button" (click)="showText()" (click)="d(); $event.stopPropagation();">
+            {{ isReadMore ? '...': 'Read Less' }}
+          </label>
+            </div>
+            <div class="col">   
+               <img src="assets\{{carddet.image}}" alt="carousel">
+            </div>
+          </div>
+        </div>
+      
+        <div  *ngIf="carddet.freeDetails">
+          <div>        
+           <p  class="pt-3 title railborder">{{carddet.freeDetails.title}}</p>
+          </div>
+          <div class="row mb-3"  >
+            <div class="col">{{userInfo.firstName}} {{userInfo.lastName}}(you)</div>
+            <div class="col">
+              <select class="form-select1" aria-label="Default select example">
+                <option selected>Admin user</option>
+              </select>
+          
+            </div>
+          </div>
+          
+        </div>
+       
+        <div class="card-border">
+          <div class="row mt-4 " >
+            <div class="col-md-4 ">
+              <span *ngIf="carddet.paidDetails">
+                <p  class=" title ">{{carddet.paidDetails.title}}</p>
+              </span  > 
+            </div>
+            <div class="col-md-4">
+              <p class="body-textseat">1 seat avail.</p>
+            </div>
+            <div class="col-md-4">
+              <a routerLink='/gettingStarted5.0-invite-v2' class="invite-link ">Invite User</a>
+            </div>
+          </div>            
+        </div>
+ 
+
+    </div>
+
+  </div>
+	</div>
+  </div>
+  </div>
+<ul class="myPoint" NguCarouselPoint>
+    <li *ngFor="let j of myCarousel.pointNumbers; let k = index" [class.active]="k==myCarousel.activePoint" (click)="myCarousel.moveTo(k)"></li>
+  </ul>
+   <button NguCarouselNext class=" angle-style position-absolute top-50 start-0 translate-middle-y"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+  <button NguCarouselPrev class=" angle-style position-absolute top-50 end-0 translate-middle-y"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+</ngu-carousel>

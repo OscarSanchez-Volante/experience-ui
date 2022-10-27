@@ -1,0 +1,231 @@
+.action-style{
+  height:36px;
+  width:129px;
+  border-radius: 3.5px;
+  border: solid 1px #cbced4;
+}
+    .th-text{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size:16px;
+    }
+    .col-font{
+    font-weight: bold;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #cbced4;
+    }
+    
+    .table th {
+      font-family:'Source Sans Pro', sans-serif; 
+      font-weight:600;
+      font-size:16px;     
+      color: #18243e;
+    }
+    .material-icons{
+    color: #607d8b;
+    }
+    .table td {
+      color: #18243E;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 16px;
+    }
+    tr > td > span.material-icons {
+      visibility: hidden;
+    }
+    .fs-16{  
+      font-size: 16px;
+      vertical-align: middle;
+    }
+    tr:hover > td > span.material-icons {
+    visibility: visible;
+    }
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 1px solid #dee2e6;
+      font-weight: bold;
+    }
+    .table-primary-clr{
+      color: #003b7c !important;
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-weight: bold;
+    } 
+    .blue{
+      color:#003B7C;
+      font-family:'Source Sans Pro', sans-serif; 
+      font-weight: 600;
+    }
+    tr:nth-child(odd) {
+      background-color: #f3f3f5;
+    }
+    tr{
+      cursor: pointer;
+      background-color: #e6ebf2;
+    }
+    tr:hover {background-color:#E6EBF2;box-shadow: 0px 2px 4px #00000029;}
+    .check-m{
+      margin: 0;
+    }
+    .color-fontawesome{
+      color: #747c8b;
+  }
+    .table-height{
+      width: 100%; 
+      height:auto;
+      overflow: scroll;
+      white-space: nowrap;
+    }
+    .margin{
+      margin-top: 1%;
+    }
+    .bg-white{
+      background-color: white;
+    }
+    .pl2{
+      padding-left: 2%;
+    }
+    .styled-checkbox {
+      position: absolute; // take it out of document flow
+      opacity: 0; // hide it
+      cursor: pointer;
+
+      & + label {
+        position: relative;
+        cursor: pointer;
+      }
+    
+      .surface {
+        box-sizing: border-box; 
+        border: 1px solid rgba(25,25,25,0.32);
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        height: 32px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        color: #272A30;
+      }
+      label{
+        
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 16px;
+      }
+      .custom-icon-clr{
+        font-size: 24px;
+        height: 32px;
+        vertical-align: middle;
+        cursor: pointer;  
+        color: #18243E !important;
+      }
+    
+      & + label:before {
+        content: '';
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 17px;
+        height: 17px;
+        background: white;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+      }
+    
+      // Box hover
+      
+      // Box focus
+      &:focus + label:before {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+      }
+    
+      // Box checked
+      &:checked + label:before {
+        background-color: #18243E;
+      }
+      
+      // Disabled state label.
+      &:disabled + label {
+        opacity: 0.5;
+        cursor: auto;
+    
+      }
+    
+      // Disabled box.
+      &:disabled  {
+        box-shadow: none;
+        color: #CBCED4;
+    
+      }
+    
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 9px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 
+          2px 0 0 white,
+          4px 0 0 white,
+          4px -2px 0 white,
+          4px -4px 0 white,
+          4px -6px 0 white,
+          4px -8px 0 white;
+        transform: rotate(45deg);
+      }
+    }
+  
+    .form{
+     
+    width: 50%;
+   
+    
+    padding: 2% 2%;
+    background-color: #fff;
+   border: 1px solid #cbced4;
+   
+    border-radius: 0.25rem;
+    }
+.borderforDelete{
+  border-top: 1px solid #cbced4;
+}
+.Actiontxt-style{
+
+  font-family:  'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #18243e;
+}
+.Action-style{
+  font-family:  'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #18243e;
+}
+.view-style{
+ 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #003b7c;
+}
+.check-boxstyle{
+  width: 17px;
+  height: 17px;
+  border-radius: 1.5px;
+  border: solid 1px #747c8b;
+}
+::-webkit-scrollbar {
+  display: none;
+  width:0;
+}

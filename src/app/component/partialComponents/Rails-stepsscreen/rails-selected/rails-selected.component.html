@@ -1,0 +1,46 @@
+<div class="container-fluid railPadding">
+    <div class="row mt-5">
+    <div class="col ">
+        <p class="mb-0 Paymentrail"> 
+           <!-- {{selected.title}} -->
+           Rails
+          </p>
+        
+         <div class="row  ">
+            <div class="col ">
+                <p class="Select">
+                     Select and configure the  {{selected.title}} that your institution would like to review and evaluate on the Volante VolPay service. You only need to configure one rail to get started, and can configure additional rails later as needed.
+                </p>
+            </div>
+                   
+         </div>
+                    
+                  <div class="row ">  
+                    <div class="Payment">
+                        <label>Selected Rails</label>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <div class="mr-4">
+                                <select  class=" lab-length form-control form-select " name="title">
+                                    <option > {{length}} Selected</option>
+                                 </select>
+                            </div>
+                        <div class="mt-3 mt-lg-0">
+                         <button class="bt-lg-next">LEARN MORE ABOUT PAYMENT RAILS</button></div>
+                        </div>
+                        </div>
+                </div>
+ 
+
+</div>
+
+  <div class="row mt-4">
+    <div class="col">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <app-rail-accordion *ngFor="let data of accordianData" [data]="data"  class="accordion accordion-default"></app-rail-accordion>
+
+</div>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+    <div class="admin-header  mt-5">Admin / Users / PaaS Sandbox / User Name</div>
+     <div class="row mt-4  ">
+            
+        <div class="col-md-2 box-border">
+          <div class="admin-header mt-3 ">User Name</div>
+          <label for="exampleInputEmail1" class="label"> Email </label>
+          <div class="val">User Email Address</div>
+          <label for="exampleInputEmail1" class="label"> Company  </label>
+          <div class="val">Company Name</div>
+          <div class="Resend mt-4">
+            <a routerLink='/gettingStarted5.0-invite-v2' class="resend-link ">Resend Invitation</a>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="row ">
+            <div class="col ">
+              <select class="form-select btn col-md-3 mt-3 mt-md-0" aria-label="Default select example">
+                <option selected>Filter</option>             
+              </select>
+            </div>
+          
+            </div>
+            <div class="row ">
+              <app-admintable-sandbox [tableHead]="tabledetailsHead3" [tableValues]="tabledetailValues3" ></app-admintable-sandbox> 
+              </div>
+        </div>
+       </div>
+  </div>

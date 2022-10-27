@@ -1,0 +1,65 @@
+.Transactions {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 20px;
+    color: #101a2b;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    
+  }
+  .standard-green{
+    color: #00875a;
+  }
+  .padding{
+    padding: 0px 35px 16px 30px ;
+    }
+    .back{
+      border: 1px solid lightgray;  
+      background-color: #e6ebf2; 
+      border-radius: 5px; 
+      height: 6.188rem;
+      width: 12.438rem;
+    }
+  .Select {
+    margin:7px 3px 10px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #101a2b;
+  }
+  .seltitle{ 
+    margin-top: -1em;
+  }
+  .no1{
+
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 54px;
+    font-weight: 700;
+    color: #00875a;
+    }
+    .bt-lg-login{
+        padding: 19px 24px;
+        font-size: 14px;
+       font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+        background-color: #003b7c;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        letter-spacing: .22px;
+        line-height: 0%;
+    }
+    @media (max-width:767px){
+      .float-end{
+        float:  left !important;
+      }
+      .manualPadding{
+        padding: 0px;
+      }
+     }

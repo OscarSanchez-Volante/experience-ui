@@ -1,0 +1,45 @@
+.bt-lg-next{
+    background-color: #003b7c;
+    color: white;
+    height: 32px;
+    padding: 8px 34px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: .22px;
+    line-height: 0%;
+   font-family:'Source Sans Pro', sans-serif;
+font-weight: 600;
+}
+.angle-style{
+    font-size:24px;
+border: 1px solid #ffffff;
+background-color: #ffffff;
+color: #003b7c;
+}
+.angle-disabled{
+    font-size:24px;
+    border: 1px solid #ffffff;
+background-color: #ffffff;
+}
+.stepper-text-style{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #003b7c;
+    &.active {
+        font-size: 20px;
+      }
+}
+.mt5{
+	margin-top: 5rem !important;
+}
+@media (min-width: 1024px ){
+    .stepper-text-style{
+        white-space: nowrap !important;
+    }
+}

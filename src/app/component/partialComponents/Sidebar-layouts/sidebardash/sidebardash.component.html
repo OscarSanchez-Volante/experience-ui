@@ -1,0 +1,24 @@
+<div class="hamburger d-md-none mt-3">
+  <div id="barHolder" class="" data-bs-toggle="collapse" aria-label="Sidebar toggle button"
+          data-bs-target="#sidebarmenu" tabindex="0" (click)="open()"><em class="fa fa-angle-right iconWidth" *ngIf="!show"></em> <em class="fa fa-angle-down iconWidth" *ngIf="show"></em>
+      </div>
+</div>
+<div id="sidebarmenu" class="collapse d-md-block">
+  <div class="d-flex flex-column p-3 text-white bg-volante-lighterr">
+    <div  [ngClass]="active==='/login0.1'?'active':''">
+      <a routerLink='/opsDashboard1.0'> <span class="material-icons-outlined routing" >
+        route
+        </span></a>
+    </div>
+     <div [ngClass]="active==='/DashboardUI'?'active':''">
+      <a routerLink='/login0.1'>  <span class="material-icons-outlined routing mt-0 mt-md-4">
+        view_compact
+        </span>
+    </a>
+    </div>
+    <div [ngClass]="active==='/login0.1'?'active':''">
+      <a routerLink='/login0.1'> <em class="fa-regular fa-rectangle routing"></em>
+    </a>
+    </div>
+  </div>
+</div>

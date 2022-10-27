@@ -1,0 +1,122 @@
+.container-fluid{
+  background-color: #18243e;
+}
+p{
+  font-size: 16px;
+  color: #101a2b;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+.trans{
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.bold{
+  font-weight: 700;
+}
+.text-style{
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+.bt-lg{
+  height: 32px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+}
+.return-btn{
+  height: 40px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+}
+.login-padding{
+  height: 40px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+}
+.first-sec-pad{
+  padding: 80px 56px 48px 56px;
+  background-color: #d7e0e5;
+}
+.credit-txt{
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 20px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+  padding-top: 25px;
+}
+.login-section{
+  background-color: white;
+  padding: 48px 50px 48px 48px;
+}
+.forgot-btn{
+  color: #003b7c;
+}
+.learn{
+  padding-top: 81px;
+}
+.loginSec{
+  padding-top: 71px;
+}
+.loginSe{
+  padding-top: 50px;
+}
+@media screen and (max-width:767px) {
+  .learn{
+    padding-top: 0px;
+  }
+  .loginSec{
+    padding-top: 0px;
+  }
+  .loginSe{
+    padding-top: 0px;
+  }
+  .login-section{
+    padding: 30px;
+  }
+  .first-sec-pad{
+    padding: 30px;
+  }
+}
+@media screen and (max-width:374px) {
+  .login-section{
+    padding: 15px;
+  }
+  .first-sec-pad{
+    padding: 15px;
+  }
+}

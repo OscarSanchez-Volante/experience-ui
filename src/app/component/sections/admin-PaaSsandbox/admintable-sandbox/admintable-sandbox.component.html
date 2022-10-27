@@ -1,0 +1,100 @@
+<div class="row m-0">
+    <div class="col-md-10 pe-0">
+      <div class="float-end">
+       
+    <div class="col-md-12 mb-2 " *ngIf="tableValues">
+      <div class="form-group">
+      </div>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+      <em class="fa fa-sort-amount-asc float-end ms-2 mt-1 color-fontawesome"  aria-hidden="true"></em>
+      <span class="material-icons-outlined float-end ms-2 color-fontawesome" >
+        filter_list
+        </span>
+          </div>
+    </div>
+ 
+
+    <div class="table-height"> 
+      <table class="table" aria-label="adminusertable"> 
+      
+        <thead class="col-font">
+          <tr class="bg-white">     
+            <th><div *ngIf="currentUrl=='/sandboxadminUser/adminForUsersSandbox1.0'">
+              <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1" (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+            </div>
+            </th>
+              <th  *ngFor="let th of tableHead" (click)="sortData ( th.fieldName)">{{th.label}} <input class="form fa fa-search color-fontawesome"  *ngIf="th.condition=='search'" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; search " >
+
+              </th> 
+                <th *ngIf="currentUrl=='/sandboxadminUser/adminForUsersdetailsSandbox2.0'" >
+                      <p class="Action-style">Action</p>
+                </th>
+            <select *ngIf="currentUrl=='/sandboxadminUser/adminForUsersSandbox1.0'" class="action-style btn mt-1" aria-label="Default select example">
+              <option selected>Actions </option>
+            </select>
+          </tr>
+        </thead>
+        <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+          <tr *ngFor="let td of tableValues| searchFilter: searchText  ;let i=index">
+        <td> <div *ngIf="currentUrl=='/sandboxadminUser/adminForUsers1.0'">
+          <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1" (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+          </div>
+        </td>
+            <td routerLink="/sandboxadminUser/adminForUsersdetailsSandbox2.0" *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''"><span *ngIf= "th1.fieldName!=='Download'">{{td[th1.fieldName]}}</span>
+           
+         <td>
+          <div *ngIf="currentUrl=='/sandboxadminUser/adminForUsersSandbox1.0'" class="dropdown">
+            <button class="action-style form-select  form-control  Actiontxt-style "   type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Actions             
+            </button>
+            <ul id="ul-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton1"  >
+              <li id="invite"><a class="dropdown-item Actiontxt-style">Invite Sent</a></li>
+              <li id="view"><a class="dropdown-item Actiontxt-style">View</a></li>
+              <li id="edit"><a class="dropdown-item Actiontxt-style">Edit</a></li>
+              <li id="update"><a class="dropdown-item Actiontxt-style">Update Status</a></li>
+              <li id="request" ><a class="dropdown-item ms-3 Actiontxt-style" >Sandbox Requested</a></li>
+              <li id="converse"><a class="dropdown-item ms-3 Actiontxt-style">1:1 Conversation</a></li>
+              <li id="provision"><a class="dropdown-item ms-3 Actiontxt-style">Start Provisioning</a></li>
+              <li id="acc-provision"><a class="dropdown-item ms-3 Actiontxt-style">Account Provisioned</a></li>
+              <li id="active"><a class="dropdown-item ms-3 Actiontxt-style">Active</a></li>
+              <li id="resend-invite"><a class="dropdown-item  Actiontxt-style">Resend Invitation</a></li>
+              <li id="delete-tab"><a class="dropdown-item borderforDelete Actiontxt-style">
+                <div class="row">
+                  <div id="delete-icon" class="col">
+                    <span class="material-icons "  >delete</span>
+
+                  </div>
+                  <div id="text-delete" class="col ">
+                    Delete
+                  </div>
+                </div>
+               </a></li>
+
+            </ul>
+          </div>
+
+          <div *ngIf="currentUrl=='/sandboxadminUser/adminForUsersdetailsSandbox2.0'" >
+
+        <td>
+              <p class="view-style" data-bs-toggle="modal" data-bs-target="#activityModal" style="cursor: pointer;">View / Edit</p>
+        </td>
+          </div>
+         </td>       
+          </tr>
+      
+        </tbody>
+        
+      </table>
+   
+      
+      <div class="margin" *ngIf="!tableValues || tableValues.length==0" >
+          <app-no-dataoutput [contain]="contain"></app-no-dataoutput>
+      </div>
+    </div>
+   
+    <div>
+      <app-activity-note-popup></app-activity-note-popup>
+    </div>

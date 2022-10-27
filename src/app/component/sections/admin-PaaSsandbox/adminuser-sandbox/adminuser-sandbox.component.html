@@ -1,0 +1,17 @@
+<div  class=" dark-blue-bg "  >
+    <div id="header">
+        <app-ops-header></app-ops-header>
+    </div>
+    <div class="row m-0" > 
+      <div id="sticky-sidebar" class="col-2 px-1 position-fixed backforsidebar d-none d-md-block">
+        <app-adminsidebar-sandbox></app-adminsidebar-sandbox>
+      </div>
+      <div id="sticky-sidebar" class="mobView d-md-none d-block">
+        <app-adminsidebar-sandbox></app-adminsidebar-sandbox>
+      </div>
+      <div id="content" class="col"> 
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+   

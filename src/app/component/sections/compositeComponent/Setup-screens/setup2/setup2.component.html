@@ -1,0 +1,65 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+  <div class="row m-0">
+    <div class="px-1 position-fixed backforsidebar d-none d-md-block" id="sticky-sidebar">
+      <app-sidebar ></app-sidebar>
+     </div>
+     <div class="mobView d-md-none d-block" id="sticky-sidebar">
+      <app-sidebar ></app-sidebar>
+     </div>
+    <div id="content" class="col"> 
+<div class="container-fluid setupPadding py-0 mt-3 mt-md-5">
+  <div class="row">
+    <div class="col-md-12 col-lg-8 col-xl-9">
+      <div class="Payment mb-4">
+        {{selected.title}}
+     
+     
+      <div class="Select mt-3">
+        {{selected.description}}
+      </div>
+    </div> 
+  
+      <button *ngIf="valueneeded=='Payment Rails'" class="btn-acc btn mb-3" type="button" >  Learn more about {{selected.title}}</button>
+    </div>
+    
+    <div *ngIf="valueneeded=='Payment Rails'" class="col-md-12 col-lg-4 col-xl-3">
+      <div class="number">
+        <div class="no1" >{{selectedRails.length}}<span class="material-icons-outlined standard-green">  </span>
+          <div class="Select">Selected {{selected.title}}</div>  
+</div>
+      </div>
+       
+</div> 
+
+<div *ngIf="valueneeded=='Message Creators' " class="col-md-12 col-lg-4 col-xl-3">
+ <div class="number">
+  <div class="no1" >10<span class="material-icons-outlined standard-green">  </span>
+    <div class="Select">Selected {{selected.title}}</div>  
+</div>
+ </div>
+</div>
+<div *ngIf="valueneeded=='Message  Constructors & Validators' " class="col-md-12 col-lg-4 col-xl-3">
+  <div class="number">
+    <div class="no1" >23<span class="material-icons-outlined standard-green">  </span>
+      <div class="Select">Selected {{selected.title}}</div>  
+</div>
+  </div>
+</div>
+
+<div  class="panel-group mb-5" *ngIf="valueneeded=='Payment Rails'" id="accordion" role="tablist" aria-multiselectable="true">
+        <app-rail-accordion *ngFor="let data of accordianData" [data]="data" (newItemEvent)="selectRails($event)" class="accordion accordion-default"></app-rail-accordion>
+  </div>
+  
+  <div  class="panel-group mt-4 mb-5" *ngIf="valueneeded=='Message Creators'" id="accordion" role="tablist" aria-multiselectable="true">
+<app-stepper-withnext  (newItemEvent)="stepper($event)"></app-stepper-withnext>
+  </div>
+
+ 
+</div>
+ </div>
+</div>
+</div>
+  
+

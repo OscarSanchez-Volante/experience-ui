@@ -1,0 +1,37 @@
+  <div class="table-height ">
+    <table class="table" aria-describedby="side">
+    
+      <thead class="col-font">
+        <tr class="bg-white"> 
+          <th><div>
+            <input name="checkboxName" id="checkbox1" type="checkbox" value="Value 1" (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+          </div>
+    
+          </th>
+
+          <th  *ngFor="let th of tableHead">  {{th.label}} <em *ngIf="(selectedColumn==th.fieldName && sortDir==1)"  ></em><em *ngIf="(selectedColumn==th.fieldName && sortDir==-1)"  ></em></th> 
+        </tr>
+      </thead>
+      <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+        
+        <tr *ngFor="let td of tableValues ;let i=index">
+         
+          <td> <div>
+            <input name="checkboxName" id="checkbox1" type="checkbox" value="Value 1" (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+            </div>
+          </td>
+        <td  *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''"><span *ngIf= "th1.fieldName!=='Download' && th1.type!== 'input'">{{td[th1.fieldName]}}</span> <span *ngIf= "th1.fieldName=='Download' && th1.type!== 'input'"><span class="csv-style">CSV</span> <span>PDF</span></span>
+        <span *ngIf="th1.type== 'input'">  
+          <input type="number" id="tableValues" class="for tvStyle" placeholder="0,000"> </span>
+          </td>    
+          <td *ngIf="iconShow?.edit" >
+          <span class="material-icons mode-edit">
+            mode_edit
+            </span>
+          </td> 
+        </tr>
+    
+      </tbody>
+      
+    </table>
+  </div>

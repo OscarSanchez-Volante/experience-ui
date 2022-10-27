@@ -1,0 +1,25 @@
+<div class="row m-0 p-0">
+  <div class="col-md-6 pl-0" *ngFor="let select of selectValue"  >
+<div class="card" [ngStyle]="{'background-color': select.checkbuttonname==value? 'rgba(0, 59, 124, 0.03)' : 'rgb(255,255,255)' }">
+<div class="pad ">
+<div class=" p-0">
+<img src="assets/{{select.image}}" alt="selectimage" class="img-fluid">
+</div>
+<div >
+<p class="bold PaaS-Sandbox">{{select.title}}</p>
+<p class=" Volante-Payments ">{{select.subtitle}}</p>
+<p class="Cloud-native-payment mt-0">{{select.description1}} </p>
+</div>
+    <p class="Cloud-native-payment mt-5">{{select.description2}} </p></div>
+<div class="card-footer">
+<div class="d-flex flex-row mt-2">
+<div>
+  <input type="radio"  name="value" id="r3" [value]='select.checkbuttonname' [(ngModel)]='value' (change)="sendData()">
+</div>
+
+<div>  <div class=" Add-Payment-Services">{{select.checkbuttonname}}</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="table-height ">
+    <table class="table" aria-describedby="report-table">
+      <thead class="col-font">
+        <tr class="bg-white">       
+          <th  *ngFor="let th of tableHead">{{th.label}}</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+    
+        
+        <tr *ngFor="let td of tableValues;let i=index">
+         
+          <td *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='GroupReferenceID' ? 'table-primary-clr':''">{{td[th1.fieldName]}}</td>     
+        </tr>
+      </tbody>
+    
+    </table>
+    <div class="margin2" *ngIf="!tableValues" >
+      <div class="col-md-12">
+       <div class="createmreport">Create a Scheduled Reports</div>
+      </div>
+   </div>
+  </div>

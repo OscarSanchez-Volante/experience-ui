@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container-fluid mart">
+  <div class="row m-0 ">
+  <div class="col-md-6 col-lg-4 col-xl-3">
+      <div class="d-flex">
+        <div class="col-md-2 px-0 homelink-width">
+        <a routerLink="/ftuPaaS/ftuInitPayments13.1" class="no-decoration"> <span class="material-icons-outlined backspace-color">
+          keyboard_backspace
+        </span> </a>
+      </div>
+      <div class="col-md-10 ms-3 pl-0">
+        <a routerLink="/ftuPaaS/ftuInitPayments13.1" class="no-decoration"><p class="back-link">Back to all rails </p></a>
+        </div>
+      </div>
+      <div class="d-flex flex-row "> 
+        <p class="pymt-rail" >         
+           {{selected.title}}        
+        </p>  
+        <span class="switch-margin ms-2">
+          <app-switch-button  ></app-switch-button></span>
+      </div>
+      <div class="col-md-12 p-0"><p class="acc mt-0">Accounts using this payment rail (3 of 6)</p></div>
+  </div>
+  <div class="col-md-5 col-lg-4 col-xl-3">
+    <div class="">
+     <div class=""> <app-no-dataoutput [contain]="contain"></app-no-dataoutput></div> 
+     </div>
+  </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-md-6 col-lg-4" *ngFor="let data of accordianData"  >
+        <app-payment-rails  [data]="data"  > </app-payment-rails>
+      </div>
+  </div>
+  <div class="fixed-bottom row m-0 p-0  justify-content-end footer-buttons">
+    <div class="col-md-9 pt-3 pb-3 ">
+    <div class="floatend">
+    <button class="bt-lg-cancel">Cancel</button> 
+    <button class="ml-4 bt-lg-next" routerLink="/" >Save Changes</button>
+  </div>
+</div>
+</div>
+</div>

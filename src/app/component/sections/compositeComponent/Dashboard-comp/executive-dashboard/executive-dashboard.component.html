@@ -1,0 +1,124 @@
+<div class="header">
+  <app-ops-header></app-ops-header>
+</div>
+  <div class="row m-0">
+    <div class="col-2 p-0 exe-sidebar position-fixed d-none d-md-block"> 
+      <app-sidebardash></app-sidebardash>
+  </div>
+  <div class="p-0 exe-mobView  d-block d-md-none">
+    <app-sidebardash></app-sidebardash>
+</div>
+      <div id="main" class="col">
+        <div class="container-fluid containerPad mt-3">
+          <div class="d-flex">
+            <a routerLink="/" class="backspace-style" > <span class="material-icons-outlined backspace-color">
+              keyboard_backspace
+            </span> </a><a routerLink="/ftuPaaS/notificationScreenflow1.0"class="backspace-style"><p class="hom ml-2">Home </p></a>
+           </div>
+           <div class="">
+               <a routerLink="/opsDashboard1.0" class="backspace-style"><p class="hom">OperationsDashboard</p></a>
+           </div>
+      <div class="d-flex flex-column flex-lg-row">
+        <div class="col-md-12 col-lg-3 p-0">
+          <h5 class="dashboard">Executive Dashboard</h5>
+        </div>
+        <div class="col-md-12 col-lg-9 p-0">
+          <div class="float-end">
+              <div class="d-flex flex-wrap">
+                <div class="marginRight">
+                  <select id="executive-dropdown" class="exe  form-select"  aria-label="Default select example">
+                    <option selected >Executive</option>
+                    <option *ngFor="let drop of data; let i = index" > 
+                      <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+                    </option>
+                  </select>
+                </div>
+               <div class="marginRight">
+                <select id="calender-dropdown" class="exe form-select"  aria-label="Default select example">
+                  <option selected >Month to date</option>
+                  <option *ngFor="let drop of data; let i = index" > 
+                    <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+                  </option>
+                </select>
+               </div>
+               <div class="">
+                <button class="filter-style" type="button" >Filters</button> 
+               </div>
+              </div>
+          </div>   
+        </div>
+        </div>
+        <div class="row m-0 mt-3 mt-lg-1">
+              <div class="d-flex flex-column">
+                <div class="bd-highlight row chart-sectionBorder">
+                  <div class="col-md-12 col-lg-4 settype">
+                    <div class="text mt-1" >Rails</div>
+                    <app-stack-barchart [optionsmidbar]="optionsmidbar"></app-stack-barchart>
+                  </div>
+                  <div class="col-md-12 col-lg-4 settype">
+                    <div class="text mt-1" >Rail Volume</div>
+                    <app-stack-barchart [optionsstackbar]="optionsstackbar"></app-stack-barchart>
+                  </div>
+                  <div class="col-md-12 col-lg-4 settype" >
+                    <div class="text mt-1" >Users</div>
+                      <app-doughnut-charts [options]="optionsdoughnutexecutive"></app-doughnut-charts>
+                    </div>
+                <div class="mt-3 row m-0">
+                  <div class="col-lg-5 col-md-12" id="group1" role="group" aria-label="...">
+                    <button type="button" id="subject1" class="button1 text btn-default">Payment Processing</button>
+                    <button type="button" id="subject2" class="button1 text btn-default">Operations Mgmt</button>
+                </div>
+              </div> 
+              <div class="mt-2 p-4">
+                <div class="p-2 bd-highlight settype delbor">
+                  <div class="p-2 bd-highlight row"  >
+                    <div class="col-xl-1 col-md-2 p-4">
+                      <p routerLink="/AdminDashboard2.0" class= "text mt-2 cursorstyle">{{railTitle}} FEDWIRE</p>
+                      <p class="no1 mb-0">1,100  </p>
+                      <p class= "text">Payments  </p>
+                      <p  class="no1 mb-0">1.65M  </p>
+                      <p class= "mb-0 text">USD </p>                 
+                    </div>
+                    <div class=" col-xl-11 col-md-10">
+                    <app-ops-linechart [optionsLinechart]="optionsLinechart"></app-ops-linechart>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 bd-highlight settype">  
+                  <div class="p-2 bd-highlight row">
+                    <div class="col-xl-1 col-md-2 p-4">
+                      <p class= "text mt-2">FEDNOW</p>
+                      <p class="no1  mb-0">1,100</p>
+                      <p class= "text ">Payments</p>
+                      <p  class="no1 mb-0">1.65M</p>
+                      <p class= "mb-0 text">USD</p>                     
+                     </div>
+                  <div class="col-xl-11 col-md-10">
+                    <app-ops-linechart [optionsLinechart]="optionsLinechart"></app-ops-linechart>
+                  </div>
+                </div>
+              </div>
+                <div class="p-2 bd-highlight settype">  
+                  <div class="p-2 bd-highlight row">
+                  <div class="col-xl-1 col-md-2 p-4">
+                    <p class= "text mt-2">TCH-RTP</p>
+                    <p class="no1 mb-0">1,100</p>
+                    <p class= "text">Payments</p>
+                    <p  class="no1 mb-0">1.65M</p>
+                    <p class= "mb-0 text">USD</p>  
+                  </div>
+                  <div class="col-xl-11 col-md-10">
+                    <app-ops-linechart [optionsLinechart]="optionsLinechart"></app-ops-linechart>
+                  </div>
+                </div>
+              </div>
+              </div> 
+              </div>
+    </div>
+</div>
+        </div>
+      </div>
+  </div>      
+
+
+

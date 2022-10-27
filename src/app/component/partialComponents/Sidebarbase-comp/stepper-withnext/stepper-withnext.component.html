@@ -1,0 +1,75 @@
+
+
+<app-stepper #cdkStepper >
+
+  <cdk-step   [optional]="false">
+  
+    <ng-template cdkStepLabel>
+      <span class="stepper-text-style">Message Creators</span>
+        
+    </ng-template>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="float-end">
+          <button type="button" (click)="cliclStepper('Message Transformers')" class="angle-style float-end ms-2" cdkStepperNext>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+          <button type="button"   [disabled]="true" class="angle-disabled float-end"  >
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+        </div>
+        </div>
+        <div class="col-md-12">
+        
+          <app-part-three></app-part-three>
+        </div>  
+
+        
+   
+
+      </div>
+  </cdk-step>
+
+  <cdk-step>
+    <ng-template cdkStepLabel>
+       <span class="stepper-text-style">Message Transformers</span>
+    </ng-template>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <div class="float-end">
+         <button  type="button" (click)="d(stepper)"  (click)="cliclStepper('Message Constructors & Validators')" class="ms-2 angle-style float-end"  cdkStepperNext>
+           <i class="fa fa-angle-right" aria-hidden="true"></i>
+         </button>
+          <button type="button"  (click)="cliclStepper('Message Creators')" class="angle-style float-end"  cdkStepperPrevious>
+           <i class="fa fa-angle-left" aria-hidden="true"></i>
+         </button>
+        </div>
+       </div>
+      <div class="col-md-12">
+        <app-part-two></app-part-two>
+      </div>   
+    </div>
+  </cdk-step>
+  <cdk-step>
+    <ng-template cdkStepLabel>
+     
+      <span class="stepper-text-style">Message Constructors & Validators</span>
+    </ng-template>
+    <div class="row mt-5">
+      <div class="col-md-12 mt-4 mt-lg-0"> 
+        <div class="float-end">
+          <button  type="button"   [disabled]="true" class="ms-2 angle-disabled float-end"  >
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+            <button type="button" (click)="cliclStepper('Message Transformers')"   class="angle-style float-end"    cdkStepperPrevious>
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+        </div>
+        </div>
+      <div class="col-md-12">
+        <app-part-one></app-part-one>
+      </div>   
+      
+    </div>
+  </cdk-step>
+</app-stepper>

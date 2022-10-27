@@ -1,0 +1,95 @@
+<ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="MessagingcardData">
+  <div *nguCarouselDef="let carddet;" class=" pl-3 pr-2 item position-relative">
+  
+ 
+    <div  class="col-xl col-lg col-md mt-4 slickpad">
+  <div class="card p-3 border card-background" >
+  
+
+
+    <div >
+  <div>
+        <div>
+          <p class="title mb-4">{{carddet.title}}</p>
+        </div>
+        <div class="row mb-3">
+          
+          <div class="col">
+          <div [ngClass]="{'limitTextHeight': isReadMore}">  {{carddet.desc}}</div>
+              <label type="button" (click)="showText()" (click)="d(); $event.stopPropagation();">
+          {{ isReadMore ? '...': 'Read Less' }}
+        </label>
+          </div>
+          <div class="col">   
+             <img src="assets\{{carddet.image}}" alt="carousel">
+          </div>
+        </div>
+      </div>
+    
+      <div  *ngIf="carddet.freeDetails">
+        <div>        
+         <p  class="pt-3 title railborder">{{carddet.freeDetails.title}}</p>
+        </div>
+        <div class="row"   >
+          <div class="col-md-5">
+            <div  class="pb-1" >
+              <p class="body-text" *ngFor="let val of carddet.freeDetails.content">{{val}}</p>
+             </div>
+          </div>
+          <div class="col-md-5">          
+          <p class="body-textseat">1 seat avail.</p>
+          </div>
+         
+        </div>
+        <div class="row"  >
+          <div class="col">{{userInfo.firstName}} {{userInfo.lastName}}(you)</div>
+          <div class="col">
+            <select class="form-select1" aria-label="Default select example">
+              <option selected>Admin User</option>
+            </select>
+          </div> 
+        </div>
+        <div class="row mb-3">
+          <div class="col">Charles Lukas</div>
+          <div class="col">End User</div>
+        </div>  
+      </div>
+     
+       <div class="carousel-cardborder">
+          <div class="row mt-4 " >
+            <div class="col ">
+              <span *ngIf="carddet.paidDetails">
+                <p  class=" title ">{{carddet.paidDetails.title}}</p>
+              </span  > 
+            </div>
+            <div class="col">
+              <p class="body-textseat">1 seat avail.</p>
+            </div>
+            <div class="col">
+              <p  class=" title float-end">Role</p>
+            </div>
+          </div>
+          <div class="row" *ngIf="carddet.paidDetails">
+            <div class="col">{{userInfo.firstName}} {{userInfo.lastName}}(you)</div>
+            <div class="col">            
+              <p class="body-textseat float-end" *ngFor="let valP of carddet.paidDetails.content">{{valP}}</p>
+            </div>
+            
+          </div>
+            
+        </div>
+
+
+  </div>
+
+</div> 
+  </div>
+
+</div>
+<ul class="myPoint" NguCarouselPoint>
+  <li *ngFor="let j of myCarousel.pointNumbers; let k = index" [class.active]="k==myCarousel.activePoint" (click)="myCarousel.moveTo(k)"></li>
+</ul>
+<button NguCarouselNext class=" angle-style position-absolute top-50 start-0 translate-middle-y"> <i class="fa fa-angle-left display-property" aria-hidden="true"></i></button>
+<button NguCarouselPrev class=" angle-style position-absolute top-50 end-0 translate-middle-y"> <i class="fa fa-angle-right display-property" aria-hidden="true"></i></button>
+</ngu-carousel>
+  

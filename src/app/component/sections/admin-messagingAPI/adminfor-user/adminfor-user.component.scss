@@ -1,0 +1,19 @@
+.backforsidebar{
+    box-shadow: 1px 0 0 0 #cbced4;
+        background-color: #e6ebf2;
+        height: 100%;
+        width: 270px;
+    }
+    .mobView{
+        box-shadow: 1px 0 0 0 #cbced4;
+        background-color: #e6ebf2;
+    }
+    #content{
+        margin-left: 270px !important;
+    }
+    
+@media screen and (max-width: 767px) {
+    #content{
+        margin-left: 0px !important;
+    }
+}

@@ -1,0 +1,52 @@
+
+
+  
+    <div class="row m-0">
+      <div class="col-md-4 mt-4 pr-0"  *ngFor="let carddet of data;let i = index" >
+        
+        <div class="card p-3 smallcard1-background">
+          <div class="round mt-3 mb-4" >
+            <input type="checkbox" [id]="'checkbox'+i" [(ngModel)]="carddet.selected" [name]="'element_name'+i"  [attr.disabled]="carddet.isDisabled ? true : null"/>
+
+            <label [for]="'checkbox'+i"></label>
+          </div>
+          <p class="title title-cardheight mb-4">{{carddet.titleC}}</p>
+          <div  class="pb-3  railborderbottom mt-4"  >
+          <div [ngClass]="{'limitTextHeight': isReadMore}">  {{carddet.descC}}</div>
+          <label type="button" (click)="showText()" (click)="d(); $event.stopPropagation();">
+            {{ isReadMore ? '...': 'Read Less' }}
+          </label>
+            
+             </div>
+             <div class="row mt-3">
+              <div class="col ">
+                <p class="body-textrole">Role</p>
+              </div>
+              <div class="col">
+                <p class="body-text">Analyst</p>
+              </div>
+
+             </div>
+           
+  
+          <p  *ngIf="carddet.paidDetailsC" class="pt-3 title railborder">{{carddet.freeDetailsC.titleC}}</p>
+          <div *ngIf="carddet.paidDetailsC" class="pb-1">
+            <p class="body-text" *ngFor="let val of carddet.freeDetailsC.contentC">{{val}}</p>
+           </div>
+           <div *ngIf="!carddet.paidDetailsC"  class="pb-1">
+            <p  class="pt-3 title ">{{carddet.freeDetailsC.titleC}}</p>
+            <app-treeview-parts [arr]="carddet.freeDetailsC.items"></app-treeview-parts>
+           </div>
+
+           <span *ngIf="carddet.paidDetailsC" class="railborder">
+           <p  class="pt-3 title ">{{carddet.paidDetailsC.titleC}}</p>
+           <div  class="pb-1">
+             <p class="body-text" *ngFor="let valP of carddet.paidDetailsC.contentC">{{valP}}</p>
+            </div> 
+             </span  >    
+        </div> 
+      
+      
+      </div>
+      
+     </div>

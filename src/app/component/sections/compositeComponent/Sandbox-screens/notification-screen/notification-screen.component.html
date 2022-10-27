@@ -1,0 +1,59 @@
+<div class="container-fluid container-pad">
+  <div class="d-flex Top-space">
+    <div class="mr-3 pr-0 home-width">
+      <a routerLink="/ftuPaaS/notificationScreenflow1.0" class="no-decoration"> <span class="material-icons-outlined backspace-blue">
+        keyboard_backspace
+      </span> </a>
+    </div>
+    <div class="pl-0">
+      <a routerLink="/ftuPaaS/notificationScreenflow1.0"><p class="hom">Home </p></a>     
+    </div>
+  </div>
+
+          <div class="dashtxt">Notifications</div>   
+         
+          <div class="Notification  mt-3">
+            <div class="d-flex flex-wrap nav-tabs">
+            <div class="col-md-6 p-0">
+              <div class="tabScroll">
+                <div class="d-flex flex-row">
+                  <div class="mr-4"><a href="" class="Notification-text active"  routerLinkActive="active">
+                    All(9)
+                </a>  </div>
+                  <div class="mr-4"><a href="" class="Notification-text " >
+                    Repairs(2)
+                </a>  </div>
+                  <div class="mr-4 overSight"><a href="" class="Notification-text" >
+                    Oversight(3)
+                </a>  </div>
+                  <div class="topMargin"><a href="" class="Notification-text">
+                    Product(4)
+                </a>  </div>
+                </div>
+              </div>
+            </div>
+                <div class="col-md-6 p-0">
+                 <div class="float-end float">
+                  <div class="d-flex flex-wrap">
+                    <div class="mr-4">
+                      <a href="" class="vlink-text" data-bs-toggle="modal" data-bs-target="#NotificationModal">Create Notification</a>
+                    </div>
+                    <div class="">
+                      <a href="#" class=""><i class="fa fa-refresh " aria-hidden="true"></i></a>
+                    </div>
+                   </div>
+                 </div>
+                </div> 
+            </div>
+            <div class="Notification-table mt-3">
+          <app-table [tableHead]="tableNotificationHead" [tableValues]="tableNotificationValues" ></app-table> 
+        </div>
+        </div>
+</div>
+
+
+<div>
+<app-create-notification-popup></app-create-notification-popup>
+</div>
+
+

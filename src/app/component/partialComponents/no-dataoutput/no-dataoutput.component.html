@@ -1,0 +1,35 @@
+<div  class="row">
+  <div class="demo">
+    <div class="d-flex align-items-center flex-wrap bd-highlight " >
+      <div class="col-md-6 col-lg-6 col-6 mx-auto d-flex justify-content-end bd-highlight " *ngIf="contain" > 
+          <img src="assets/{{contain.image}}" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-6 col-lg-6 bd-highlight textalign p-0" *ngIf="contain" >
+          <p class="normal-text"> {{contain.title}}</p>
+          <div class="small-text">{{contain.description}}</div>
+        <div *ngIf="currentUrl=='/ftuInitPayments9.0'">
+        
+        </div>
+      <div *ngIf="contain.buttonName">
+        <button class="btn-secondary dropdown-toggle btn-acc btn new1 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          {{contain.buttonName}} 
+          </button>
+      </div>
+        <div *ngIf="currentUrl=='/ftuPaaS/ftuInitPayments9.0'" >
+         <div  class="dropdown mt-2">
+          <button class="btn-secondary btn-secondary-test dropdown-toggle btn-acc btn new1 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            NEW PAYMENT SIMULATED
+            <span class="material-icons-outlined add-size">
+                  add
+                  </span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" routerLink="/ftuInitPayments11.0">Add Manually</a></li>
+                  <li><a class="dropdown-item cursor-style-upload" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload Transaction Payload</a></li>
+                </ul>
+              </div>
+        </div>
+      </div>
+     </div>
+  </div>
+</div>

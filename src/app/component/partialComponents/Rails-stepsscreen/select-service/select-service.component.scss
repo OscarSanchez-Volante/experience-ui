@@ -1,0 +1,123 @@
+
+::ng-deep{
+ .card{
+  height: 100%;
+  }
+  .button,  optgroup,  textarea {
+    height: 22px;
+      width: 22px;
+  }
+}
+.pad{
+  padding: 5%;
+  height: 100%;
+
+}
+.text-style{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: #101a2b;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.rails-box{
+    border-radius: 5px 5px 0px 0px;
+    border: solid 1px #d7d9de;
+    background-color: #ffffff;
+    padding: 5%;
+    cursor:pointer
+  }
+
+  .PaaS-Sandbox {
+  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101a2b;
+  }
+  .Volante-Payments {
+   
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #474747;
+  }
+  .Cloud-native-payment {
+  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #101a2b;
+    border-bottom: 2px #d7d9de;
+  }
+
+ 
+.Add-Payment-Services {
+ 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: #000;
+  padding-left: 1em;
+}
+.card-footer {
+  background-color: rgba(0,0,0,0);
+}
+
+   input[type='radio']:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #deebff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.overflow-selectservice{
+  overflow: scroll;
+}
+input[type='radio']:checked:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    box-shadow: inset 0 -1px 6px #003B7C, inset 0 0 4px #003B7C, inset 0 0 0 6px #003B7C;
+    background: white !important;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+@media screen and (min-width:1025px) {
+  ::-webkit-scrollbar {
+      display: none;
+      width:0;
+    }
+}

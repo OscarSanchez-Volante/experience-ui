@@ -1,0 +1,7 @@
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option *ngFor="let drop of data; let i = index" > 
+    <div (click)="selectActive(i)" data-toggle="collapse" [attr.data-target]="'#' + drop.id"  [ngClass]="active == drop.name ? 'active' : ''">{{drop.name}}</div> 
+  </option>
+
+</select>

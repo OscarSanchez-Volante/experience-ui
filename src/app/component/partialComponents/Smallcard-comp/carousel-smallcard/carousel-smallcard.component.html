@@ -1,0 +1,65 @@
+       <ngu-carousel #myCarousel  [inputs]="carouselTileConfig"  [dataSource]="newValue">
+        <div *nguCarouselDef="let carddet;let i = index" class="pl-2 pr-2 item position-relative">
+     
+         
+            <div  class="col-md-12 mt-4 slickpad">
+          <div class="card p-3 border card-background">
+            <div class="round mt-3 mb-4" >
+              <input type="checkbox" [id]="'checkbox'+i" [(ngModel)]="carddet.selected" [name]="'element_name'+i"  [attr.disabled]="carddet.isDisabled ? true : null"/>
+
+              <label [for]="'checkbox'+i"></label>
+            </div>
+      
+      
+            <div >
+              <p class="title mb-4">{{carddet.title}}</p>
+              <div  class="pb-3  railborderbottom"  >
+              <div [ngClass]="{'limitTextHeight': isReadMore}">  {{carddet.desc}}</div>
+              <label type="button" (click)="showText()" (click)="d(); $event.stopPropagation();">
+                {{ isReadMore ? '...': 'Read Less' }}
+              </label>
+                
+                 </div>
+                 <div class="row mt-3">
+                <div class="col ">
+                  <p class="body-textrole">Role</p>
+                </div>
+                <div class="col">
+                  <p class="body-text">Analyst</p>
+                </div>
+
+               </div>
+            <div >
+              <p  *ngIf="carddet.paidDetails" class="pt-3 title railborder">{{carddet.freeDetails.title}}</p>
+              <div *ngIf="carddet.paidDetails" class="pb-1">
+                <p class="body-text" *ngFor="let val of carddet.freeDetails.content">{{val}}</p>
+               </div>
+            </div>
+
+             <div *ngIf="!carddet.paidDetails"  class="pb-1">
+              <p  class="pt-3 title ">{{carddet.freeDetails.title}}</p>
+              <app-treeview-parts [arr]="carddet.freeDetails.items"></app-treeview-parts>
+             </div>
+
+              <div *ngIf="currentUrl!=='/ftuPostLogin1.0'">
+               <span *ngIf="carddet.paidDetails" class="railborder">
+             <p  class="pt-3 title ">{{carddet.paidDetails.title}}</p>
+             <div  class="pb-1">
+               <p class="body-text" *ngFor="let valP of carddet.paidDetails.content">{{valP}}</p>
+              </div> 
+               </span  > 
+              </div>
+       
+      
+          </div>
+      
+        </div>
+        </div>
+      
+        </div>
+      <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of myCarousel.pointNumbers; let k = index" [class.active]="k==myCarousel.activePoint" (click)="myCarousel.moveTo(k)"></li>
+        </ul>
+        <button NguCarouselNext class=" angle-style position-absolute top-50 start-0 translate-middle-y"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+        <button NguCarouselPrev class=" angle-style position-absolute top-50 end-0 translate-middle-y"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+      </ngu-carousel>  
