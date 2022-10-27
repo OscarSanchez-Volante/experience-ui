@@ -4,7 +4,10 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { dataLoader, object, string } from '@amcharts/amcharts4/core';
 import { any } from '@amcharts/amcharts4/.internal/core/utils/Array';
+import { AccountService } from '@services/account/account.service';
+import { Account } from '../../../../interface/account';
 
+//account
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -1241,7 +1244,7 @@ data:string;
     ]
 
   signupDetails: {institutionname: any, firstname: any, lastname: any, email: any, password:any};
-  constructor(private service: SignupService,private router: Router,private formBuilder: FormBuilder) { }
+  constructor(private service: SignupService,private router: Router,private formBuilder: FormBuilder, private accountService:AccountService) { }
 
   signup:any={}
   ngOnInit(): void {
@@ -1282,15 +1285,40 @@ data:string;
         this.password = 'password';
         this.show = false;
       }
-      }
+  }
+
   formSubmit(){
     this.submitted = true;
     if (this.registerForm.invalid) {
       return;
     }
-    sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
+    console.log("formSubmit-----");
+    console.log(this.signup);
+    
+  var new_account:Account={
+    institution: this.signup.institutionName,
+    firstName: this.signup.firstName,
+    lastName: this.signup.lastName,
+    title: this.signup.title,
+    country: this.signup.country,
+    phone: this.signup.contactNumber,
+    email: this.signup.email,
+    password: this.signup.password,
+    createdAt:null,
+    id:null,
+    updatedAt:null
+  };
 
-    this.router.navigate(['validateUI3.0']);
+    this.accountService.createAccount(new_account).subscribe(result => {
+      console.log("formSubmit-----");
+        console.log(result);
+    },err=>{
+      console.log('HTTP Error', err);
+    });
+
+    //sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
+
+    //this.router.navigate(['validateUI3.0']);
 
   }
 
