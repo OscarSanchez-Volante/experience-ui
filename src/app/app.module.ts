@@ -14,6 +14,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { CommonModule } from '@angular/common';
+import { Toast, ToastrModule } from 'ngx-toastr';
 import * as echarts from 'echarts';
 /*Base component*/
 /////////Sidebarbase-comp///////
@@ -183,6 +185,7 @@ import {NotificationScreenComponent} from './component/compositeComponent/Sandbo
 import {CreateNotificationPopupComponent} from './component/layout/Modal-popups/create-notification-popup/create-notification-popup.component';
 import { ExecutiveDashboardStep2Component } from './component/compositeComponent/Dashboard-comp/executive-dashboard-step2/executive-dashboard-step2.component';
 import { ActivateLoginComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-login/activate-login.component';
+import { ToastServiceService } from './utilities/toast-service/toast-service.service';
 import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-account-screen/activate-account-screen.component';
 
 @NgModule({
@@ -318,6 +321,8 @@ import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-s
     NgxPaginationModule,
     HttpClientModule,
     CdkStepperModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
     NguCarouselModule,
     HighchartsChartModule,
     TreeModule.forRoot(),

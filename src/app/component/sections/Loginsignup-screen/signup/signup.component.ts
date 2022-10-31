@@ -6,6 +6,8 @@ import { dataLoader, object, string } from '@amcharts/amcharts4/core';
 import { any } from '@amcharts/amcharts4/.internal/core/utils/Array';
 import { AccountService } from '@services/account/account.service';
 import { Account } from '../../../../interface/account';
+import { ToastServiceService } from 'src/app/utilities/toast-service/toast-service.service';
+
 
 //account
 @Component({
@@ -1244,7 +1246,7 @@ data:string;
     ]
 
   signupDetails: {institutionname: any, firstname: any, lastname: any, email: any, password:any};
-  constructor(private service: SignupService,private router: Router,private formBuilder: FormBuilder, private accountService:AccountService) { }
+  constructor(private service: SignupService,private router: Router,private formBuilder: FormBuilder, private accountService:AccountService,private toastService: ToastServiceService) { }
 
   signup:any={}
   ngOnInit(): void {
@@ -1278,6 +1280,7 @@ data:string;
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
+    
       if (this.password === 'password') {
         this.password = 'text';
         this.show = true;
@@ -1289,6 +1292,7 @@ data:string;
 
   formSubmit(){
     this.submitted = true;
+    //this.toastService.OpenToast(true,"Mensaje correcto exitoso de prueba");
     if (this.registerForm.invalid) {
       return;
     }
@@ -1310,15 +1314,16 @@ data:string;
   };
 
     this.accountService.createAccount(new_account).subscribe(result => {
-      console.log("formSubmit-----");
-        console.log(result);
+        this.toastService.OpenToast(result.success,result.message);
     },err=>{
-      console.log('HTTP Error', err);
+//      console.log(err);
+      this.toastService.OpenToast(false,"There is a problem, please try again");
+      //console.log('HTTP Error', err);
     });
 
     //sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
 
-    //this.router.navigate(['validateUI3.0']);
+    
 
   }
 
