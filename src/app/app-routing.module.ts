@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './component/layout/Loginsignup-screen/login/login.component';
-import { SignupComponent } from './component/layout/Loginsignup-screen/signup/signup.component';
 import { ValidateUIComponent } from './component/layout/Loginsignup-screen/validate-ui/validate-ui.component';
 import { TimelineComponent } from './component/layout/timeline/timeline.component';
 import { InputWizardComponent } from './component/compositeComponent/Wizard-screen/input-wizard/input-wizard.component';
@@ -55,6 +53,8 @@ import { UserdetailsSandboxComponent } from './component/admin-PaaSsandbox/userd
 import { PopupInviteusersandboxComponent } from './component/admin-PaaSsandbox/popup-inviteusersandbox/popup-inviteusersandbox.component';
 import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-account-screen/activate-account-screen.component';
 import { ActivateLoginComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-login/activate-login.component';
+import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
+import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 
 const routes: Routes = [
 //main page routes

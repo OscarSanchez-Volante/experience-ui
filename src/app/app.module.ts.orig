@@ -110,6 +110,8 @@ import { InputWizardComponent } from './component/compositeComponent/Wizard-scre
 
 /* Layout component*/
 //////Loginsignup-screen///////
+import { LoginComponent } from './component/layout/Loginsignup-screen/login/login.component';
+import { SignupComponent } from './component/layout/Loginsignup-screen/signup/signup.component';
 import { InviteUserscreenComponent } from './component/layout/Loginsignup-screen/invite-userscreen/invite-userscreen.component';
 import { ValidateUIComponent } from './component/layout/Loginsignup-screen/validate-ui/validate-ui.component';
 import { VolanteSimEndComponent } from './component/layout/Loginsignup-screen/volante-sim-end/volante-sim-end.component';
@@ -175,6 +177,7 @@ import { ActivityNotePopupComponent } from './component/admin-messagingAPI/activ
 
 import { SelectSetuplayoutComponent } from './component/layout/select-setuplayout/select-setuplayout.component';
 
+<<<<<<< HEAD
 import { MessageRailaccordionComponent } from './component/baseComponent/Rails-comp/message-railaccordion/message-railaccordion.component';
 import { StackBarchartComponent } from './component/baseComponent/Charts/stack-barchart/stack-barchart.component';
 import { StepperWithnextComponent } from './component/baseComponent/Sidebarbase-comp/stepper-withnext/stepper-withnext.component';
@@ -183,11 +186,17 @@ import {NotificationScreenComponent} from './component/compositeComponent/Sandbo
 import {CreateNotificationPopupComponent} from './component/layout/Modal-popups/create-notification-popup/create-notification-popup.component';
 import { ExecutiveDashboardStep2Component } from './component/compositeComponent/Dashboard-comp/executive-dashboard-step2/executive-dashboard-step2.component';
 import { ActivateLoginComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-login/activate-login.component';
-import { ToastServiceService } from './utilities/toast-service/toast-service.service';
 import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-account-screen/activate-account-screen.component';
-
-import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
-import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
+=======
+import { MessageRailaccordionComponent } from '@partialComponents/Rails-comp/message-railaccordion/message-railaccordion.component';
+import { StackBarchartComponent } from '@partialComponents/Charts/stack-barchart/stack-barchart.component';
+import { StepperWithnextComponent } from '@partialComponents/Sidebarbase-comp/stepper-withnext/stepper-withnext.component';
+import { NodataPaasFtudashboardComponent } from '@sections/compositeComponent/Sandbox-screens/nodata-paas-ftudashboard/nodata-paas-ftudashboard.component';
+import {NotificationScreenComponent} from '@sections/compositeComponent/Sandbox-screens/notification-screen/notification-screen.component'
+import {CreateNotificationPopupComponent} from '@partialComponents/Modal-popups/create-notification-popup/create-notification-popup.component';
+import { ExecutiveDashboardStep2Component } from '@sections/compositeComponent/Dashboard-comp/executive-dashboard-step2/executive-dashboard-step2.component';
+import { ToastServiceService } from './utilities/toast-service/toast-service.service';
+>>>>>>> develop
 
 @NgModule({
   declarations: [

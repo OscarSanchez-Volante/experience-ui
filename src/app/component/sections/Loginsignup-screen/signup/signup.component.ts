@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from '@services/signup/signup.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { dataLoader, object, string } from '@amcharts/amcharts4/core';
 import { any } from '@amcharts/amcharts4/.internal/core/utils/Array';
-import { AccountService } from '@services/account/account.service';
 import { Account } from '../../../../interface/account';
 import { ToastServiceService } from 'src/app/utilities/toast-service/toast-service.service';
+import { SignupService } from 'src/app/services/signup/signup.service';
+import { AccountService } from 'src/app/services/account/account.service';
 
 
 //account
@@ -1246,7 +1246,14 @@ data:string;
     ]
 
   signupDetails: {institutionname: any, firstname: any, lastname: any, email: any, password:any};
-  constructor(private service: SignupService,private router: Router,private formBuilder: FormBuilder, private accountService:AccountService,private toastService: ToastServiceService) { }
+  constructor(
+    private router: Router,
+    private formBuilder: FormBuilder, 
+
+     private service: SignupService,
+     private accountService:AccountService,
+     private toastService: ToastServiceService
+    ) { }
 
   signup:any={}
   ngOnInit(): void {
@@ -1291,7 +1298,9 @@ data:string;
   }
 
   formSubmit(){
+    console.log("FORM SUBITED");
     this.submitted = true;
+
     //this.toastService.OpenToast(true,"Mensaje correcto exitoso de prueba");
     if (this.registerForm.invalid) {
       return;
@@ -1314,14 +1323,14 @@ data:string;
   };
 
     this.accountService.createAccount(new_account).subscribe(result => {
-        this.toastService.OpenToast(result.success,result.message);
+      sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
+      this.toastService.OpenToast(result.success,result.message);
     },err=>{
-//      console.log(err);
+      //this.toastService.OpenToast(result.success,result.message);
       this.toastService.OpenToast(false,"There is a problem, please try again");
       //console.log('HTTP Error', err);
     });
 
-    //sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
 
     
 

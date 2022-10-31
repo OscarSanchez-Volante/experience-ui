@@ -5,11 +5,14 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {signupInterface} from '../../../../interface/login-interface'
 import{ConfirmPasswordValidator} from '../../../../services/confirm-password.validator'
 import { JsonHttpService } from 'src/app/services/json-http/json-http.service';
+
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
+
 export class SignupComponent implements OnInit {
   registerForm: FormGroup;
 data:string;
