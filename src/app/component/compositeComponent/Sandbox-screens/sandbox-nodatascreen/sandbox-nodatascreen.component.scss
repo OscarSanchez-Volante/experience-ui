@@ -1,0 +1,154 @@
+.img-fluid{
+  width: 249px;
+  height: 222px;
+  object-fit: contain;
+}
+.status {
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 16px;
+font-weight: 700;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+color: #101a2b  ;
+}
+.add-sandboxsize{
+font-size: 16px;
+}
+.cursorupload{
+cursor: pointer;
+}
+.San {
+  width: 302px;
+  height: 56px;
+  margin: 24px 434.5px 323px 433.5px;
+  object-fit: contain;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #101a2b;
+}
+.sandbox{
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 32px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+
+}
+.btn-acc{
+
+  font-size: 15px;
+ font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+}
+
+.btn{
+    
+  padding:  7px 14px;
+  border-radius: 20px;
+  border: solid 1px #cbced4;
+ 
+
+}
+.table th {
+  font-family:'Source Sans Pro', sans-serif; 
+  font-weight:600;
+  font-size:14px;
+  padding: 10px;
+  color: #18243e;
+}
+
+.table td {
+  padding: 8px;
+  font-size:16px !important;
+  font-weight: 700;
+}
+.bt-lg-cancel{
+  height: 32px;
+  padding: 8px 34px;
+  font-size: 14px;
+ font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+  background-color: white;
+  color: #18243e;
+  border: solid 1px #cbced4;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+  margin-right: 20px;
+}
+
+.config-text{
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color:#101a2b;
+}
+
+.new1{
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+  .material-icons-outlined{
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 2px;
+    vertical-align: middle;
+  }
+  .sandbox{
+    margin-top: 1em;
+  }
+  .sandMargin{
+    margin-top: 2.5em;
+  }
+  @media (max-width:767px){
+    .containerpad{
+      padding: 0px;
+    }
+  }
+  @media (max-width:1023px){
+    .float-end{
+      float: left !important;
+    }
+    .sandMargin{
+      margin-top: 0.5em;
+    }
+  }
+  @media (max-width:1023px){
+    .sandbox{
+      margin-top: 0.5em;
+    }
+  }
+  

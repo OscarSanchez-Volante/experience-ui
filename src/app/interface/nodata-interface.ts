@@ -1,4 +1,4 @@
-export class Contain{
+export interface Contain{
     image: string;
     title: string;
     description : string;

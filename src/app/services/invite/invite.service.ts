@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class InviteService {
-  invite: { firstname: any; lastname: any; email: any; };
+  invite: { firstname: string; lastname: string; email: string|number; };
 
   constructor() { }
 }

@@ -1,0 +1,43 @@
+<div class="table-height ">
+    <table class="table" aria-describedby="tree-table">
+      <thead class="col-font">
+        <tr class="bg-white"> 
+            <th></th>      
+          <th  *ngFor="let th of tableHead">{{th.label}}</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="tableValues && tableValues['length']" class="normal-text">
+    
+    
+        <ng-container *ngFor="let td of tableValues;let i=index">
+        <tr data-bs-toggle="collapse" attr.data-bs-target="#demo{{i}}" [ngClass]="i%2==0?'tablerowbg':''" (click)="expandPayment(td)">
+        
+          <td><span class="material-icons-outlined icon-style">
+            {{(td.Expand)?"expand_less":"expand_more"}}
+            </span></td>
+          <td *ngFor="let th1 of tableHead;let j=index" [ngClass]="th1.fieldName=='Status' && td[th1.fieldName]=='Completed' ? 'success':th1.fieldName=='Source' ? 'table-primary-clr':''">{{td[th1.fieldName]}}</td>     
+          <td><span class="material-icons-outlined icon-style">
+            east
+            </span></td>
+        </tr>
+        
+        <tr class="collapse p-3 key-border" attr.id="demo{{i}}" [ngClass]="i%2==0?'tablerowbg':''">
+            <td colspan="100%">
+                <div class="row  m-0 " >
+                  <div  *ngFor="let item of td.Details | keyvalue:originalOrder;let k=index" class="p-2" [ngClass]="[(k==0||k==3?'col-xl-3':''),(k==1||k==4?'col-xl-4':''),(k==2||k==5?'col-xl-5':'')]">
+                    <div class="ms-4 key-style">{{item.key}}</div>
+                    <div class="value ms-4">{{item.value}}</div>
+                </div>
+                    
+                </div>
+            </td>
+        </tr>
+    </ng-container>
+      </tbody>
+    
+    </table>
+    <div class="margin" *ngIf="!tableValues" >
+        <app-no-dataoutput [contain]="contain"></app-no-dataoutput>
+    </div>
+  </div>
+  

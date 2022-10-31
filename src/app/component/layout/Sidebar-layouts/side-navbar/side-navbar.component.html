@@ -1,0 +1,113 @@
+<div class="logo d-md-none mt-3">
+  <div>
+    <div id="barHolder" class="" data-bs-toggle="collapse" aria-label="Sidebar toggle button"
+      data-bs-target="#SideBarMenu" (click)="open()"><em class="fa fa-angle-right iconSize"
+        *ngIf="!show"></em> <em class="fa fa-angle-down iconSize" *ngIf="show"></em>
+    </div>
+  </div>
+</div>
+<div id="SideBarMenu" class="collapse d-md-block">
+    <div class="side-bar d-flex align-items-start flex-column">
+      <div class="menu mb-auto float">
+        <div class="item btn-toggle " routerLinkActive="active"
+          [ngClass]="active==='/ftu-paas/ftu-dashboard'?'active':''">
+          <a id="home" routerLink='/ftu-paas/ftu-dashboard'>
+            <div class='item'>Home<em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div>
+          </a>
+        </div>
+
+        <div class="item" routerLinkActive="active" [ngClass]="active==='/ftu-paas/ftu-init-payments9.0'?'active':''">
+          <a id="payment-simulation" routerLink='/ftu-paas/ftu-init-payments9.0'>
+            <div class="item" data-bs-toggle="collapse" data-bs-target="#paysimulation-collapse" aria-expanded="false">
+              Payment Simulations
+              <em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div>
+          </a>
+        </div>
+
+        <div class="collapse" id="paysimulation-collapse">
+          <ul class="btn-toggle-nav fw-normal pb-1 ">
+            <li>
+              <a id="rails" routerLink='/ftu-paas/ftu-init-payments13.1' class=" item1 " routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Rails</a>
+            </li>
+            <li>
+
+              <a id="initiate-payment" routerLink='/ftu-paas' class="link-dark rounded  item ">Initiate Payment </a>
+            </li>
+          </ul>
+        </div>
+        <div class="item" routerLinkActive="active">
+          <a id="business-intelligence" routerLink='/ops-dashboard1.0'>
+            <div class="item" data-bs-toggle="collapse" data-bs-target="#charts-collapse" aria-expanded="false">Business
+              Insight<em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div>
+          </a>
+        </div>
+        <div class="item" routerLinkActive="active" [ngClass]="active==='/ftu-paas/reports15.0'?'active':''">
+          <a id="reports" routerLink='/ftu-paas/reports15.0'>
+            <div class="item" data-bs-toggle="collapse" data-bs-target="#reports-collapse" aria-expanded="false">
+              Reports<em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div>
+          </a>
+        </div>
+        <div class="collapse" id="reports-collapse">
+          <ul class="btn-toggle-nav fw-normal pb-1 ">
+            <li>
+              <a id="all-reports" routerLink='/ftu-paas' class=" item1 " routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">All Reports</a>
+            </li>
+            <li>
+              <a id="jobs" routerLink='/ftu-paas' class=" item1 " routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Jobs</a>
+            </li>
+            <li>
+              <a id="templates" routerLink='/ftu-paas' class=" item1 " routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Templates</a>
+            </li>
+          </ul>
+        </div>
+        <div id="volpay" class="item" [ngClass]="active==='/'?'active':''">
+          <a routerLink='/ftu-paas'>
+            <div class="item">VolPay<em class="fa fa-angle-right" aria-hidden="true"></em>
+            </div>
+          </a>
+        </div>
+        
+        <div id="footer-mobile" class="d-md-none d-block">
+          <div class="item" [ngClass]="active==='/'?'active':''">
+            <a id="help-mobile" routerLink='/ftu-paas'>
+              <div class="item">Help & Support <em class="fa fa-angle-right" aria-hidden="true"></em>
+              </div>
+            </a>
+          </div>
+
+          <div class="item " [ngClass]="active==='/'?'active':''">
+            <a id="setting-mobile" routerLink='/ftu-paas'>
+              <div class="item">Settings <em class="fa fa-angle-right" aria-hidden="true"></em>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div id="footer-layout" class="menu d-none d-md-block  float mb-5 mt-0 ">
+          <div class="item " [ngClass]="active==='/'?'active':''">
+            <a id="help" routerLink='/ftu-paas'>
+              <div class="item">Help & Support <em class="fa fa-angle-right right" aria-hidden="true"></em>
+              </div>
+            </a>
+          </div>
+
+          <div class="item " [ngClass]="active==='/'?'active':''">
+            <a id="setting" routerLink='/ftu-paas'>
+              <div class="item">Settings<em class="fa fa-angle-right float-end" aria-hidden="true"></em>
+              </div>
+            </a>
+          </div>
+        </div>
+  </div>
+</div>

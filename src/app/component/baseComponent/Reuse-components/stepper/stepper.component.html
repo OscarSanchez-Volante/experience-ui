@@ -1,0 +1,27 @@
+<section >
+    <!-- The navbar for the wizard -->
+    <header class="header">
+      <ol >
+        <ng-container *ngFor="let step of steps; let i = index;">
+          <div class="line1"></div>
+
+          <li  [ngClass]="{'active':selectedIndex== i,'inactiveGrey':selectedIndex!=i,'activeGreen':(i<selectedIndex)}">
+            <div   (click)="selectedIndex = i"></div>
+            <a class="mt-4">
+              <ng-container  *ngIf="step.stepLabel; else showLabelText" [ngTemplateOutlet]="step.stepLabel.template">
+              </ng-container>
+              <ng-template #showLabelText>
+                {{ step.label }}
+              </ng-template>
+            </a>
+          </li>
+          <div class="line"></div>
+        </ng-container>
+      </ol> 
+    </header>
+  
+    <div class="body">
+      <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+    </div>
+  </section> 
+  

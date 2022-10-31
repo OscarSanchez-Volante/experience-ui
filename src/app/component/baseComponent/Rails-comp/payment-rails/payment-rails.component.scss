@@ -1,0 +1,94 @@
+.heading-text{
+  margin: 0 8px 16px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+font-size: 20px;
+color: #101a2b;
+
+}
+
+.rails-box{
+  border-radius: 5px 5px 0px 0px;
+  border: solid 1px #d7d9de;
+  background-color: #f3f3f5;
+  padding: 2%;
+  cursor:pointer
+}
+
+.card{
+  border-radius:0px 0px 5px 5px ;
+  border-top:none;
+}
+
+.card-grid-title{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+}
+.card-grid-body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  word-break: break-all;
+}
+.marg{
+  margin-top: 0.7rem;
+  margin-right: 1.2rem;
+  color: #101a2b;
+}
+.ml-0{
+  margin-left: -0.5em;
+}
+.ml-1{
+  margin-left: 0em;
+}
+::ng-deep .row.payment-rails{
+  --bs-gutter-x: -3.5rem;
+}
+.b-color{
+  background-color: #f3f3f5;
+  border: 0px;
+}
+.marg-left{
+  margin-left: 0em;
+}
+.left{
+  margin-left: 5em;
+}
+.left1{
+  margin-left: -3em;
+
+}
+.left-align{
+  margin-left: 1.6em;
+  margin-bottom: -1em;
+}
+.fa{
+  width: 17px;
+  height: 7px;
+  font-weight: bolder;
+  font-size: 21px;
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+  color: #607d8b;
+ 
+ 
+}
+.edit{
+  font-family:  'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #003b7c;
+}

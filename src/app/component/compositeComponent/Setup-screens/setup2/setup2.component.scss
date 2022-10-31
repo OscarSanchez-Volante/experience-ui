@@ -1,0 +1,121 @@
+.Payment {
+ 
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 21px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+}
+.bg-volante-light{
+  background-color: #e6ebf2;
+  height: 100%;
+
+}
+.standard-green{
+  color: #00875a;
+}
+.Select {
+  
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+}
+.config{
+  
+    padding: 1px 3px;
+    border-radius: 16px;
+    border: solid 1px #cbced4;
+    background-color: #fff;
+  
+}
+.text{
+width: 110px;
+height: 21px;
+font-family: 'Source Sans Pro', sans-serif !important;
+font-size: 14px;
+font-weight: 700;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #18243e;
+}
+
+.btn-acc{
+
+font-size: 15px;
+font-family:'Source Sans Pro', sans-serif !important;
+ font-weight:600; 
+background-color: #003b7c;
+color: #fff;
+border: none;
+border-radius: 20px;
+letter-spacing: .22px;
+line-height: 0%;
+}
+
+
+.btn{
+  
+width: 251px;
+height: 38px;
+padding:  7px 14px;
+border-radius: 20px;
+border: solid 1px #cbced4;
+
+
+}
+.img-fluid{
+height: 59%;
+}
+
+
+.no1{
+
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 54px;
+  font-weight: 700;
+  color: #00875a;
+  }
+  .number{
+    border: 1px solid lightgray;  
+    background-color: #e6ebf2; 
+    border-radius: 5px; 
+    height: 8rem; 
+    padding: 0px 16px; 
+  }
+  .backforsidebar{
+    box-shadow: 1px 0 0 0 #cbced4;
+        background-color: #e6ebf2;
+        height: 100%;
+        width: 270px;
+    }
+    .mobView{
+        box-shadow: 1px 0 0 0 #cbced4;
+        background-color: #e6ebf2;
+    }
+    #content{
+        margin-left: 270px !important;
+    }
+    
+  @media screen and (max-width: 767px) {
+    #content{
+        margin-left: 0px !important;
+    }
+    .setupPadding{
+      padding: 0px;
+  }
+  .mb-5{
+    margin-bottom: 6rem;
+  }
+  }
+ 

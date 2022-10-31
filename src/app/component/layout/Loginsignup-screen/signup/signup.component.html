@@ -1,0 +1,154 @@
+<div class="container-fluid">
+    <div class="row h-100">
+        <div class="col">
+    <div class="container trans">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-12 mx-auto py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12 first-sec-pad position-relative">
+                        <img src="assets/vol-login-new-logo2.png" class="img-fluid" alt="Volante Logo">
+                        <p class="text-style mt-5 pb-0 pb-md-4">We are a global financial technology company, with two decades of experience serving as trusted strategic partners for financial institutions of all sizes.</p>
+                            <div class="d-flex flex-wrap account">
+                                <div class="col-md-8 p-0 mt-1">
+                                    <span class="bold">Already have an account? </span>
+                                </div>
+                                <div class="col-md-4 p-0">
+                                    <button class="bt-lg float-end mt-2 mt-md-0" routerLink="/login0.1">Login Here</button>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 signup-section">
+                        <form class="form-class" [formGroup]="registerForm" (ngSubmit)="formSubmit()">
+                            <h5 class="bold login signup">Create Sandbox Account</h5>
+                            <div class="row">
+                                <div class="col-lg-12 mb-2 mt-2">
+                                    <label for="exampleInputtext" class="form-label">Institution Name</label>
+                                    <input type="text"  formControlName="institutionName" placeholder="Enter Institution Name" class="form-control" id="exampleInputtext" aria-describedby="emailHelp"  name="Institution" [(ngModel)]="signup.institutionName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                                    <div *ngIf="submitted && f.institutionName.errors" class="invalid-feedback">
+                                        <div *ngIf="f.institutionName.errors.required">Institution Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <label for="exampleInputfn" class="form-label">First Name</label>
+                                    <input type="text" formControlName="firstName" placeholder="Enter First Name" class="form-control" id="exampleInputfn" aria-describedby="emailHelp"  name="firstName" [(ngModel)]="signup.firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <label for="exampleInputLn" class="form-label">Last Name</label>
+                                    <input type="text" formControlName="lastName" placeholder="Enter Last Name" class="form-control" id="exampleInputLn" aria-describedby="emailHelp" name="lastName" [(ngModel)]="signup.lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="text" class="form-label">Title</label>
+                                    <select formControlName="title" class="form-control form-select" name="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" [(ngModel)]="signup.title">
+                                        <option value="undefined">-- Select Title --</option>
+                                        <option *ngFor= "let data of Title; let i= index" [ngValue]= "data.name"> {{data.name}}</option>
+                                </select>
+
+                                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                                        <div *ngIf="f.title.errors.required">Title is required</div>
+                                    </div>
+                                </div>
+                                <div *ngIf="signup.title=='Other'">
+                                    <input type="text"  formControlName="titleother" class="form-control" id="exampleInputLn" aria-describedby="emailHelp" placeholder="Specify Other"  name="title1" [(ngModel)]="signup.title1">
+                                </div>
+                                <div class="col-lg-12 col-12 mb-2">
+                                    <label for="exampleInputEmail1" class="form-label">Country</label>
+                                    <select formControlName="country" class="form-control form-select " aria-placeholder="Select Country" name="country" (change)= "selectCountry(signup.country)" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" [(ngModel)]="signup.country"><span class="material-icons-outlined">expand_more
+                                    </span>
+                                    <option value="undefined">-- Select Country --</option>
+                                    <option *ngFor= "let data of Country; let i= index" [value]= "data.name"> {{data.name}}</option>
+                                </select>
+                                <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                                    <div *ngIf="f.country.errors.required">Country is required</div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-12 col-12 mb-2">
+                                <label for="exampleInputLn" class="form-label">Phone</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">{{code}}</span>
+                                    <input minlength="10" maxlength="10" type="tel" placeholder="Enter Contact Number" inputmode="numeric"  formControlName="conNumber" class="form-control"  aria-describedby="emailHelp"  name="contactNumber" [(ngModel)]="signup.contactNumber" [ngClass]="{ 'is-invalid': submitted && f.conNumber.errors }" (keypress)="mobileNumber($event)" >
+                                    <div *ngIf="submitted && f.conNumber.errors" class="invalid-feedback">
+                                        <div *ngIf="f.conNumber.errors.required">Contact Number is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-2">
+                                <label for="exampleInputEmail1" class="form-label">Business Email Address (Username)</label>
+                                <input type="email" formControlName="email" placeholder="Enter Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="email" [(ngModel)]="signup.email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-2">                     
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <input [type]="password" formControlName="password" class="form-control"
+                                            id="exampleInputPassword1" name="password" placeholder="Enter Password"
+                                            [(ngModel)]="signup.password"
+                                            [ngClass]="{ 'is-invalid': submitted && registerForm.get('password').errors }">
+                                        <div *ngIf="submitted && registerForm.get('password').errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf="registerForm.get('password').errors.required">Password
+                                                is required</div>
+                                            <div *ngIf="registerForm.get('password').errors.errors.minlength">
+                                                Password must be at least 6 characters</div>
+                                        </div>
+                                        <div class="input-group-addon btn-eye"
+                                            *ngIf="!(submitted && registerForm.get('password').errors)"
+                                            [ngClass]="{ 'hidden': !(submitted && registerForm.get('password').errors) }">
+                                            <span (click)="onSubmit()" class="eye">
+                                                <span class="material-icons mt-2" *ngIf="show">visibility</span>
+                                                <span class="material-icons mt-2"
+                                                    *ngIf="!show">visibility_off</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="exampleInputPassword1" class="form-label">Confirm
+                                    Password</label>
+                                <div class="input-group">
+                                    <input [type]="password" formControlName="confirmpassword"
+                                        class="form-control" id="exampleInputPassword2" name="password" placeholder="Enter Confirm Password"
+                                        [(ngModel)]="signup.conformpassword"
+                                        [ngClass]="{ 'is-invalid': submitted && registerForm.get('confirmpassword').errors }">
+                                    <div *ngIf="submitted && registerForm.get('confirmpassword').errors"
+                                        class="invalid-feedback">
+                                        <div *ngIf="registerForm.get('confirmpassword').errors.required">
+                                            Password is required</div>
+                                        <div
+                                            *ngIf="registerForm.get('confirmpassword').errors.confirmpasswordValidator">
+                                            Passsword and
+                                            Confirm Password didn't match. </div>
+                                    </div>
+                                    <div class="input-group-addon btn-eye"
+                                        *ngIf="!(submitted && registerForm.get('confirmpassword').errors)"
+                                        [ngClass]="{ 'hidden': !(submitted && registerForm.get('confirmpassword').errors) }">
+                                        <span (click)="onSubmit()" class="eye">
+                                            <span class="material-icons mt-2" *ngIf="show">visibility</span>
+                                            <span class="material-icons mt-2"
+                                                *ngIf="!show">visibility_off</span>
+                                        </span>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="bt-lg-login mt-2">CREATE ACCOUNT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+

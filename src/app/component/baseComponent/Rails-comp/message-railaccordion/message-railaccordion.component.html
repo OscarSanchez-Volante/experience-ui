@@ -1,0 +1,30 @@
+<div class="accordion-item pt-3 mt-3">    
+            <button class="accordion-button collapsed mb-3" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+data['id']" aria-expanded="false" [attr.aria-controls]="'collapse'+data['id']">
+              <div class="d-flex justify-content-start ">
+              <div class="fed ">{{data.header}}</div>
+             </div>
+             
+            <div class="d-flex justify-content-end">
+              <em class="fa fa-angle-up"></em>
+              <em class="fa fa-angle-down"></em>
+            </div>
+            </button>
+        
+          <div [attr.id]="'collapse'+data['id']" class="accordion-collapse expand hide" [attr.aria-labelledby]="'heading'+data['id']" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+             <div *ngIf="data.headerId=='constructors'">
+                <app-part-one></app-part-one>
+    
+             </div>
+             <div *ngIf="data.headerId=='Transformers'">
+                <app-part-two></app-part-two>
+    
+             </div>
+             <div *ngIf="data.headerId=='Creators'">
+                <app-part-three></app-part-three>
+    
+             </div>
+            </div>       
+          </div>
+         </div>
+    

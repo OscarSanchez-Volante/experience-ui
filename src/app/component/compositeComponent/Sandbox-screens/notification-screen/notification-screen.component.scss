@@ -1,0 +1,105 @@
+.backforsidebar{
+    box-shadow: 1px 0 0 0 #cbced4;
+        background-color: #e6ebf2;
+        height: 100%;
+    }
+    .home-width{
+      width: 30px;
+    }
+.no-decoration{
+  text-decoration: none;
+}
+.backspace-blue{
+  color: #003b7c;
+}
+    .dashtxt{
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-size: 20px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #101a2b;
+    }
+    .nav-tabs {
+      border-bottom: 1px solid #dee2e6;
+      width: 100%;
+      margin-left: 1px;
+      padding-bottom: 1%;
+  }
+    .vlink-text{
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-size: 16px;
+      font-weight: bold;
+      color: #003b7c !important;
+    } 
+    .Notification-text{
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-size: 16px;
+      color: #18243e;
+    }
+    .Notification-text.active{
+
+      position: relative;
+      cursor: pointer;
+      font-family:'Source Sans Pro', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #003b7c;
+      padding-bottom: 15%;
+      border-bottom: 3px solid #003B7C;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+ 
+  
+    .Notification-text:hover{
+      color: #003b7c;
+      font-weight: 700;
+    }
+   
+    a{
+      text-decoration: none;
+    }
+    @media (min-width: 1925px) and (max-width: 2560px){    
+      .Top-space{
+        margin-top:-2em;
+      }
+    }
+    @media  (min-width: 1925px) and (max-width: 2560px) {    
+      .Top-space{
+        margin-top: 1em;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1990px) {    
+      .Top-space{
+        margin-top: 2em;
+      }
+    }
+    .fa-refresh{
+    
+      font-size: 20px;
+      color: #003b7c !important;
+    }
+    @media (max-width:767px){
+      .float{
+        float: left !important;
+        margin-top: 1rem;
+      }
+    }
+    @media (max-width:767px){
+     .container-pad{
+      padding: 0px;
+     }
+    }
+    @media (max-width:424px){
+     
+    }
+    @media (max-width:374px){
+      .tabScroll{
+        overflow: scroll;
+        height: 100%;
+      }
+    }

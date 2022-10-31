@@ -1,0 +1,163 @@
+.Payment {
+  margin: 2px 16px 16px 0px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+  margin-top: 1em;
+}
+.bg-volante-light{
+  background-color: #e6ebf2;
+  height: 100%;
+}
+
+.Select {
+  margin: 16px 0 44px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+}
+.title {
+  font-family: 'Source Sans Pro', sans-serif !important;
+font-size: 20px;
+font-weight: 700;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+color: #101a2b ;
+}
+.content{
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b ;
+  display: inline-block;
+  margin-top: -2px;
+  vertical-align: top;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 220px; 
+}
+.config{
+    margin: -20px 764px 19px 151px;
+    padding: 1px 3px;
+    border-radius: 16px;
+    border: solid 1px #cbced4;
+    background-color: #fff;
+  
+}
+.text{
+width: 110px;
+height: 21px;
+font-family: 'Source Sans Pro', sans-serif !important;
+font-size: 14px;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #18243e;
+}
+
+.btn-acc{
+
+font-size: 15px;
+font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+background-color: #003b7c;
+color: #fff;
+border: none;
+border-radius: 20px;
+letter-spacing: .22px;
+line-height: 0%;
+}
+.length-style{
+  padding-left:8px;
+  padding-right:0px
+}
+.length-box{
+  background-color:#e6ebf2; 
+  border-radius: 5px;
+  padding:0px 24px  24px  24px;
+}
+.selected-title{
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.formsection-style{
+  background-color:#e6ebf2;
+  padding:24px; 
+  border-radius: 5px;
+}
+.number-style{
+  font-size: 45px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #00875a;
+  line-height: normal;
+}
+.btn{
+  
+width: 251px;
+height: 38px;
+margin: -21px -47px 26px 2px;
+padding:  7px 14px;
+border-radius: 20px;
+border: solid 1px #cbced4;
+}
+.order-style{
+  background-color:#e6ebf2;
+  padding:24px; 
+  border-radius: 5px;
+}
+.backforsidebar{
+box-shadow: 1px 0 0 0 #cbced4;
+    background-color: #e6ebf2;
+    height: 100%;
+    width: 270px;
+}
+.mobView{
+    box-shadow: 1px 0 0 0 #cbced4;
+    background-color: #e6ebf2;
+}
+#content{
+    margin-left: 270px !important;
+}
+@media (max-width:374px){
+  .content{ 
+    width: 130px; 
+  }
+}
+@media screen and (max-width: 767px) {
+#content{
+    margin-left: 0px !important;
+}
+.mb-5{
+  margin-bottom: 6rem;
+}
+.content{ 
+  width: auto; 
+}
+.reviewPadding{
+  padding: 0px;
+}
+}
+@media (max-width:1023px){
+  .content{ 
+    width: 170px; 
+  }
+}  

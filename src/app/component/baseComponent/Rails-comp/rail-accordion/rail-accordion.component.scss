@@ -1,0 +1,215 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1;
+}
+
+li {
+  padding-left: 0em; 
+}
+.accordion-item{
+    
+    height: auto;
+    border-radius: 5px;
+    border: solid 1px #d7d9de;
+    background-color: #f3f3f5;
+  }
+  .accordion-button{
+    background-color: #f3f3f5;
+    padding: 0 24px;
+    box-shadow: inset 0 0px 0 rgb(0 0 0 / 13%);
+
+  }
+  .fed {
+
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 20px;
+    font-weight: bold;
+    
+    color: #101a2b;
+  }
+  .sepa{
+
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px 6px;
+        color: #101a2b;
+      
+  }
+  .trans{
+
+        padding: 3px 11px;
+        border-radius: 16px;
+        background-color: #facdcf;
+  }
+  .text {
+
+        opacity: 0.7;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+      
+  }
+
+.btn{
+            height: 40px;
+        padding:  17px 2px;
+        border-radius: 20px;
+        border: solid 1px #cbced4;
+        background-color: #fff;
+      
+}
+.view{
+
+      padding: 2px 16px;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #18243e;
+      
+}
+.btn1{
+  height: 40px;
+  margin: -143px 35px 32px 75px;
+}
+
+
+.btn-acc{
+ 
+  font-size: 14px;
+ font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+  background-color: #003b7c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: .22px;
+  line-height: 0%;
+  padding: 2px 16px;
+
+}
+.transac{
+    
+    height: 24px;
+    margin: 18px 764px 19px 20px;
+    padding: -1px 11px;
+    border-radius: 16px;
+    background-color: #d9eed1;
+      
+      
+}
+.accordion-button::after {
+ display: none;
+}
+.fa{
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  margin: -18px 22px 39px 15px;
+  font-weight: bolder;
+  font-size: 21px;
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+  color: #607d8b;
+  
+ 
+}
+.accordion-body {
+  padding: 0rem 1.25rem;
+}
+.cont {
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+.head{
+  
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101a2b;
+}
+.point{
+ 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1rem ;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+  margin-bottom: 5px;
+}
+[aria-expanded=true] .fa-angle-down {
+  display: none;
+}
+[aria-expanded=false] .fa-angle-up {
+  display: none;
+}
+.form-check-input:checked {
+  background-color: #00875a;
+  border-color: #00875a;
+  cursor: pointer;
+}
+.cursor-style{
+  cursor: pointer;
+}
+.card-font{
+  font-size: 1.5rem;
+}
+.add-font{
+  font-size: 16px;
+}
+.but-lg{
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: white;
+  color: white;
+}
+  
+.material-icons-outlined{
+  font-size: 20px;
+  font-weight: normal;
+  vertical-align: middle;
+  padding: 10px;
+  cursor: pointer;
+}
+.Input-style{
+   border-radius: 3px;
+    font-size: 16px;
+background-color: rgba(9, 30, 66, 0.04); 
+ color: #101a2b;
+ font-family: 'Source Sans Pro', sans-serif !important;
+ border: none;
+ letter-spacing: 0.22px;
+
+}

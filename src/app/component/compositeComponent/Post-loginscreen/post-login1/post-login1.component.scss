@@ -1,0 +1,67 @@
+.lets{
+    
+    font-family:  'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+.letsback{
+    background-color: #18243e;
+}
+.lback{
+    background-color: #fff;
+}
+.over{
+    
+    font-family:  'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101a2b;
+
+}
+.over1{
+    
+    font-family:  'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101a2b;
+    text-align: center;
+
+}
+.rad
+{
+    border-radius: 14px;
+}
+.bt-lg-login{
+    padding: 19px 31px;
+    font-size: 14px;
+   font-family:'Source Sans Pro', sans-serif !important;
+font-weight: 600;
+    background-color: #003b7c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: .22px;
+    line-height: 0%;
+}
+.bd-highlight{
+    padding: 10px;
+}
+@media (max-width:767px) {
+    .mb-5{
+        margin-bottom: 6rem !important;
+    }
+}
