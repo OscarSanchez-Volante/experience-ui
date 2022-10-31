@@ -43,6 +43,7 @@
     "ngx-echarts": "^5.1.2",
     "ngx-pagination": "^5.1.1",
     "ngx-slickjs": "^1.5.2",
+    "ngx-toastr": "^12.1.0",
     "node": "^14.15.1",
     "primeicons": "^4.1.0",
     "primeng": "^9.0.0",
