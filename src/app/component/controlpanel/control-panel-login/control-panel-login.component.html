@@ -1,0 +1,52 @@
+<div class="container-fluid vh-100 bg-core">
+    <div class="row h-100">
+        <div class="col h-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-10 col-12 mx-auto">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-12 first-sec-pad position-relative">
+                                <img src="assets/vol-login-new-logo2.png" class="img-fluid" alt="Vol-Login">
+                                <p class="text-style my-3 my-md-5">This is the control panel</p>
+                                <form class="form-class" [formGroup]="registerForm" (ngSubmit)="formSubmit()">
+                                    <div >
+                                        <label for="exampleInputEmail1" class="form-label padding">Username (Email Address)</label>
+                                        <input type="email" formControlName="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+                                            [(ngModel)]="login.email"
+                                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+
+                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                            <div *ngIf="f.email.errors.required">Email is required</div>
+                                        </div>
+
+                                        <label for="password1" class="form-label padding">Password</label>
+                                        <input type="password" formControlName="password" class="form-control"
+                                            id="password1" aria-describedby="password" name="password"
+                                            [(ngModel)]="login.password"
+                                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+
+                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                            <div *ngIf="f.password.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <!-- <span class="text">Only admin allowed</span> -->
+                                    </div>
+                                    <div class="account" style="text-align: right;">
+                                        <div class="">
+                                            <button class="bt-lg float-end mt-3 mt-md-0">Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

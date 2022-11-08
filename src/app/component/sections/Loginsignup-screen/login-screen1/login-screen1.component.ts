@@ -1,7 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { LoginService } from '@services/login/login.service';
 import { Router} from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from 'src/app/services/login/login.service';
 @Component({
   selector: 'app-login-screen1',
   templateUrl: './login-screen1.component.html',
@@ -19,6 +19,7 @@ export class LoginScreen1Component implements OnInit {
   public title=sessionStorage.getItem('selectedAddOn')
   public userInfo= JSON.parse(sessionStorage.getItem("userInfo"));
   @Input() count:number=3;
+
   constructor(private service: LoginService,private router: Router,private formBuilder: FormBuilder) {}
 
   ngOnInit() {

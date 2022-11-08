@@ -19,11 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(private service: LoginService,private router: Router,private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      userName: ['', Validators.required],
-  });
-
-   this.loginDetails = this.service.login;
+    this.registerForm = this.formBuilder.group({userName: ['', Validators.required],});
+    this.loginDetails = this.service.login;
   }
 
   get f() { return this.registerForm.controls; }

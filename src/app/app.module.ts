@@ -188,6 +188,7 @@ import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-s
 
 import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
+import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
 
 @NgModule({
   declarations: [
@@ -310,6 +311,7 @@ import { SignupComponent } from './component/sections/Loginsignup-screen/signup/
     AdmintableSandboxComponent,
     ActivateLoginComponent,
     ActivateAccountScreenComponent,
+    ControlPanelLoginComponent,
 
   ],
   imports: [

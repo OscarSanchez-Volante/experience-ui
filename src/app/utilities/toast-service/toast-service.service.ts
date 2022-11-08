@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { elementAt } from 'rxjs-compat/operator/elementAt';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,6 @@ export class ToastServiceService {
 
 
   public OpenToast(success,msj){
-    this.toastr.error('',msj);
+    success?this.toastr.success(msj) :this.toastr.error('',msj);
   }
 }
