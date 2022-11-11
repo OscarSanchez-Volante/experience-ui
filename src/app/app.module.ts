@@ -187,6 +187,7 @@ import { ToastServiceService } from './utilities/toast-service/toast-service.ser
 import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-account-screen/activate-account-screen.component';
 
 import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
+import { LoginScreen1Component } from './component/sections/Loginsignup-screen/login-screen1/login-screen1.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
 
@@ -194,6 +195,7 @@ import { ControlPanelLoginComponent } from './component/controlpanel/control-pan
   declarations: [
     AppComponent,
     LoginComponent,
+    LoginScreen1Component,
     SignupComponent,
     ValidateUIComponent,
     TimelineComponent,
