@@ -15,7 +15,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   loginAdmin(logindata: LoginData) {
-    return this.http.post<SuccessResponse>(GlobalConstants.ApiUrl + '/account/loginAdmin',logindata, httpOptionsJson); 
+    return this.http.post<SuccessResponse>(GlobalConstants.ApiUrl + 'account/loginAdmin',logindata, httpOptionsJson); 
   }
   
 

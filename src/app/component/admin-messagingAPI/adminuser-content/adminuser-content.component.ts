@@ -12,14 +12,14 @@ export class AdminuserContentComponent implements OnInit {
   public tableadminHead2: adminuserHeadInterface[];
   public tableadminValues2: adminuserContentInterface[];
 
-  constructor(private jsonhttp:JsonHttpService) { }
+  constructor() { }
 
   ngOnInit(): void {
 
-    this.jsonhttp.getadminUserContent("assets/data/admin.json").subscribe(data => {
-      this.tableadminHead2 = data['adminuserTablehead'];
-      this.tableadminValues2 = data['adminuserTablecont'];
-    })
+    // this.jsonhttp.getadminUserContent("assets/data/admin.json").subscribe(data => {
+    //   this.tableadminHead2 = data['adminuserTablehead'];
+    //   this.tableadminValues2 = data['adminuserTablecont'];
+    // })
    
 
   }

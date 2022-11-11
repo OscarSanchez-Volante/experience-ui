@@ -56,6 +56,7 @@ import { ActivateLoginComponent } from './component/layout/Loginsignup-screen/ac
 import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
+import { UserAccountComponent } from './sections/user-account/user-account.component';
 
 const routes: Routes = [
 //main page routes
@@ -139,6 +140,7 @@ const routes: Routes = [
 // Dasboard//
 {path:'ops-dashboard1.0',component: OpsDashboardComponent},
 {path:'control-panel-login',component: ControlPanelLoginComponent},
+{path:'user-account',component: UserAccountComponent},
 {path:'admin-dashboard1.0',component: ExecutiveDashboardComponent},
 {path:'admin-dashboard2.0',component: ExecutiveDashboardStep2Component},
 

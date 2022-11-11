@@ -1,0 +1,99 @@
+<app-header></app-header>
+<br /><br /><br /><br />
+<div class="container">
+  <h2>User account</h2>
+  <p>Here you can change various settings about your account</p><br />
+  <div class="row">
+    <div class="col-sm">
+      <h4>Personal info</h4>
+      <br>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm">
+            <i class="fa fa-user grayicon spaced" aria-hidden="true"></i>
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" [(ngModel)]="this.name" class="form-control" aria-describedby="emailHelp"
+              placeholder="Enter new email">
+          </div>
+          <div class="col-sm">
+            <label for="exampleInputEmail1">Last name</label>
+            <input type="text" [(ngModel)]="this.nameLast" class="form-control" aria-describedby="emailHelp"
+              placeholder="Enter new last name">
+          </div>
+        </div>
+        <small class="form-text text-muted">This is the name of your account, you can modify this here.</small>
+        <div class="tools-to-right">
+          <button type="submit" class="bt-lg-primary" (click)="this.saveNames()">Save</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <i class="fa fa-envelope grayicon spaced" aria-hidden="true"></i>
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" [(ngModel)]="userdata.email" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else, this will be
+          the email where we notify all movements in the account</small>
+        <div class="tools-to-right">
+          <button type="submit" class="bt-lg-primary" (click)="this.saveEmail()">Save</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="col-sm">
+        <h4>Account info</h4>
+        <br />
+        <div class="form-group">
+          <i class="fa fa-mobile grayicon spaced" aria-hidden="true"></i>
+          <label for="exampleInputEmail1">Phone</label>
+          <input [(ngModel)]="userdata.phone" type="number" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter phone">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your phone with anyone else, this will be
+            the phone where we notify all movements in the account</small>
+          <div class="tools-to-right">
+            <button type="submit" class="bt-lg-primary" (click)="this.savePhone()">Save</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-key grayicon spaced" aria-hidden="true"></i>
+          <label for="exampleInputEmail1">Change password</label>
+          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            [(ngModel)]="password" placeholder="New password" (ngModelChange)="this.validatePassword()">
+          <br />
+          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            [(ngModel)]="password_confirmation" placeholder="Confirm password" (ngModelChange)="this.validatePassword()">
+          <small *ngIf="password_validation!=''" class="form-text danger">{{this.password_validation}}</small>
+          <small id="emailHelp" class="form-text text-muted">Make sure your password is equal in both fields</small>
+          <div class="tools-to-right">
+            <button  [attr.disabled]="this.password=='' || this.password_validation!=''? true : null" type="submit" class="bt-lg-primary" (click)="this.savePassword()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class=" dark-blue-bg ">
+    <div id="header">
+    </div>
+    <br/><br/><br/><br/><br/>
+
+    <div class="row m-2">
+      <div id="sticky-sidebar" class="col-2 px-1 position-fixed backforsidebar d-none d-md-block">
+        <app-message-sidebaradmin></app-message-sidebaradmin>
+      </div>
+      <div id="sticky-sidebar" class="mobView d-md-none d-block">
+        <app-message-sidebaradmin></app-message-sidebaradmin>
+      </div>
+      <div id="content" class="col">
+        <h2>
+            User account 
+            dwqdwq
+
+        </h2>
+      </div>
+    </div>
+    <div>
+        <h2>USER ACCPUNT</h2>
+    </div>
+  </div> -->

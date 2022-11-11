@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginData } from 'src/app/interface/login-data';
 import { LoginService } from 'src/app/services/login/login.service';
+import { GlobalVariables } from 'src/app/utilities/globals-variables';
 import { ToastServiceService } from 'src/app/utilities/toast-service/toast-service.service';
 
 @Component({
@@ -28,7 +29,8 @@ export class ControlPanelLoginComponent implements OnInit {
   constructor(private service: LoginService, 
     private router: Router,
      private formBuilder: FormBuilder, 
-     private toastService:ToastServiceService) { 
+     private toastService:ToastServiceService,
+     private globbalsVariables:GlobalVariables) { 
     this.registerForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -57,8 +59,11 @@ export class ControlPanelLoginComponent implements OnInit {
     }
     this.service.loginAdmin(this.login).subscribe(result=>{
       this.toastService.OpenToast(result.success,result.message);
-      if(result.success)
-        this.router.navigate(['/control-panel-users-table'])
+      if(result.success){
+        this.globbalsVariables.currentUser=result.data;
+        localStorage.setItem("userdata",JSON.stringify(result.data));
+      //  this.router.navigate(['/control-panel-users-table']);
+      }
       console.log(result);
     });
 

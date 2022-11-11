@@ -261,3 +261,62 @@ button.toast-close-button {
   }
 }
 
+
+.tools-to-right{
+  width: 100%;
+  text-align: right;
+}
+
+.bt-lg-primary{
+  height: 36px;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  background-color: #18243e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 0.22px;
+  line-height: 0%;
+}
+
+.danger{
+  color: #d10000 !important;
+}
+
+#navbar-menu:hover > #navbar-menu-options {
+  display: block !important;
+
+}
+
+#navbar-menu:hover ~ #navbar-menu-options {
+  display: block !important;
+
+}
+#navbar-menu-options {
+  left: calc(100% - 209px);
+  position: absolute;
+  /* display: block; */
+  top: 46px;
+
+}
+
+#navbar-menu-options:hover {
+  display: block; 
+}
+
+.grayicon{
+  color:#999999
+}
+.spaced{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+disabled{
+  background-color: lightslategray !important;
+}
+:disabled{
+  background-color: lightslategray !important;
+}

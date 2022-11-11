@@ -189,6 +189,8 @@ import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-s
 import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
+import { UserAccountComponent } from './sections/user-account/user-account.component';
+import { GlobalVariables } from './utilities/globals-variables';
 
 @NgModule({
   declarations: [
@@ -312,6 +314,7 @@ import { ControlPanelLoginComponent } from './component/controlpanel/control-pan
     ActivateLoginComponent,
     ActivateAccountScreenComponent,
     ControlPanelLoginComponent,
+    UserAccountComponent,
 
   ],
   imports: [
