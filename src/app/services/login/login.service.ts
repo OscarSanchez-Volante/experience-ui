@@ -17,9 +17,15 @@ export class LoginService {
   loginAdmin(logindata: LoginData) {
     return this.http.post<SuccessResponse>(GlobalConstants.ApiUrl + 'account/loginAdmin',logindata, httpOptionsJson); 
   }
-  
+
+  loginValidateEmail(logindata: LoginData){
+    return this.http.post<SuccessResponse>(GlobalConstants.ApiUrl + 'account/email',logindata, httpOptionsJson);
+  }
 
 
+  loginValidatePassword(logindata: LoginData){
+    return this.http.post<SuccessResponse>(GlobalConstants.ApiUrl + 'account/password',logindata, httpOptionsJson);
+  }
 
 
 

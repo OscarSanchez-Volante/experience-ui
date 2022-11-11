@@ -54,15 +54,17 @@ import { PopupInviteusersandboxComponent } from './component/admin-PaaSsandbox/p
 import { ActivateAccountScreenComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-account-screen/activate-account-screen.component';
 import { ActivateLoginComponent } from './component/layout/Loginsignup-screen/activate-userlogin/activate-login/activate-login.component';
 import { LoginComponent } from './component/sections/Loginsignup-screen/login/login.component';
+import { LoginScreen1Component } from './component/sections/Loginsignup-screen/login-screen1/login-screen1.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
 import { UserAccountComponent } from './sections/user-account/user-account.component';
 
 const routes: Routes = [
 //main page routes
-{ path: '', component: VolBannerpageComponent },  
+{ path: '', component: VolBannerpageComponent },
 { path: 'select-service0.1', component: VolMainpageComponent },
 { path: 'login0.1', component: LoginComponent },
+{ path: 'login1.1', component: LoginScreen1Component },
 { path: 'sign-up2.0', component: SignupComponent },
 { path: 'activate-account-verfication', component: ActivateAccountScreenComponent },
 { path: 'activate-login', component: ActivateLoginComponent },
@@ -97,7 +99,7 @@ const routes: Routes = [
   path: 'admin-user',
   component: AdminforUserComponent,
   children: [
-    
+
       { path: '',   redirectTo: 'admin-for-users1.0', pathMatch: 'full' },
       {
         path: 'admin-for-users1.0',
@@ -112,14 +114,14 @@ const routes: Routes = [
         component: AdminpopupInviteuserComponent
       },
   ]
-  
+
 },
 //admin user screens PaaS sandbox
 {
   path: 'sandbox-admin-user',
   component: AdminuserSandboxComponent,
   children: [
-    
+
       { path: '',   redirectTo: 'admin-for-userssandbox1.0', pathMatch: 'full' },
       {
         path: 'admin-for-userssandbox1.0',
@@ -149,9 +151,9 @@ const routes: Routes = [
     path: 'ftu-paas',
     component: FtuSidebarComponent,
     children: [
-      
+
       { path: '',   redirectTo: 'notification-screenflow1.0', pathMatch: 'full' },
-      
+
       {
         path: 'notification-screenflow1.0',
         component: FtuDashboardscreenComponent
@@ -174,21 +176,21 @@ const routes: Routes = [
         path: 'ftu-init-payments13.1',
         component: RailsSelectedComponent
       },
- 
+
       {
         path: 'reports15.0',
         component: ReportComponent
       },
 
     ]
-    
+
   },
 // sidebar and header static routes for messsaging api
   {
     path: 'ftu-messsage-api',
     component: FtuLayoutmessageComponent,
     children: [
-      
+
       { path: '',   redirectTo: 'ftu-dashboard-message4.4', pathMatch: 'full' },
       {
         path: 'ftu-dashboard-message4.4',
@@ -206,9 +208,9 @@ const routes: Routes = [
       { path: 'messaging-dropdown-creators', component:MessagingDropdownComponent},
       { path: 'messaging-dropdown-transformers', component:MessagingDropdownTComponent},
       { path: 'messaging-dropdown-validators', component:MessagingDropdownVComponent},
-    ] 
+    ]
   },
- 
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

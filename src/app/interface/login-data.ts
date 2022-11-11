@@ -3,3 +3,10 @@ export interface LoginData {
     password: string;
 }
 
+export interface LoginValidateEmail{
+  email:string
+}
+
+export interface LoginValidatePassword{
+  password: string;
+}
