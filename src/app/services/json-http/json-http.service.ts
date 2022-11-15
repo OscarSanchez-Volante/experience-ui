@@ -126,4 +126,7 @@ host:string="http://localhost:3000";
     getallreportsdata(url){
       return this.http.get(url).pipe(map(res => res))
     }
+    getControlPanelUser(url){
+      return this.http.get(url).pipe(map(res => res))
+    }
 }

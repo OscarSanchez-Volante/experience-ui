@@ -1,0 +1,77 @@
+
+
+      <div class="col-md-12 mb-2 " *ngIf="tableValues">
+        <div class="form-group">
+        </div>
+      </div>
+
+
+
+<div class="col-lg-12 col-12 mb-2">
+  <div class="searchBox ">
+    <input [(ngModel)]="searchText" autocomplete="off" placeholder=" Search ">
+  </div>
+
+  <table class="table" aria-label="adminusertable">
+
+    <thead class="col-font">
+      <tr class="bg-white">
+        <th >
+          <h6  > </h6>
+       
+      </th>
+        
+        <th>
+          <h6 aria-label="Default select example"> <b> 
+            Name     </b></h6>
+        </th>
+        <th>
+          <h6 aria-label="Default select example">
+            <b>Email</b></h6>
+        </th>
+        <th>
+          <h6 aria-label="Default select example">
+            <b>  Company</b></h6>
+        </th>
+        <th>
+          <h6 aria-label="Default select example">
+            <b>  Login</b></h6>
+        </th>
+        <th>
+          <h6 aria-label="Default select example">
+            <b>   Status</b></h6>
+        </th>
+        <th>
+          <h6 aria-label="Default select example">
+            <b>  Accept</b></h6>
+        </th>
+      </tr>
+     
+    </thead>
+
+
+    <tbody *ngIf="tableValues && tableValues['length']">
+      <tr *ngFor="let td of tableValues| searchFilter: searchText  ;let i=index">
+        <td>
+          <div *ngIf="currentUrl=='/admin-user/admin-for-users1.0'">
+            <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1"
+              (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+          </div>
+        </td>
+        <!-- data table-->
+        <td routerLink="/admin-user/admin-for-usersdetails2.0" *ngFor="let th1 of tableHead;let j=index"
+          [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''">
+          <span *ngIf="th1.fieldName!=='Download'">{{td[th1.fieldName]}}</span>
+         </td>
+
+         <td>
+          <select id="accept">
+            <option value="volvo" >--Select---</option>
+            <option value="volvo">Accept</option>
+            <option value="saab">Reject</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>

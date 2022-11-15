@@ -1,0 +1,47 @@
+<div class="admin-header">
+  <div id="header">
+    <div class="btncentered ">
+    <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;<img src="assets/darlogo-new.png" class="img-fluid" alt=""></a>
+ 
+            <a routerLink="/"><button class="btn-acc btn mb-3 mt-3 mt-md-0 float-end cursorsetting" type="button" data-bs-toggle="modal"
+              data-bs-target="#admininviteModal">Logout</button> </a>
+            </div>
+        </div>
+</div>
+<div class="centered">
+  <br>
+  <h1>&nbsp; Users control panel</h1>  
+</div>
+<div class=" row">
+  <div id="total-request" class="col-md-4 col-lg-2">
+    <div class="request-style ">
+      <div class="no1 ms-3">4
+        <span class="material-icons-outlined standard-green"> </span>
+        <div class="Select   ">Total Requests</div>
+      </div>
+    </div>
+
+  </div>
+  <div id="active-sandbox" class="col-md-4 col-lg-2 mt-3 mt-md-0">
+    <div class="request-style">
+      <div class="no1 ms-3">1
+        <span class="material-icons-outlined standard-green"> </span>
+        <div class="Select   ">Active Sandboxes</div>
+      </div>
+    </div>
+  </div>
+  <div id="companies" class="col-md-4 col-lg-2 mt-3 mt-md-0">
+    <div class="request-style">
+      <div class="no1 ms-3">3
+        <span class="material-icons-outlined standard-green"> </span>
+        <div class="Select   ">Companies</div>
+      </div>
+    </div>
+  </div>
+
+
+<div>
+  <app-control-panel-users-table [tableHead]="tableHead" [tableValues]="tableValues">
+  </app-control-panel-users-table>
+</div>
+
