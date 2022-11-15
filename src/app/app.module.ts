@@ -190,6 +190,8 @@ import { LoginComponent } from './component/sections/Loginsignup-screen/login/lo
 import { LoginScreen1Component } from './component/sections/Loginsignup-screen/login-screen1/login-screen1.component';
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
+import { ControlPanelUsersComponent } from './component/controlpanel/control-panel-users/control-panel-users.component';
+import { ControlPanelUsersTableComponent } from './component/controlpanel/control-panel-users-table/control-panel-users-table.component';
 import { UserAccountComponent } from './sections/user-account/user-account.component';
 import { GlobalVariables } from './utilities/globals-variables';
 
@@ -317,6 +319,8 @@ import { GlobalVariables } from './utilities/globals-variables';
     ActivateAccountScreenComponent,
     ControlPanelLoginComponent,
     UserAccountComponent,
+    ControlPanelUsersTableComponent,
+    ControlPanelUsersComponent,
 
   ],
   imports: [

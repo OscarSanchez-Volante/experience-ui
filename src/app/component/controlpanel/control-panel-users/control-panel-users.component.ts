@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 //importa las definiciones de los objetos  controlUserTableHead,controlUserTableContent del archivo interface
 import { controlUserTableHead,controlUserTableContent} from '../../../interface/control-panel-users-table';
-import { Router } from '@angular/router';
+
 // importa el servicio muckup
  import { JsonHttpService } from 'src/app/services/json-http/json-http.service';
 
@@ -20,7 +20,7 @@ export class ControlPanelUsersComponent implements OnInit {
   public active:string;
 
   // inicializa la llamada del servicio
-   constructor(private jsonhttp:JsonHttpService, private router:Router) { }
+   constructor(private jsonhttp:JsonHttpService) { }
 
   ngOnInit(): void {
 
@@ -28,7 +28,7 @@ export class ControlPanelUsersComponent implements OnInit {
      this.jsonhttp.getControlPanelUser("assets/data/admin.json").subscribe(data => {
       this.tableHead = data['controlUserTableHead'];
       this.tableValues = data['controlUserTableContent'];
-      this.active = this.router.url;
+     
      })
      
      
