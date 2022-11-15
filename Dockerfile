@@ -10,3 +10,5 @@ RUN npm run build
 FROM nginx
 COPY  nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /usr/src/app/dist/testing /usr/share/nginx/html
+
+ENTRYPOINT node_modules/@angular/cli/bin/ng serve --host 0.0.0.0
