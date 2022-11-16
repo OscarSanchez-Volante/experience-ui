@@ -1248,7 +1248,7 @@ data:string;
   signupDetails: {institutionname: any, firstname: any, lastname: any, email: any, password:any};
   constructor(
     private router: Router,
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
 
      private service: SignupService,
      private accountService:AccountService,
@@ -1287,7 +1287,7 @@ data:string;
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
-    
+
       if (this.password === 'password') {
         this.password = 'text';
         this.show = true;
@@ -1307,7 +1307,7 @@ data:string;
     }
     console.log("formSubmit-----");
     console.log(this.signup);
-    
+
   var new_account:Account={
     institution: this.signup.institutionName,
     firstName: this.signup.firstName,
@@ -1325,6 +1325,8 @@ data:string;
     this.accountService.createAccount(new_account).subscribe(result => {
       sessionStorage.setItem("userInfo", JSON.stringify(this.signup));
       this.toastService.OpenToast(result.success,result.message);
+
+      this.router.navigate(['validate-ui3.0']);
     },err=>{
       //this.toastService.OpenToast(result.success,result.message);
       this.toastService.OpenToast(false,"There is a problem, please try again");
@@ -1332,7 +1334,7 @@ data:string;
     });
 
 
-    
+
 
   }
 

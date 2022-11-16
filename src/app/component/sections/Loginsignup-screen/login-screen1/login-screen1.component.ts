@@ -34,7 +34,7 @@ export class LoginScreen1Component implements OnInit {
       password: ["", [Validators.required, Validators.minLength(6)]],
     });
     this.loginDetails = this.service.login;
-    this.password = "password";
+    //this.password = "password";
   }
 
   get f() {
@@ -58,7 +58,9 @@ export class LoginScreen1Component implements OnInit {
     }
 
 
-    this.service.loginValidatePassword(this.login).subscribe((result) => {
+    var loginForm = {email:this.userInfo.email, password:this.login.password}
+
+    this.service.loginValidatePassword(loginForm).subscribe((result) => {
       //this.toastService.OpenToast(result.success,result.message);
 
       if (result.success) {
@@ -67,6 +69,7 @@ export class LoginScreen1Component implements OnInit {
         console.log("========= LOGIN CORRECT =========");
         this.globalVariables.currentUser=result.data;
         localStorage.setItem("userdata",JSON.stringify(result.data));
+        sessionStorage.setItem("userInfo",JSON.stringify(result.data));
 
         if (
           sessionStorage.getItem("service") &&
@@ -83,7 +86,7 @@ export class LoginScreen1Component implements OnInit {
 
         console.log(result);
 
-     
+
 
       } else {
         //sessionStorage.setItem("userInfo", "");
