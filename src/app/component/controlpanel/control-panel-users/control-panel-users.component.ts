@@ -9,7 +9,7 @@ import { controlUserTableHead,controlUserTableContent} from '../../../interface/
 @Component({
   selector: 'app-control-panel-users',
   templateUrl: './control-panel-users.component.html',
-  styleUrls: ['./control-panel-users.component.css']
+  styleUrls: ['./control-panel-users.component.scss']
 })
 
 export class ControlPanelUsersComponent implements OnInit {

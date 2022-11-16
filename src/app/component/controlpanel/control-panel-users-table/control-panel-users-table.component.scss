@@ -1,4 +1,91 @@
-.action-style{
+.admin-header{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101a2b;
+  }
+  .btn-acc{
+  
+      font-size: 15px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      background-color: #003b7c;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: .22px;
+      line-height: 0%;
+      }
+      .btn{
+    
+          height: 38px;
+          border-radius: 20px;
+          border: solid 1px #cbced4;
+          }
+  
+          .no1{
+  
+              font-family: 'Source Sans Pro', sans-serif !important;
+              font-size: 54px;
+              font-weight: 700;
+              color: #00875a;
+              }
+  
+  .Select {
+    
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: #101a2b;
+  }
+  .request-style{
+      border: 1px solid lightgray; 
+       background-color: #e6ebf2;
+        border-radius: 5px; 
+        height: 7rem;
+  }
+  .form-select{
+      font-family:  'Source Sans Pro', sans-serif !important;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #18243e;
+  }
+  .cursorsetting{
+    cursor: pointer;
+  }
+  .standard-green{
+    color: #00875a;
+  }
+  .curve{
+      border-radius: 18.5px;
+      height: 32px;
+  }
+  .material-icons{
+      color: #e30613;
+    }
+  .color-fontawesome{
+      color: #747c8b;
+  }
+  @media (max-width:767px){
+      .float-end{
+          float: left !important;
+      }
+  }
+
+
+  .action-style{
     height:36px;
     width:129px;
     border-radius: 3.5px;
@@ -86,7 +173,12 @@
       .styled-checkbox {
         position: absolute; 
         opacity: 0; 
-        cursor: pointer;}
+        cursor: pointer;
+  
+        & + label {
+          position: relative;
+          cursor: pointer;
+        }
       
         .surface {
           box-sizing: border-box; 
@@ -111,7 +203,7 @@
           color: #18243E !important;
         }
       
-      label:before {
+        & + label:before {
           content: '';
           margin-right: 20px;
           display: inline-block;
@@ -121,6 +213,44 @@
           background: white;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
         }
+      
+        &:focus + label:before {
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+        }
+      
+        &:checked + label:before {
+          background-color: #18243E;
+        }
+        
+        &:disabled + label {
+          opacity: 0.5;
+          cursor: auto;
+      
+        }
+      
+        &:disabled  {
+          box-shadow: none;
+          color: #CBCED4;
+      
+        }
+            &:checked + label:after {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 9px;
+          background: white;
+          width: 2px;
+          height: 2px;
+          box-shadow: 
+            2px 0 0 white,
+            4px 0 0 white,
+            4px -2px 0 white,
+            4px -4px 0 white,
+            4px -6px 0 white,
+            4px -8px 0 white;
+          transform: rotate(45deg);
+        }
+      }
     
       .form{
        
@@ -178,20 +308,23 @@
     display: none;
     width:0;
   }
-  .orderby {
-    text-align-last: center;
-    padding: 9px;
-    width:400px;
-    border-radius: 1px;
-    font-weight: 600;
-    color: #868585;
-    font-size: 16px;
-}
-.searchBox {
-  display: table-cell;
-    height: 50px;
-    width: 1500px;
-  text-align: right;
-  vertical-align: middle;
-  background-color:white;
+
+  .searchbar_table{
+    width: 100%;
+    height: 33px;
+  }
+
+  .table-height{
+    overflow: revert;
+  }
+  .footer-table{
+    text-align: right !important;
+  }
+  .footer-table > button{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+  }
+  .footer-table > button:hover{
+    background: #747c8b;
   }

@@ -1,77 +1,219 @@
-
-
-      <div class="col-md-12 mb-2 " *ngIf="tableValues">
-        <div class="form-group">
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div id="title" class="admin-header col-md-6"> Admin/Users/Messaging APIs</div>
+    <div class=" col-md-6">
+      <button class="btn-acc btn mb-3 mt-3 mt-md-0 float-end cursorsetting" type="button" data-bs-toggle="modal"
+        data-bs-target="#admininviteModal">Invite Users</button>
+    </div>
+  </div>
+  <div class=" row">
+    <div id="total-request" class="col-md-4 col-lg-2">
+      <div class="request-style ">
+        <div class="no1 ms-3">4
+          <span class="material-icons-outlined standard-green"> </span>
+          <div class="Select   ">Total Requests</div>
         </div>
       </div>
 
+    </div>
+    <div id="active-sandbox" class="col-md-4 col-lg-2 mt-3 mt-md-0">
+      <div class="request-style">
+        <div class="no1 ms-3">1
+          <span class="material-icons-outlined standard-green"> </span>
+          <div class="Select   ">Active Sandboxes</div>
+        </div>
+      </div>
+    </div>
+    <div id="companies" class="col-md-4 col-lg-2 mt-3 mt-md-0">
+      <div class="request-style">
+        <div class="no1 ms-3">3
+          <span class="material-icons-outlined standard-green"> </span>
+          <div class="Select   ">Companies</div>
+        </div>
+      </div>
+    </div>
 
-
-<div class="col-lg-12 col-12 mb-2">
-  <div class="searchBox ">
-    <input [(ngModel)]="searchText" autocomplete="off" placeholder=" Search ">
   </div>
-
-  <table class="table" aria-label="adminusertable">
-
-    <thead class="col-font">
-      <tr class="bg-white">
-        <th >
-          <h6  > </h6>
-       
-      </th>
-        
-        <th>
-          <h6 aria-label="Default select example"> <b> 
-            Name     </b></h6>
-        </th>
-        <th>
-          <h6 aria-label="Default select example">
-            <b>Email</b></h6>
-        </th>
-        <th>
-          <h6 aria-label="Default select example">
-            <b>  Company</b></h6>
-        </th>
-        <th>
-          <h6 aria-label="Default select example">
-            <b>  Login</b></h6>
-        </th>
-        <th>
-          <h6 aria-label="Default select example">
-            <b>   Status</b></h6>
-        </th>
-        <th>
-          <h6 aria-label="Default select example">
-            <b>  Accept</b></h6>
-        </th>
-      </tr>
-     
-    </thead>
-
-
-    <tbody *ngIf="tableValues && tableValues['length']">
-      <tr *ngFor="let td of tableValues| searchFilter: searchText  ;let i=index">
-        <td>
-          <div *ngIf="currentUrl=='/admin-user/admin-for-users1.0'">
-            <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1"
-              (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+  <div class="mt-3">
+    <!-- <div class="row m-0">
+      <div class="col-md-10 pe-0">
+        <div class="float-end">
+    
+          <div class="col-md-12 mb-2 " *ngIf="tableValues">
+            <div class="form-group">
+            </div>
           </div>
-        </td>
-        <!-- data table-->
-        <td routerLink="/admin-user/admin-for-usersdetails2.0" *ngFor="let th1 of tableHead;let j=index"
-          [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''">
-          <span *ngIf="th1.fieldName!=='Download'">{{td[th1.fieldName]}}</span>
-         </td>
+        </div>
+      </div>
+      <div class="col">
+        <em class="fa fa-sort-amount-asc float-end ms-2 mt-1 color-fontawesome" aria-hidden="true"></em>
+        <span class="material-icons-outlined float-end ms-2 color-fontawesome">
+          filter_list
+        </span>
+      </div>
+    </div> -->
+    
+    
+    <div class="table-height">
+      <table class="table" aria-label="adminusertable">
+        <thead class="col-font">
+          <tr class="bg-white">
+              <th></th>
+              <th (click)="this.OrderTableBy(this.tableControls['0'].columnName)"> {{this.tableControls['0'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['0'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['0'].order==='desc'"></i>
+              </th>
+              <th (click)="this.OrderTableBy(this.tableControls['1'].columnName)"> {{this.tableControls['1'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['1'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['1'].order==='desc'"></i>
+              </th>
+              <th (click)="this.OrderTableBy(this.tableControls['2'].columnName)"> {{this.tableControls['2'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['2'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['2'].order==='desc'"></i>
+              </th>
+              <th (click)="this.OrderTableBy(this.tableControls['3'].columnName)"> {{this.tableControls['3'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['3'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['3'].order==='desc'"></i>
+              </th>
+              <th (click)="this.OrderTableBy(this.tableControls['4'].columnName)"> {{this.tableControls['4'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['4'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['4'].order==='desc'"></i>
+              </th>
+              <th (click)="this.OrderTableBy(this.tableControls['5'].columnName)"> {{this.tableControls['5'].columnName}} 
+                <i class="fa fa-angle-double-up" aria-hidden="true" *ngIf="this.tableControls['5'].order==='asc'"></i>
+                <i class="fa fa-angle-double-down" aria-hidden="true" *ngIf="this.tableControls['5'].order==='desc'"></i>
+              </th>
+              <th> Actions</th>
+          </tr>
+          <tr class="bg-white">
+            <th></th>
+            <!-- (blur)="this.updateFilter(this.tableControls['0'].filter)"  -->
+            <th><input class="form fa fa-search color-fontawesome searchbar_table" 
+              type="text" name="search"[(ngModel)]="this.tableControls['0'].filter" autocomplete="off" placeholder="&#61442; search "></th>
+            <th><input class="form fa fa-search color-fontawesome searchbar_table" type="text" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; search "></th>
+            <th><input class="form fa fa-search color-fontawesome searchbar_table"  type="text" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; search "></th>
+            <th></th>
+            <th></th>
+            <th><input class="form fa fa-search color-fontawesome searchbar_table" type="text" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; search "></th>
+            <th></th>
+          </tr>
+          <!-- <tr class="bg-white">
+            <th>
+              <div>
+                <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1"
+                  (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+              </div>
+            </th>
+            <th *ngFor="let th of tableHead" (click)="sortData ( th.fieldName)">{{th.label}} <input
+                class="form fa fa-search color-fontawesome" *ngIf="th.condition=='search'" type="text" name="search"
+                [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; search ">
+    
+            </th>
+            <th *ngIf="currentUrl=='/admin-user/admin-for-usersdetails2.0'">
+              <p class="Action-style">Action</p>
+            </th>
+            <select *ngIf="currentUrl=='/admin-user/admin-for-users1.0'" class="action-style btn mt-1"
+              aria-label="Default select example">
+              <option selected>Actions </option>
+            </select>
+          </tr> -->
+        </thead>
+        <tbody *ngIf="accountTable && accountTable.rows['length']" class="normal-text">
+          <tr *ngFor="let td of accountTable.rows">
+            <td></td>
+            <td>{{td.firstName}} {{td.lastName}}</td>
+            <td>{{td.email}}</td>
+            <td>{{td.institution}}</td>
+            <td></td>
+            <td>{{td.createdAt}}</td>
+            <td>{{td.status}}</td>
+            <td>
 
-         <td>
-          <select id="accept">
-            <option value="volvo" >--Select---</option>
-            <option value="volvo">Accept</option>
-            <option value="saab">Reject</option>
-          </select>
+              <div class="dropdown">
+                <button class="action-style form-select  form-control  Actiontxt-style " type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Actions
+                </button>
+                <ul id="ul-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li id="invite"><a class="dropdown-item Actiontxt-style">Invite Sent</a></li>
+                  <li id="view"><a class="dropdown-item Actiontxt-style">View</a></li>
+                  <li id="edit"><a class="dropdown-item Actiontxt-style">Edit</a></li>
+                  <li id="update"><a class="dropdown-item Actiontxt-style">Update Status</a></li>
+                  <li id="request"><a class="dropdown-item ms-3 Actiontxt-style">Sandbox Requested</a></li>
+                  <li id="converse"><a class="dropdown-item ms-3 Actiontxt-style">1:1 Conversation</a></li>
+                  <li id="provision" (click)="this.updateStatus(td.id,'provisioning')"><a class="dropdown-item ms-3 Actiontxt-style">Start Provisioning</a></li>
+                  <li id="acc-provision" (click)="this.updateStatus(td.id,'provisioned')"><a class="dropdown-item ms-3 Actiontxt-style">Account Provisioned</a></li>
+                  <li id="active" (click)="this.updateStatus(td.id,'inactive')"><a class="dropdown-item ms-3 Actiontxt-style">Inactive</a></li>
+                  <li id="active" (click)="this.updateStatus(td.id,'active')"><a class="dropdown-item ms-3 Actiontxt-style">Active</a></li>
+                  <li id="resend-invite"><a class="dropdown-item  Actiontxt-style">Resend Invitation</a></li>
+                  <li id="delete-tab"  (click)="this.deleteAccount(td.id)"><a class="dropdown-item borderforDelete Actiontxt-style">
+                      <div class="row">
+                        <div id="delete-icon" class="col">
+                          <span class="material-icons ">delete</span>
+                        </div>
+                        <div id="text-delete" class="col ">
+                          Delete
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <!-- <td>
+              <div *ngIf="currentUrl=='/admin-user/admin-for-users1.0'">
+                <input name="checkboxName" class="check-boxstyle" id="checkbox1" type="checkbox" value="Value 1"
+                  (change)="$event.target.checked? (isfrmChecked = true) : isfrmChecked = false; componentMethodName($event,isfrmChecked);">
+              </div> 
+            </td> -->
+            <!-- <td routerLink="/admin-user/admin-for-usersdetails2.0" *ngFor="let th1 of tableHead;let j=index"
+              [ngClass]="th1.fieldName=='GroupReferenceID' || th1.fieldName=='ReportName'|| th1.fieldName=='Source' || th1.fieldName=='Download' ? 'table-primary-clr':''">
+              <span *ngIf="th1.fieldName!=='Download'">{{td[th1.fieldName]}}</span>
+    
+            <td> -->
+              <!-- 
+    
+              <div *ngIf="currentUrl=='/admin-user/admin-for-usersdetails2.0'">
+    
+            <td>
+              <p class="view-style" data-bs-toggle="modal" data-bs-target="#activityModal" style="cursor: pointer;">View /
+                Edit</p>
+            </td>
+    </div>
+    </td> -->
+    </tr>
+    
+    </tbody>
+    <tfoot>
+      <tr class="bg-white">
+        <td colspan="8" class="footer-table">
+          
+          <button *ngIf="this.page!=0" (click)="this.movePage(-1)">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <label>Pagina {{this.accountTable.page+1 }} de  {{this.accountTable.totalPages }}</label>
+          <button *ngIf="this.page!=this.accountTable.totalPages"  (click)="this.movePage(1)"> 
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          de un total de  {{this.accountTable.count }} Usuarios
         </td>
       </tr>
-    </tbody>
-
-  </table>
+    </tfoot>
+    
+    </table>
+    
+    
+    <div class="margin" *ngIf="!tableValues || tableValues.length==0">
+      <app-no-dataoutput [contain]="contain"></app-no-dataoutput>
+    </div>
+    </div>
+    
+    <div>
+      <app-activity-note-popup></app-activity-note-popup>
+    </div>
+  </div>
+</div>
+<div>
+  <!-- <app-adminpopup-inviteuser></app-adminpopup-inviteuser> -->
+</div>

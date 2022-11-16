@@ -1,40 +1,14 @@
 <app-header></app-header>
-<br /><br /><br /><br />
-
-<div class="centered">
-  <br>
-  <h1>&nbsp; Users control panel</h1>  
+<div class=" dark-blue-bg ">
+  <div class="row m-0">
+    <div id="sticky-sidebar" class="col-2 px-1 position-fixed backforsidebar d-none d-md-block">
+      <app-message-sidebaradmin></app-message-sidebaradmin>
+    </div>
+    <div id="sticky-sidebar" class="mobView d-md-none d-block">
+      <app-message-sidebaradmin></app-message-sidebaradmin>
+    </div>
+    <div id="content" class="col">
+      <app-control-panel-users-table></app-control-panel-users-table>
+    </div>
+  </div>
 </div>
-<div class=" row">
-  <div id="total-request" class="col-md-4 col-lg-2">
-    <div class="request-style ">
-      <div class="no1 ms-3">4
-        <span class="material-icons-outlined standard-green"> </span>
-        <div class="Select   ">Total Requests</div>
-      </div>
-    </div>
-
-  </div>
-  <div id="active-sandbox" class="col-md-4 col-lg-2 mt-3 mt-md-0">
-    <div class="request-style">
-      <div class="no1 ms-3">1
-        <span class="material-icons-outlined standard-green"> </span>
-        <div class="Select   ">Active Sandboxes</div>
-      </div>
-    </div>
-  </div>
-  <div id="companies" class="col-md-4 col-lg-2 mt-3 mt-md-0">
-    <div class="request-style">
-      <div class="no1 ms-3">3
-        <span class="material-icons-outlined standard-green"> </span>
-        <div class="Select   ">Companies</div>
-      </div>
-    </div>
-  </div>
-
-
-  <div>
-    <app-control-panel-users-table [tableHead]="tableHead" [tableValues]="tableValues">
-    </app-control-panel-users-table>
-</div>
-

@@ -141,6 +141,7 @@ const routes: Routes = [
 
 
 // Dasboard//
+{path:'test',component: AdminforUserComponent},
 {path:'ops-dashboard1.0',component: OpsDashboardComponent},
 {path:'control-panel-login',component: ControlPanelLoginComponent},
 {path:'control-panel-users',component: ControlPanelUsersComponent},
