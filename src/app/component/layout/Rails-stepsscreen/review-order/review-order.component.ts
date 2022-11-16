@@ -20,16 +20,17 @@ export class ReviewOrderComponent implements OnInit {
   public title=sessionStorage.getItem('selectedAddOn')
   public active:string;
   public accordianData:setup2accordiondata;
-  public userInfo= JSON.parse(sessionStorage.getItem("userInfo"));
+  //public userInfo= JSON.parse(sessionStorage.getItem("userInfo"));
+  public userInfo = JSON.parse(localStorage.getItem('userdata'));
   @Input() count:number=3;
-  
-  constructor(private router:Router, private jsonhttp:JsonHttpService) { 
-    
+
+  constructor(private router:Router, private jsonhttp:JsonHttpService) {
+
     this.active = this.router.url;
     this.valueneeded= this.selected.title;
 
 
-  } 
+  }
 
  ngOnInit() {
     this.jsonhttp.getjsonreviewOrder("assets/data/admin.json").subscribe(data => {
@@ -41,10 +42,10 @@ export class ReviewOrderComponent implements OnInit {
         let len=this.accordianData?.length;
         for (let i = 0; i < len; i++) {
           var index = storedArray.indexOf(this.accordianData[i].id);
-          if(index!==-1){     
+          if(index!==-1){
             this.accordianData[i]['display']=true;
             this.accordianData[i]['selected']=true;
-          
+
         }
         }
     }
