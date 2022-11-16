@@ -15,7 +15,11 @@
           <i class="fa fa-user spaced" aria-hidden="true"></i>
           {{this.global_vars.currentUser.userName}} &nbsp;{{this.global_vars.currentUser.userLastName}} &nbsp;&nbsp;&nbsp;.&nbsp;.&nbsp;.
           <div id="navbar-menu-options" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <label class="dropdown-item">My account</label>
+            <a routerLink="/user-account">
+            <label class="dropdown-item">
+                My account
+              </label>
+            </a>
             <label class="dropdown-item">Options</label>
             <label class="dropdown-item">Other</label>
             <div class="dropdown-divider"></div>

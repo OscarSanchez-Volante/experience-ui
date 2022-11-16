@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'testing';
 
   constructor(private globalvariables:GlobalVariables){
+    console.log("========= APP BEGIN =========");
     if(localStorage.getItem("userdata")==undefined)
       return;
     this.globalvariables.currentUser=JSON.parse(localStorage.getItem("userdata"));

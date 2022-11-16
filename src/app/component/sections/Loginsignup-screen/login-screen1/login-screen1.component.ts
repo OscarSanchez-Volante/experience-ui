@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { LoginService } from "src/app/services/login/login.service";
 import { ToastServiceService } from "src/app/utilities/toast-service/toast-service.service";
+import { GlobalVariables } from "src/app/utilities/globals-variables";
 @Component({
   selector: "app-login-screen1",
   templateUrl: "./login-screen1.component.html",
@@ -24,7 +25,8 @@ export class LoginScreen1Component implements OnInit {
     private service: LoginService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private toastService: ToastServiceService
+    private toastService: ToastServiceService,
+    private globalVariables:GlobalVariables
   ) {}
 
   ngOnInit() {
@@ -61,6 +63,11 @@ export class LoginScreen1Component implements OnInit {
 
       if (result.success) {
 
+
+        console.log("========= LOGIN CORRECT =========");
+        this.globalVariables.currentUser=result.data;
+        localStorage.setItem("userdata",JSON.stringify(result.data));
+
         if (
           sessionStorage.getItem("service") &&
           sessionStorage.getItem("redirect")
@@ -75,6 +82,9 @@ export class LoginScreen1Component implements OnInit {
         }
 
         console.log(result);
+
+     
+
       } else {
         //sessionStorage.setItem("userInfo", "");
         this.toastService.OpenToast(false, "Incorrect password");

@@ -58,6 +58,7 @@ import { LoginScreen1Component } from './component/sections/Loginsignup-screen/l
 import { SignupComponent } from './component/sections/Loginsignup-screen/signup/signup.component';
 import { ControlPanelLoginComponent } from './component/controlpanel/control-panel-login/control-panel-login.component';
 import { UserAccountComponent } from './sections/user-account/user-account.component';
+import { ControlPanelUsersComponent } from './component/controlpanel/control-panel-users/control-panel-users.component';
 
 const routes: Routes = [
 //main page routes
@@ -142,6 +143,7 @@ const routes: Routes = [
 // Dasboard//
 {path:'ops-dashboard1.0',component: OpsDashboardComponent},
 {path:'control-panel-login',component: ControlPanelLoginComponent},
+{path:'control-panel-users',component: ControlPanelUsersComponent},
 {path:'user-account',component: UserAccountComponent},
 {path:'admin-dashboard1.0',component: ExecutiveDashboardComponent},
 {path:'admin-dashboard2.0',component: ExecutiveDashboardStep2Component},

@@ -62,7 +62,7 @@ export class ControlPanelLoginComponent implements OnInit {
       if(result.success){
         this.globbalsVariables.currentUser=result.data;
         localStorage.setItem("userdata",JSON.stringify(result.data));
-      //  this.router.navigate(['/control-panel-users-table']);
+        this.router.navigate(['/control-panel-users']);
       }
       console.log(result);
     });

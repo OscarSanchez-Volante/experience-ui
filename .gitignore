@@ -49,3 +49,6 @@ node_modules
 # vagrant and docker stuff
 .docker/*
 .vagrant/*
+src/app/interface/login-data.ts.orig
+src/app/services/login/login.service.ts.orig
+.gitignore.orig
