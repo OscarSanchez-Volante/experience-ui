@@ -18,12 +18,6 @@ pipeline {
         sh 'ng build'
       }
     }
-    
-    stage('test') {
-      steps {   
-        sh 'ng test --progress=false --watch false'
-      }
-    }
 
   }
   tools {
