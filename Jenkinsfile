@@ -23,7 +23,7 @@ pipeline {
   
   post {
       always {
-        sh 'sudo azcopy copy --from-to=LocalBlob "dist/testing/" "hhttps://storageangular.blob.core.windows.net/$web?sp=racwdli&st=2022-11-18T01:15:42Z&se=2022-11-18T09:15:42Z&sv=2021-06-08&sr=c&sig=2AVOfU7na0cqxLL1EJ0ImTUWjwGX%2FY6xI3mKkG2blHE%3D[SAS]" --recursive'
+        sh 'sudo azcopy copy --from-to=LocalBlob "dist/testing/" "https://storageangular.blob.core.windows.net/testing?sp=racwdli&st=2022-11-18T10:03:24Z&se=2022-11-18T18:03:24Z&sv=2021-06-08&sr=c&sig=yOBJJJNX4uHwNH94J4DkRsOQAIChB%2FUvKwHeHx72OiI%3D" --recursive'
       }
     }
   
